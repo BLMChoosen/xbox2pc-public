@@ -1,0 +1,264 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-11-20T22:52:56.096843+00:00",
+  "snapshot": "0.1.0",
+  "public_snapshot_id": "pub_0.1.0_a297ebf4ae18",
+  "summary": {
+    "unique_physical_files": 17,
+    "unique_logical_identities": 18,
+    "known_platform_library_identities": 6,
+    "unresolved_library_identities": 1,
+    "total_records": 18
+  },
+  "subsystems": [
+    {
+      "name": "GPU runtime",
+      "library_count": 2,
+      "export_count": 10,
+      "libraries": [
+        "amd_fidelityfx_loader_xbox.dll",
+        "amd_fidelityfx_upscaler_xbox.dll"
+      ]
+    },
+    {
+      "name": "Gaming services",
+      "library_count": 1,
+      "export_count": 0,
+      "libraries": [
+        "Catalog000.bin"
+      ]
+    },
+    {
+      "name": "Graphics and Direct3D",
+      "library_count": 1,
+      "export_count": 12,
+      "libraries": [
+        "XboxBvhBuilder.dll"
+      ]
+    },
+    {
+      "name": "Kernel and system services",
+      "library_count": 8,
+      "export_count": 1906,
+      "libraries": [
+        "msvcp140.dll",
+        "msvcp140_1.dll",
+        "msvcp140_2.dll",
+        "msvcp140_atomic_wait.dll",
+        "vccorlib140.dll",
+        "vcruntime140.dll",
+        "vcruntime140_1.dll",
+        "game_scarlett_master.exe"
+      ]
+    },
+    {
+      "name": "Media and codecs",
+      "library_count": 2,
+      "export_count": 78,
+      "libraries": [
+        "Bink2Scarlett.dll",
+        "msvcp140_codecvt_ids.dll"
+      ]
+    },
+    {
+      "name": "Networking",
+      "library_count": 2,
+      "export_count": 190,
+      "libraries": [
+        "XCurl.dll",
+        "libHttpClient.GDK.dll"
+      ]
+    },
+    {
+      "name": "Threading and synchronization",
+      "library_count": 2,
+      "export_count": 404,
+      "libraries": [
+        "concrt140.dll",
+        "vcomp140.dll"
+      ]
+    }
+  ],
+  "libraries": [
+    {
+      "name": "amd_fidelityfx_loader_xbox.dll",
+      "subsystem": "GPU runtime",
+      "category": "Game Middleware (Xbox Optimized)",
+      "exports_count": 5,
+      "imports_count": 31,
+      "is_physical": true,
+      "status": "Analyzed",
+      "description": "Exports: 5, Imports: 22"
+    },
+    {
+      "name": "amd_fidelityfx_upscaler_xbox.dll",
+      "subsystem": "GPU runtime",
+      "category": "Game Middleware (Xbox Optimized)",
+      "exports_count": 5,
+      "imports_count": 110,
+      "is_physical": true,
+      "status": "Analyzed",
+      "description": "Exports: 5, Imports: 86"
+    },
+    {
+      "name": "Catalog000.bin",
+      "subsystem": "Gaming services",
+      "category": "Xbox PE Package Catalog (GameOS)",
+      "exports_count": 0,
+      "imports_count": 0,
+      "is_physical": true,
+      "status": "Analyzed",
+      "description": "Exports: 0, Imports: 0"
+    },
+    {
+      "name": "XboxBvhBuilder.dll",
+      "subsystem": "Graphics and Direct3D",
+      "category": "Game Middleware (Xbox Optimized)",
+      "exports_count": 12,
+      "imports_count": 78,
+      "is_physical": true,
+      "status": "Analyzed",
+      "description": "Exports: 12, Imports: 57"
+    },
+    {
+      "name": "msvcp140.dll",
+      "subsystem": "Kernel and system services",
+      "category": "MSVC Runtime",
+      "exports_count": 1493,
+      "imports_count": 229,
+      "is_physical": true,
+      "status": "Analyzed",
+      "description": "Exports: 1493, Imports: 187"
+    },
+    {
+      "name": "msvcp140_1.dll",
+      "subsystem": "Kernel and system services",
+      "category": "MSVC Runtime",
+      "exports_count": 7,
+      "imports_count": 46,
+      "is_physical": true,
+      "status": "Analyzed",
+      "description": "Exports: 7, Imports: 33"
+    },
+    {
+      "name": "msvcp140_2.dll",
+      "subsystem": "Kernel and system services",
+      "category": "MSVC Runtime",
+      "exports_count": 44,
+      "imports_count": 114,
+      "is_physical": true,
+      "status": "Analyzed",
+      "description": "Exports: 44, Imports: 96"
+    },
+    {
+      "name": "msvcp140_atomic_wait.dll",
+      "subsystem": "Kernel and system services",
+      "category": "MSVC Runtime",
+      "exports_count": 32,
+      "imports_count": 84,
+      "is_physical": true,
+      "status": "Analyzed",
+      "description": "Exports: 32, Imports: 64"
+    },
+    {
+      "name": "vccorlib140.dll",
+      "subsystem": "Kernel and system services",
+      "category": "MSVC Runtime",
+      "exports_count": 256,
+      "imports_count": 141,
+      "is_physical": true,
+      "status": "Analyzed",
+      "description": "Exports: 256, Imports: 114"
+    },
+    {
+      "name": "vcruntime140.dll",
+      "subsystem": "Kernel and system services",
+      "category": "MSVC Runtime",
+      "exports_count": 71,
+      "imports_count": 71,
+      "is_physical": true,
+      "status": "Analyzed",
+      "description": "Exports: 71, Imports: 41"
+    },
+    {
+      "name": "vcruntime140_1.dll",
+      "subsystem": "Kernel and system services",
+      "category": "MSVC Runtime",
+      "exports_count": 3,
+      "imports_count": 55,
+      "is_physical": true,
+      "status": "Analyzed",
+      "description": "Exports: 3, Imports: 34"
+    },
+    {
+      "name": "Bink2Scarlett.dll",
+      "subsystem": "Media and codecs",
+      "category": "Game Middleware (Xbox Optimized)",
+      "exports_count": 74,
+      "imports_count": 80,
+      "is_physical": true,
+      "status": "Analyzed",
+      "description": "Exports: 74, Imports: 60"
+    },
+    {
+      "name": "msvcp140_codecvt_ids.dll",
+      "subsystem": "Media and codecs",
+      "category": "MSVC Runtime",
+      "exports_count": 4,
+      "imports_count": 35,
+      "is_physical": true,
+      "status": "Analyzed",
+      "description": "Exports: 4, Imports: 24"
+    },
+    {
+      "name": "XCurl.dll",
+      "subsystem": "Networking",
+      "category": "Discovered Dynamic Library",
+      "exports_count": 61,
+      "imports_count": 173,
+      "is_physical": true,
+      "status": "Analyzed",
+      "description": "Exports: 61, Imports: 140"
+    },
+    {
+      "name": "libHttpClient.GDK.dll",
+      "subsystem": "Networking",
+      "category": "Microsoft GDK Library",
+      "exports_count": 129,
+      "imports_count": 212,
+      "is_physical": true,
+      "status": "Analyzed",
+      "description": "Exports: 129, Imports: 198"
+    },
+    {
+      "name": "concrt140.dll",
+      "subsystem": "Threading and synchronization",
+      "category": "MSVC Runtime",
+      "exports_count": 291,
+      "imports_count": 126,
+      "is_physical": true,
+      "status": "Analyzed",
+      "description": "Exports: 291, Imports: 103"
+    },
+    {
+      "name": "vcomp140.dll",
+      "subsystem": "Threading and synchronization",
+      "category": "MSVC Runtime",
+      "exports_count": 113,
+      "imports_count": 107,
+      "is_physical": true,
+      "status": "Analyzed",
+      "description": "Exports: 113, Imports: 78"
+    },
+    {
+      "name": "game_scarlett_master.exe",
+      "subsystem": "Kernel and system services",
+      "category": "Target Executable (Primary Game Binary)",
+      "exports_count": 0,
+      "imports_count": 0,
+      "is_physical": false,
+      "status": "Missing Platform Requirement",
+      "description": "Specified in MicrosoftGame.Config and appxmanifest.xml; binary NOT present in workspace."
+    }
+  ]
+}

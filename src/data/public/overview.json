@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "project": "Xbox2PC",
+  "snapshot": "0.1.0",
+  "public_snapshot_id": "pub_0.1.0_a297ebf4ae18",
+  "generated_at": "2026-11-20T21:30:21.928665+00:00",
+  "discovery": {
+    "physical_binaries": 17,
+    "logical_libraries": 18,
+    "unique_exports": 2593,
+    "unique_imports": 551,
+    "unique_shader_instructions": 202,
+    "decoded_shader_occurrences": 48154,
+    "total_workspace_files": 108,
+    "total_components": 3483
+  },
+  "coverage": {
+    "global": null,
+    "analysis": {
+      "completed": 3482,
+      "known": 3483,
+      "percentage": 99.97
+    },
+    "implementation": {
+      "completed": 0,
+      "known": 3483,
+      "percentage": 0.0
+    },
+    "testing": {
+      "completed": 0,
+      "known": 0,
+      "percentage": 0.0
+    },
+    "validation": {
+      "completed": 0,
+      "known": 0,
+      "percentage": 0.0
+    },
+    "game_requirement": {
+      "completed": 0,
+      "known": null,
+      "percentage": null
+    }
+  },
+  "project_info": {
+    "phase": "Discovery Phase Active",
+    "target_platform": "Xbox Series X|S (Scarlett / Anaconda & Lockhart)",
+    "target_architecture": "x86-64 CPU (AMD Zen 2), AMD RDNA2 GPU (GFX10.3)",
+    "limitations_summary": [
+      "Target primary game executable (game_scarlett_master.exe) is absent from the workspace.",
+      "Global Xbox OS and title-level API denominator is unclosed and reported as Unknown.",
+      "RPF9 container encryption and XVD partitions are not decrypted.",
+      "Implementation progress is 0.0%; stubs are strictly excluded from completion metrics."
+    ]
+  }
+}

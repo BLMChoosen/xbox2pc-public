@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-20T22:52:56.096843+00:00",
-  "latest_snapshot": "pub_0.1.0_a297ebf4ae18",
+  "generated_at": "2026-11-20T23:09:18.641928+00:00",
+  "latest_snapshot": "pub_0.1.1_ea208942ff6e",
   "snapshots": [
     {
       "snapshot_id": "pub_0.1.0_0c985cd5",
@@ -144,10 +144,10 @@
       "description": "Audited public discovery snapshot v0.1.0"
     },
     {
-      "snapshot_id": "pub_0.1.0_a297ebf4ae18",
-      "version": "0.1.0",
-      "timestamp": "2026-11-20T22:52:56.096843+00:00",
-      "total_components": 3483,
+      "snapshot_id": "pub_0.1.1_11daddec",
+      "version": "0.1.1",
+      "timestamp": "2026-11-20T23:08:25.454735+00:00",
+      "total_components": 3512,
       "unique_exports": 2593,
       "unique_imports": 551,
       "unique_shader_instructions": 202,
@@ -155,7 +155,21 @@
       "analysis_coverage": 99.97,
       "implementation_coverage": 0.0,
       "status": "approved",
-      "description": "Audited public discovery snapshot v0.1.0"
+      "description": "Audited public discovery snapshot v0.1.1"
+    },
+    {
+      "snapshot_id": "pub_0.1.1_ea208942ff6e",
+      "version": "0.1.1",
+      "timestamp": "2026-11-20T23:09:18.641928+00:00",
+      "total_components": 3512,
+      "unique_exports": 2593,
+      "unique_imports": 551,
+      "unique_shader_instructions": 202,
+      "decoded_shader_occurrences": 48154,
+      "analysis_coverage": 99.97,
+      "implementation_coverage": 0.0,
+      "status": "approved",
+      "description": "Audited public discovery snapshot v0.1.1"
     }
   ]
 }

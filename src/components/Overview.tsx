@@ -116,7 +116,7 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
             </span>
           </div>
           <p style={{ fontSize: '13px', color: '#d6d3d1', lineHeight: 1.5, margin: 0 }}>
-            Independent audit confirmed raw workspace counts (17 PE binaries, 2,593 exports, 81 shaders, 48k occurrences) but flagged 5 material discrepancies: shader container DB tracking, XPSF packaging terminology, opcode variant merging, external dependency resolution, and synthetic test scope. <strong>The current baseline is not represented as fully verified.</strong>
+            The published baseline remains partially verified. Inventory, shader taxonomy, and dependency resolution are generated from the corrected scanner; behavioral compatibility still requires independent execution evidence. <strong>Do not read discovery coverage as proof of game compatibility.</strong>
           </p>
         </div>
 

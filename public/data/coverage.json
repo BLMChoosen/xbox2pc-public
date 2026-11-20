@@ -1,12 +1,12 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-20T22:52:56.096843+00:00",
-  "snapshot": "0.1.0",
-  "public_snapshot_id": "pub_0.1.0_a297ebf4ae18",
+  "generated_at": "2026-11-20T23:09:18.641928+00:00",
+  "snapshot": "0.1.1",
+  "public_snapshot_id": "pub_0.1.1_ea208942ff6e",
   "metrics": {
     "discovery": {
       "name": "Discovery Coverage",
-      "numerator": 3483,
+      "numerator": 3512,
       "denominator": null,
       "percentage": null,
       "display_string": "Unknown",
@@ -16,8 +16,8 @@
     },
     "analysis": {
       "name": "Analysis Coverage",
-      "numerator": 3482,
-      "denominator": 3483,
+      "numerator": 3511,
+      "denominator": 3512,
       "percentage": 99.97,
       "display_string": "99.97%",
       "reference_universe": "Discovered Components",
@@ -27,7 +27,7 @@
     "implementation": {
       "name": "Implementation Coverage",
       "numerator": 0,
-      "denominator": 3483,
+      "denominator": 3512,
       "percentage": 0.0,
       "display_string": "0.0%",
       "reference_universe": "Discovered Components",

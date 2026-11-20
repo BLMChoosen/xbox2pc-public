@@ -1,11 +1,14 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-20T22:52:56.096843+00:00",
-  "snapshot": "0.1.0",
-  "public_snapshot_id": "pub_0.1.0_a297ebf4ae18",
+  "generated_at": "2026-11-20T23:09:18.641928+00:00",
+  "snapshot": "0.1.1",
+  "public_snapshot_id": "pub_0.1.1_ea208942ff6e",
   "architecture": "AMD RDNA2 (GFX10.3 / Scarlett)",
   "summary": {
     "unique_instructions": 202,
+    "unique_mnemonic_variants": 202,
+    "distinct_family_opcode_pairs": 194,
+    "distinct_semantic_operations": 194,
     "unique_instruction_encodings": 202,
     "supported_instruction_variants": 202,
     "instruction_formats": 15,

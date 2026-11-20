@@ -1,12 +1,12 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-20T22:52:56.096843+00:00",
-  "snapshot": "0.1.0",
-  "public_snapshot_id": "pub_0.1.0_a297ebf4ae18",
+  "generated_at": "2026-11-20T23:09:18.641928+00:00",
+  "snapshot": "0.1.1",
+  "public_snapshot_id": "pub_0.1.1_ea208942ff6e",
   "summary": {
     "total_edges": 1662,
-    "resolved_edges": 1367,
-    "unresolved_edges": 295,
+    "resolved_edges": 288,
+    "unresolved_edges": 1374,
     "circular_cycles": 0
   },
   "unresolved_platform_targets": [

@@ -109,6 +109,9 @@ export interface PublicShaderStatsData {
   architecture: string;
   summary: {
     unique_instructions: number;
+    unique_mnemonic_variants?: number;
+    distinct_family_opcode_pairs?: number;
+    distinct_semantic_operations?: number;
     unique_instruction_encodings: number;
     supported_instruction_variants: number;
     instruction_formats: number;

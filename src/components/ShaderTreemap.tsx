@@ -145,7 +145,7 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
             AMD RDNA2 (GFX10.3 / Scarlett) Shader Instruction Treemap
           </h2>
           <p style={{ fontSize: '13px', color: '#94a3b8', margin: '4px 0 0 0' }}>
-            Visualizes instruction occurrences decoded across BVH and Scarlett ACO shader containers.
+            Visualizes instruction occurrences decoded across DXIL and ACCC/XPSF shader containers.
           </p>
         </div>
 
@@ -168,6 +168,12 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
             ))}
           </select>
         </div>
+      </div>
+
+      <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', fontSize: '12px', color: '#cbd5e1' }}>
+        <span>Mnemonic variants: <strong>{data.summary.unique_mnemonic_variants ?? data.summary.unique_instructions}</strong></span>
+        <span>Family/opcode pairs: <strong>{data.summary.distinct_family_opcode_pairs ?? '—'}</strong></span>
+        <span>Semantic operations: <strong>{data.summary.distinct_semantic_operations ?? '—'}</strong></span>
       </div>
 
       <div style={{

@@ -79,22 +79,17 @@ export const App: React.FC = () => {
         gap: '12px'
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <div style={{
-            width: '36px',
-            height: '36px',
-            borderRadius: '6px',
-            backgroundColor: '#1a0507',
-            border: '1px solid #7f1d1d',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontWeight: 800,
-            fontSize: '18px',
-            color: '#ef4444',
-            boxShadow: '0 0 12px rgba(239, 68, 68, 0.2)'
-          }}>
-            X
-          </div>
+          <img
+            src="/Logo.png"
+            alt="Blood Moon Logo"
+            style={{
+              width: '36px',
+              height: '36px',
+              objectFit: 'contain',
+              borderRadius: '6px',
+              filter: 'drop-shadow(0 0 10px rgba(239, 68, 68, 0.35))'
+            }}
+          />
           <div>
             <h1 style={{ fontSize: '18px', fontWeight: 700, letterSpacing: '-0.02em', color: '#f4f4f5', margin: 0 }}>
               Xbox2PC: Discovery & Compatibility Dashboard

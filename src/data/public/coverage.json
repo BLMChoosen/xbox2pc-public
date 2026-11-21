@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-21T03:56:20.119476+00:00",
-  "snapshot": "0.3.0",
-  "public_snapshot_id": "pub_0.3.0_84b141cdefea",
+  "generated_at": "2026-11-21T05:33:49.438951+00:00",
+  "snapshot": "0.4.0",
+  "public_snapshot_id": "pub_0.4.0_72b410b9924f",
   "metrics": {
     "discovery": {
       "name": "Discovery Coverage",
@@ -16,8 +16,8 @@
     },
     "analysis": {
       "name": "Analysis Coverage",
-      "numerator": 3515,
-      "denominator": 3516,
+      "numerator": 3517,
+      "denominator": 3518,
       "percentage": 99.97,
       "display_string": "99.97%",
       "reference_universe": "Discovered Components",
@@ -26,18 +26,18 @@
     },
     "implementation": {
       "name": "Implementation Coverage",
-      "numerator": 8,
-      "denominator": 3516,
-      "percentage": 0.23,
-      "display_string": "0.23%",
+      "numerator": 12,
+      "denominator": 3518,
+      "percentage": 0.34,
+      "display_string": "0.34%",
       "reference_universe": "Discovered Components",
       "is_global_unknown": false,
       "description": "Components with functional translation or proxy implementations. Stubs are strictly excluded."
     },
     "testing": {
       "name": "Testing Coverage",
-      "numerator": 8,
-      "denominator": 8,
+      "numerator": 12,
+      "denominator": 12,
       "percentage": 100.0,
       "display_string": "100.0%",
       "reference_universe": "Implemented Components",
@@ -47,7 +47,7 @@
     "validation": {
       "name": "Validation Coverage",
       "numerator": 0,
-      "denominator": 8,
+      "denominator": 12,
       "percentage": 0.0,
       "display_string": "0.0%",
       "reference_universe": "Implemented Components",

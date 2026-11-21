@@ -1,12 +1,12 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-21T03:56:20.119476+00:00",
-  "snapshot": "0.3.0",
-  "public_snapshot_id": "pub_0.3.0_84b141cdefea",
+  "generated_at": "2026-11-21T05:33:49.438951+00:00",
+  "snapshot": "0.4.0",
+  "public_snapshot_id": "pub_0.4.0_72b410b9924f",
   "summary": {
     "total_edges": 1662,
-    "resolved_edges": 294,
-    "unresolved_edges": 1368,
+    "resolved_edges": 297,
+    "unresolved_edges": 1365,
     "circular_cycles": 0
   },
   "unresolved_platform_targets": [
@@ -291,12 +291,6 @@
       "subsystem": "System Services",
       "dependent_count": 1,
       "description": "Required platform library dependency Bink2Scarlett.dll imports XAudio2_9.dll"
-    },
-    {
-      "target": "XCurl.dll imports api-ms-win-core-psm-appnotify-l1-1-0.dll",
-      "subsystem": "System Services",
-      "dependent_count": 1,
-      "description": "Required platform library dependency XCurl.dll imports api-ms-win-core-psm-appnotify-l1-1-0.dll"
     },
     {
       "target": "vccorlib140.dll imports OLEAUT32.dll",
@@ -639,7 +633,7 @@
       "source": "XCurl.dll",
       "target": "XCurl.dll imports api-ms-win-core-psm-appnotify-l1-1-0.dll",
       "type": "import_dll",
-      "is_resolved": false,
+      "is_resolved": true,
       "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-core-psm-appnotify-l1-1-0.dll"
     },
     {

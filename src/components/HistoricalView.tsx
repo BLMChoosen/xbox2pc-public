@@ -42,31 +42,31 @@ export const HistoricalView: React.FC<HistoricalViewProps> = ({ data }) => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
       <div>
-        <h2 style={{ fontSize: '18px', fontWeight: 600, color: '#f8fafc', margin: 0 }}>
+        <h2 style={{ fontSize: '18px', fontWeight: 600, color: '#f4f4f5', margin: 0 }}>
           Historical Snapshots & Discovery Timeline
         </h2>
-        <p style={{ fontSize: '13px', color: '#94a3b8', margin: '4px 0 0 0' }}>
-          Immutable, auditable discovery records. Published historical snapshots are cryptographically sealed and never overwritten.
+        <p style={{ fontSize: '13px', color: '#71717a', margin: '4px 0 0 0' }}>
+          Auditable discovery records. Published historical snapshots are cryptographically sealed.
         </p>
       </div>
 
       {/* Historical Discovery Growth Chart */}
       <div style={{
-        backgroundColor: '#1e293b',
-        borderRadius: '10px',
+        backgroundColor: '#0a0a0c',
+        borderRadius: '6px',
         padding: '20px',
-        border: '1px solid #334155',
+        border: '1px solid #1f1f24',
         display: 'flex',
         flexDirection: 'column',
         gap: '12px'
       }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <h3 style={{ fontSize: '15px', fontWeight: 600, color: '#e2e8f0', margin: 0 }}>
-            Discovery Inventory Growth Across Immutable Snapshots
+          <h3 style={{ fontSize: '15px', fontWeight: 600, color: '#f4f4f5', margin: 0 }}>
+            Discovery Inventory Growth Across Snapshots
           </h3>
           <div style={{ display: 'flex', gap: '16px', fontSize: '12px' }}>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#38bdf8' }}>
-              <span style={{ width: '10px', height: '10px', backgroundColor: '#38bdf8', borderRadius: '50%' }}></span>
+            <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#ef4444' }}>
+              <span style={{ width: '8px', height: '8px', backgroundColor: '#ef4444', borderRadius: '2px' }}></span>
               Total Discovered Components
             </span>
           </div>
@@ -80,8 +80,8 @@ export const HistoricalView: React.FC<HistoricalViewProps> = ({ data }) => {
               const labelVal = Math.round(maxVal * (1 - pct));
               return (
                 <g key={i}>
-                  <line x1={0} y1={y} x2={innerWidth} y2={y} stroke="#334155" strokeDasharray="3 3" />
-                  <text x={-10} y={y + 4} fill="#64748b" fontSize="10px" textAnchor="end">
+                  <line x1={0} y1={y} x2={innerWidth} y2={y} stroke="#1f1f24" strokeDasharray="3 3" />
+                  <text x={-10} y={y + 4} fill="#71717a" fontSize="10px" textAnchor="end">
                     {labelVal.toLocaleString()}
                   </text>
                 </g>
@@ -93,11 +93,11 @@ export const HistoricalView: React.FC<HistoricalViewProps> = ({ data }) => {
               const x = getX(i);
               return (
                 <g key={i} transform={`translate(${x}, ${innerHeight})`}>
-                  <line y2={6} stroke="#475569" />
-                  <text y={18} fill="#94a3b8" fontSize="10px" textAnchor="middle">
+                  <line y2={6} stroke="#27272a" />
+                  <text y={18} fill="#a1a1aa" fontSize="10px" textAnchor="middle">
                     {d.timestamp}
                   </text>
-                  <text y={30} fill="#64748b" fontSize="9px" textAnchor="middle">
+                  <text y={30} fill="#71717a" fontSize="9px" textAnchor="middle">
                     {d.id.slice(0, 14)}
                   </text>
                 </g>
@@ -107,11 +107,11 @@ export const HistoricalView: React.FC<HistoricalViewProps> = ({ data }) => {
             {/* Area under curve */}
             <path
               d={`${pathTotal} L ${getX(chartData.length - 1)} ${innerHeight} L ${getX(0)} ${innerHeight} Z`}
-              fill="rgba(56, 189, 248, 0.1)"
+              fill="rgba(239, 68, 68, 0.06)"
             />
 
             {/* Total Components Line */}
-            <path d={pathTotal} fill="none" stroke="#38bdf8" strokeWidth={2.5} />
+            <path d={pathTotal} fill="none" stroke="#ef4444" strokeWidth={2.5} />
 
             {/* Data Points */}
             {chartData.map((d, i) => {
@@ -124,8 +124,8 @@ export const HistoricalView: React.FC<HistoricalViewProps> = ({ data }) => {
                   cx={cx}
                   cy={cy}
                   r={isSelected ? 6 : 4}
-                  fill={isSelected ? '#f8fafc' : '#38bdf8'}
-                  stroke={isSelected ? '#0284c7' : '#0f172a'}
+                  fill={isSelected ? '#f4f4f5' : '#ef4444'}
+                  stroke={isSelected ? '#b91c1c' : '#050505'}
                   strokeWidth={2}
                   style={{ cursor: 'pointer' }}
                   onClick={() => setSelectedSnapshot(d.snapshot)}
@@ -138,20 +138,20 @@ export const HistoricalView: React.FC<HistoricalViewProps> = ({ data }) => {
 
       {/* Snapshot Comparison Tool */}
       <div style={{
-        backgroundColor: '#1e293b',
-        borderRadius: '10px',
+        backgroundColor: '#0a0a0c',
+        borderRadius: '6px',
         padding: '16px 20px',
-        border: '1px solid #334155',
+        border: '1px solid #1f1f24',
         display: 'flex',
         flexDirection: 'column',
         gap: '12px'
       }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '10px' }}>
-          <h3 style={{ fontSize: '15px', fontWeight: 600, color: '#e2e8f0', margin: 0 }}>
+          <h3 style={{ fontSize: '15px', fontWeight: 600, color: '#f4f4f5', margin: 0 }}>
             Compare Historical Snapshots
           </h3>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '13px' }}>
-            <span style={{ color: '#94a3b8' }}>Compare baseline against:</span>
+            <span style={{ color: '#71717a' }}>Compare baseline against:</span>
             <select
               value={compareSnapshot?.snapshot_id || ''}
               onChange={e => {
@@ -159,11 +159,11 @@ export const HistoricalView: React.FC<HistoricalViewProps> = ({ data }) => {
                 setCompareSnapshot(s);
               }}
               style={{
-                backgroundColor: '#0f172a',
-                color: '#f8fafc',
-                border: '1px solid #334155',
+                backgroundColor: '#121215',
+                color: '#f4f4f5',
+                border: '1px solid #27272a',
                 padding: '6px 10px',
-                borderRadius: '6px',
+                borderRadius: '4px',
                 fontSize: '12px'
               }}>
               <option value="">(Select comparison snapshot)</option>
@@ -178,39 +178,39 @@ export const HistoricalView: React.FC<HistoricalViewProps> = ({ data }) => {
 
         {compareSnapshot && selectedSnapshot && (
           <div style={{
-            backgroundColor: '#0f172a',
+            backgroundColor: '#121215',
             padding: '14px',
-            borderRadius: '8px',
-            border: '1px solid #334155',
+            borderRadius: '6px',
+            border: '1px solid #27272a',
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
             gap: '12px',
             fontSize: '12px'
           }}>
             <div>
-              <div style={{ color: '#94a3b8' }}>Total Components Delta</div>
-              <div style={{ fontSize: '16px', fontWeight: 700, color: selectedSnapshot.total_components >= compareSnapshot.total_components ? '#4ade80' : '#f87171' }}>
+              <div style={{ color: '#71717a' }}>Total Components Delta</div>
+              <div style={{ fontSize: '16px', fontWeight: 700, color: selectedSnapshot.total_components >= compareSnapshot.total_components ? '#ef4444' : '#fca5a5' }}>
                 {selectedSnapshot.total_components - compareSnapshot.total_components >= 0 ? '+' : ''}
                 {selectedSnapshot.total_components - compareSnapshot.total_components}
               </div>
             </div>
             <div>
-              <div style={{ color: '#94a3b8' }}>Unique Exports Delta</div>
-              <div style={{ fontSize: '16px', fontWeight: 700, color: '#38bdf8' }}>
+              <div style={{ color: '#71717a' }}>Unique Exports Delta</div>
+              <div style={{ fontSize: '16px', fontWeight: 700, color: '#f87171' }}>
                 {selectedSnapshot.unique_exports - compareSnapshot.unique_exports >= 0 ? '+' : ''}
                 {selectedSnapshot.unique_exports - compareSnapshot.unique_exports}
               </div>
             </div>
             <div>
-              <div style={{ color: '#94a3b8' }}>Unique Imports Delta</div>
-              <div style={{ fontSize: '16px', fontWeight: 700, color: '#38bdf8' }}>
+              <div style={{ color: '#71717a' }}>Unique Imports Delta</div>
+              <div style={{ fontSize: '16px', fontWeight: 700, color: '#f87171' }}>
                 {selectedSnapshot.unique_imports - compareSnapshot.unique_imports >= 0 ? '+' : ''}
                 {selectedSnapshot.unique_imports - compareSnapshot.unique_imports}
               </div>
             </div>
             <div>
-              <div style={{ color: '#94a3b8' }}>Shader Instructions Delta</div>
-              <div style={{ fontSize: '16px', fontWeight: 700, color: '#38bdf8' }}>
+              <div style={{ color: '#71717a' }}>Shader Instructions Delta</div>
+              <div style={{ fontSize: '16px', fontWeight: 700, color: '#f87171' }}>
                 {selectedSnapshot.unique_shader_instructions - compareSnapshot.unique_shader_instructions >= 0 ? '+' : ''}
                 {selectedSnapshot.unique_shader_instructions - compareSnapshot.unique_shader_instructions}
               </div>
@@ -228,9 +228,9 @@ export const HistoricalView: React.FC<HistoricalViewProps> = ({ data }) => {
               key={s.snapshot_id}
               onClick={() => setSelectedSnapshot(s)}
               style={{
-                backgroundColor: isSelected ? '#1e293b' : '#0f172a',
-                border: isSelected ? '2px solid #0284c7' : '1px solid #1e293b',
-                borderRadius: '8px',
+                backgroundColor: isSelected ? '#120406' : '#0a0a0c',
+                border: isSelected ? '1px solid #7f1d1d' : '1px solid #1f1f24',
+                borderRadius: '6px',
                 padding: '16px',
                 cursor: 'pointer',
                 display: 'flex',
@@ -238,29 +238,30 @@ export const HistoricalView: React.FC<HistoricalViewProps> = ({ data }) => {
                 gap: '8px'
               }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <span style={{ fontFamily: 'monospace', fontWeight: 700, color: '#38bdf8', fontSize: '13px' }}>
+                <span style={{ fontFamily: 'monospace', fontWeight: 700, color: '#ef4444', fontSize: '13px' }}>
                   {s.snapshot_id}
                 </span>
                 <span style={{
-                  backgroundColor: '#064e3b',
-                  color: '#6ee7b7',
+                  backgroundColor: '#2b070b',
+                  color: '#f87171',
+                  border: '1px solid #7f1d1d',
                   padding: '2px 8px',
-                  borderRadius: '9999px',
+                  borderRadius: '4px',
                   fontSize: '11px',
                   fontWeight: 600
                 }}>
                   {s.status}
                 </span>
               </div>
-              <div style={{ fontSize: '12px', color: '#94a3b8' }}>
+              <div style={{ fontSize: '12px', color: '#71717a' }}>
                 Timestamp: {new Date(s.timestamp).toLocaleString()}
               </div>
               <div style={{ display: 'flex', gap: '14px', fontSize: '12px', marginTop: '4px' }}>
-                <span>Components: <strong style={{ color: '#f8fafc' }}>{s.total_components}</strong></span>
-                <span>Exports: <strong style={{ color: '#f8fafc' }}>{s.unique_exports}</strong></span>
-                <span>Shaders: <strong style={{ color: '#f8fafc' }}>{s.unique_shader_instructions}</strong></span>
+                <span>Components: <strong style={{ color: '#f4f4f5' }}>{s.total_components}</strong></span>
+                <span>Exports: <strong style={{ color: '#f4f4f5' }}>{s.unique_exports}</strong></span>
+                <span>Shaders: <strong style={{ color: '#f4f4f5' }}>{s.unique_shader_instructions}</strong></span>
               </div>
-              <div style={{ fontSize: '11px', color: '#64748b' }}>
+              <div style={{ fontSize: '11px', color: '#71717a' }}>
                 {s.description}
               </div>
             </div>

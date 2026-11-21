@@ -61,26 +61,26 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
        .style('font-family', 'sans-serif');
 
     const familyColors: Record<string, string> = {
-      VOP2: '#0284c7',
-      VOP3: '#6366f1',
-      VOP1: '#38bdf8',
-      VOPC: '#06b6d4',
-      SOP1: '#10b981',
-      SOP2: '#059669',
-      SOPP: '#eab308',
-      SOPK: '#84cc16',
-      SMEM: '#d97706',
-      MIMG: '#ec4899',
-      MUBUF: '#a855f7',
-      DS: '#f97316',
-      GLOBAL: '#8b5cf6',
-      UNKNOWN: '#475569'
+      VOP2: '#e11d48',
+      VOP3: '#be123c',
+      VOP1: '#f43f5e',
+      VOPC: '#fb7185',
+      SOP1: '#dc2626',
+      SOP2: '#b91c1c',
+      SOPP: '#991b1b',
+      SOPK: '#7f1d1d',
+      SMEM: '#c2410c',
+      MIMG: '#9f1239',
+      MUBUF: '#881337',
+      DS: '#ea580c',
+      GLOBAL: '#4c0519',
+      UNKNOWN: '#27272a'
     };
 
     const getColor = (d: any) => {
-      if (d.depth === 1) return '#1e293b';
+      if (d.depth === 1) return '#1a0507';
       const fam = d.data.family;
-      return familyColors[fam] || '#64748b';
+      return familyColors[fam] || '#520810';
     };
 
     const nodes = svg.selectAll('g')
@@ -93,7 +93,7 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
       .attr('width', (d: any) => Math.max(0, d.x1 - d.x0))
       .attr('height', (d: any) => Math.max(0, d.y1 - d.y0))
       .attr('fill', (d: any) => getColor(d))
-      .attr('stroke', '#0f172a')
+      .attr('stroke', '#050505')
       .attr('stroke-width', (d: any) => (d.depth === 1 ? 2 : 1))
       .attr('rx', (d: any) => (d.depth === 2 ? 3 : 2))
       .style('cursor', (d: any) => (d.depth === 2 ? 'pointer' : 'default'))
@@ -110,7 +110,7 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
       .text((d: any) => `${d.data.name} (${d.children ? d.children.length : 0} mnemonics)`)
       .attr('font-size', '11px')
       .attr('font-weight', '700')
-      .attr('fill', '#94a3b8');
+      .attr('fill', '#a1a1aa');
 
     nodes.filter((d: any) => d.depth === 2)
       .append('text')
@@ -133,7 +133,7 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
         return boxW > 55 ? `${d.data.count}` : '';
       })
       .attr('font-size', '9px')
-      .attr('fill', '#e2e8f0');
+      .attr('fill', '#fecaca');
 
   }, [data, familyFilter]);
 
@@ -141,25 +141,25 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
         <div>
-          <h2 style={{ fontSize: '18px', fontWeight: 600, color: '#f8fafc', margin: 0 }}>
+          <h2 style={{ fontSize: '18px', fontWeight: 600, color: '#f4f4f5', margin: 0 }}>
             AMD RDNA2 (GFX10.3 / Scarlett) Shader Instruction Treemap
           </h2>
-          <p style={{ fontSize: '13px', color: '#94a3b8', margin: '4px 0 0 0' }}>
-            Visualizes instruction occurrences decoded across DXIL and ACCC/XPSF shader containers.
+          <p style={{ fontSize: '13px', color: '#71717a', margin: '4px 0 0 0' }}>
+            Visualizes instruction occurrences decoded across BVH and Scarlett ACO shader containers.
           </p>
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <label style={{ fontSize: '13px', color: '#94a3b8' }}>Filter ISA Family:</label>
+          <label style={{ fontSize: '13px', color: '#a1a1aa' }}>Filter ISA Family:</label>
           <select
             value={familyFilter}
             onChange={e => setFamilyFilter(e.target.value)}
             style={{
-              backgroundColor: '#1e293b',
-              color: '#f8fafc',
-              border: '1px solid #334155',
+              backgroundColor: '#121215',
+              color: '#f4f4f5',
+              border: '1px solid #27272a',
               padding: '6px 12px',
-              borderRadius: '6px',
+              borderRadius: '4px',
               fontSize: '13px'
             }}>
             <option value="all">All Families ({data.families.length} families)</option>
@@ -170,50 +170,45 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
         </div>
       </div>
 
-      <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', fontSize: '12px', color: '#cbd5e1' }}>
-        <span>Mnemonic variants: <strong>{data.summary.unique_mnemonic_variants ?? data.summary.unique_instructions}</strong></span>
-        <span>Family/opcode pairs: <strong>{data.summary.distinct_family_opcode_pairs ?? '—'}</strong></span>
-        <span>Semantic operations: <strong>{data.summary.distinct_semantic_operations ?? '—'}</strong></span>
-      </div>
-
       <div style={{
-        backgroundColor: '#0f172a',
-        borderRadius: '10px',
+        backgroundColor: '#0a0a0c',
+        borderRadius: '6px',
         padding: '16px',
-        border: '1px solid #1e293b'
+        border: '1px solid #1f1f24'
       }}>
         <svg ref={svgRef} />
       </div>
 
       {selectedInst && (
         <div style={{
-          backgroundColor: '#1e293b',
-          borderRadius: '8px',
+          backgroundColor: '#0a0a0c',
+          borderRadius: '6px',
           padding: '16px 20px',
-          border: '1px solid #334155',
+          border: '1px solid #1f1f24',
           display: 'flex',
           flexDirection: 'column',
           gap: '8px'
         }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <h3 style={{ fontSize: '16px', fontWeight: 600, color: '#f8fafc', margin: 0 }}>
+            <h3 style={{ fontSize: '16px', fontWeight: 600, color: '#f4f4f5', margin: 0 }}>
               <code>{selectedInst.mnemonic.mnemonic}</code>
             </h3>
             <span style={{
-              backgroundColor: '#0369a1',
-              color: '#e0f2fe',
-              padding: '3px 10px',
-              borderRadius: '9999px',
+              backgroundColor: '#2b070b',
+              color: '#f87171',
+              border: '1px solid #7f1d1d',
+              padding: '3px 8px',
+              borderRadius: '4px',
               fontSize: '11px',
               fontWeight: 600
             }}>
               Family: {selectedInst.family}
             </span>
           </div>
-          <div style={{ fontSize: '13px', color: '#94a3b8' }}>
-            Format: <strong style={{ color: '#e2e8f0' }}>{selectedInst.mnemonic.format}</strong> • Decoded Occurrences: <strong style={{ color: '#38bdf8' }}>{selectedInst.mnemonic.occurrences.toLocaleString()}</strong>
+          <div style={{ fontSize: '13px', color: '#71717a' }}>
+            Format: <strong style={{ color: '#d4d4d8' }}>{selectedInst.mnemonic.format}</strong> | Decoded Occurrences: <strong style={{ color: '#ef4444' }}>{selectedInst.mnemonic.occurrences.toLocaleString()}</strong>
           </div>
-          <p style={{ fontSize: '13px', color: '#cbd5e1', margin: '4px 0' }}>
+          <p style={{ fontSize: '13px', color: '#a1a1aa', margin: '4px 0' }}>
             {selectedInst.mnemonic.description}
           </p>
         </div>

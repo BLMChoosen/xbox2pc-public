@@ -56,11 +56,11 @@ export const ImplementationView: React.FC<ImplementationViewProps> = ({ data }) 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
       <div>
-        <h2 style={{ fontSize: '20px', fontWeight: 700, color: '#f8fafc', margin: 0 }}>
+        <h2 style={{ fontSize: '20px', fontWeight: 700, color: '#f4f4f5', margin: 0 }}>
           Implementation, Testing & Behavioral Validation Tracking
         </h2>
-        <p style={{ fontSize: '13px', color: '#94a3b8', margin: '4px 0 0 0' }}>
-          Audited lifecycle tracking. Strictly separates catalog discovery, functional implementation, automated testing, and behavioral validation.
+        <p style={{ fontSize: '13px', color: '#71717a', margin: '4px 0 0 0' }}>
+          Lifecycle tracking across discovered symbols, functional implementation, automated testing, and behavioral validation.
         </p>
       </div>
 
@@ -78,136 +78,41 @@ export const ImplementationView: React.FC<ImplementationViewProps> = ({ data }) 
 
         <div style={kpiBoxStyle}>
           <span style={kpiLabel}>Game-Required Targets</span>
-          <span style={{ ...kpiVal, color: '#ea580c' }}>{summary.game_required}</span>
+          <span style={{ ...kpiVal, color: '#ef4444' }}>{summary.game_required}</span>
           <span style={kpiSub}>Missing platform dependencies</span>
         </div>
 
         <div style={kpiBoxStyle}>
           <span style={kpiLabel}>Implemented Components</span>
-          <span style={{ ...kpiVal, color: '#4ade80' }}>{summary.implemented}</span>
-          <span style={kpiSub}>Functional (stubs excluded)</span>
+          <span style={{ ...kpiVal, color: '#f87171' }}>{summary.implemented}</span>
+          <span style={kpiSub}>Functional runtime code</span>
         </div>
 
         <div style={kpiBoxStyle}>
           <span style={kpiLabel}>Detected Stubs</span>
-          <span style={{ ...kpiVal, color: '#ca8a04' }}>{summary.stubs}</span>
+          <span style={{ ...kpiVal, color: '#dc2626' }}>{summary.stubs}</span>
           <span style={kpiSub}>Excluded from progress</span>
         </div>
 
         <div style={kpiBoxStyle}>
           <span style={kpiLabel}>Tested Components</span>
-          <span style={{ ...kpiVal, color: '#38bdf8' }}>{summary.tested}</span>
+          <span style={{ ...kpiVal, color: '#fca5a5' }}>{summary.tested}</span>
           <span style={kpiSub}>Passing automated tests</span>
         </div>
 
         <div style={kpiBoxStyle}>
-          <span style={kpiLabel}>Behaviorally Validated</span>
-          <span style={{ ...kpiVal, color: '#10b981' }}>{summary.validated}</span>
-          <span style={kpiSub}>Hardware golden traces</span>
-        </div>
-
-        <div style={kpiBoxStyle}>
-          <span style={kpiLabel}>Implemented Not Validated</span>
-          <span style={{ ...kpiVal, color: '#f59e0b' }}>{summary.implemented_not_validated}</span>
-          <span style={kpiSub}>Code exists, parity pending</span>
-        </div>
-
-        <div style={kpiBoxStyle}>
-          <span style={kpiLabel}>Flagged For Review</span>
-          <span style={{ ...kpiVal, color: summary.flagged_for_review > 0 ? '#f87171' : '#64748b' }}>
-            {summary.flagged_for_review}
-          </span>
-          <span style={kpiSub}>Git drift detected</span>
+          <span style={kpiLabel}>Hardware Validated</span>
+          <span style={{ ...kpiVal, color: '#b91c1c' }}>{summary.validated}</span>
+          <span style={kpiSub}>Behavioral trace parity</span>
         </div>
       </div>
 
-      {/* Discovery vs. Implementation Comparison Banner */}
+      {/* Filter Controls Bar */}
       <div style={{
-        backgroundColor: '#0f172a',
-        border: '1px solid #1e293b',
-        borderRadius: '10px',
-        padding: '20px',
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-        gap: '20px'
-      }}>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-          <h3 style={{ fontSize: '15px', fontWeight: 600, color: '#38bdf8', margin: 0 }}>
-            Catalog Discovery (99.97%) vs. Real Implementation (0.0%)
-          </h3>
-          <p style={{ fontSize: '13px', color: '#cbd5e1', lineHeight: 1.5, margin: 0 }}>
-            Having a complete catalog of function signatures and opcode encodings does <strong>not</strong> mean the components are implemented. Stubs are permanently quarantined as <code>Stub</code> and never contribute to implementation percentages.
-          </p>
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-          <h3 style={{ fontSize: '15px', fontWeight: 600, color: '#10b981', margin: 0 }}>
-            Unit Testing vs. Behavioral Validation
-          </h3>
-          <p style={{ fontSize: '13px', color: '#cbd5e1', lineHeight: 1.5, margin: 0 }}>
-            A passing unit test confirms that code executes without crashing, but does <strong>not</strong> prove behavioral parity against Xbox Series X|S Scarlett hardware. Behavioral validation requires separate golden trace proof.
-          </p>
-        </div>
-      </div>
-
-      {/* 8 Distinct Lifecycle States Guide */}
-      <div style={{
-        backgroundColor: '#0f172a',
-        border: '1px solid #1e293b',
-        borderRadius: '10px',
+        backgroundColor: '#0a0a0c',
+        border: '1px solid #1f1f24',
+        borderRadius: '6px',
         padding: '16px 20px',
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '12px'
-      }}>
-        <div style={{ fontSize: '14px', fontWeight: 700, color: '#f8fafc' }}>
-          8 Distinct Audited Lifecycle States
-        </div>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-          gap: '10px',
-          fontSize: '12px'
-        }}>
-          <div style={{ backgroundColor: '#1e293b', padding: '10px', borderRadius: '6px' }}>
-            <span style={{ color: '#94a3b8', fontWeight: 700 }}>1. Discovered</span>
-            <p style={{ margin: '4px 0 0 0', color: '#cbd5e1', fontSize: '11px' }}>Symbol/opcode identified in PE header or shader container.</p>
-          </div>
-          <div style={{ backgroundColor: '#1e293b', padding: '10px', borderRadius: '6px' }}>
-            <span style={{ color: '#38bdf8', fontWeight: 700 }}>2. Analyzed</span>
-            <p style={{ margin: '4px 0 0 0', color: '#cbd5e1', fontSize: '11px' }}>Calling convention, parameters, and ISA format mapped.</p>
-          </div>
-          <div style={{ backgroundColor: '#1e293b', padding: '10px', borderRadius: '6px' }}>
-            <span style={{ color: '#818cf8', fontWeight: 700 }}>3. Specified</span>
-            <p style={{ margin: '4px 0 0 0', color: '#cbd5e1', fontSize: '11px' }}>Formal translation specification & requirements documented.</p>
-          </div>
-          <div style={{ backgroundColor: '#1e293b', padding: '10px', borderRadius: '6px' }}>
-            <span style={{ color: '#ca8a04', fontWeight: 700 }}>4. Stub</span>
-            <p style={{ margin: '4px 0 0 0', color: '#cbd5e1', fontSize: '11px' }}>No-op / placeholder shim. Permanently excluded from progress.</p>
-          </div>
-          <div style={{ backgroundColor: '#1e293b', padding: '10px', borderRadius: '6px' }}>
-            <span style={{ color: '#fb923c', fontWeight: 700 }}>5. Partially Implemented</span>
-            <p style={{ margin: '4px 0 0 0', color: '#cbd5e1', fontSize: '11px' }}>Subset of operations or paths functional; incomplete ABI.</p>
-          </div>
-          <div style={{ backgroundColor: '#1e293b', padding: '10px', borderRadius: '6px' }}>
-            <span style={{ color: '#4ade80', fontWeight: 700 }}>6. Implemented</span>
-            <p style={{ margin: '4px 0 0 0', color: '#cbd5e1', fontSize: '11px' }}>Complete non-stub translation logic reviewed in repository.</p>
-          </div>
-          <div style={{ backgroundColor: '#1e293b', padding: '10px', borderRadius: '6px' }}>
-            <span style={{ color: '#38bdf8', fontWeight: 700 }}>7. Tested</span>
-            <p style={{ margin: '4px 0 0 0', color: '#cbd5e1', fontSize: '11px' }}>Automated unit test suite executes and passes in CI.</p>
-          </div>
-          <div style={{ backgroundColor: '#1e293b', padding: '10px', borderRadius: '6px' }}>
-            <span style={{ color: '#10b981', fontWeight: 700 }}>8. Behaviorally Validated</span>
-            <p style={{ margin: '4px 0 0 0', color: '#cbd5e1', fontSize: '11px' }}>Verified against real Scarlett hardware golden traces.</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Filter Bar */}
-      <div style={{
-        backgroundColor: '#1e293b',
-        padding: '16px',
-        borderRadius: '8px',
         display: 'flex',
         flexDirection: 'column',
         gap: '12px'
@@ -215,52 +120,20 @@ export const ImplementationView: React.FC<ImplementationViewProps> = ({ data }) 
         <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
           <input
             type="text"
-            placeholder="Search component name, ID, source file, or notes..."
+            placeholder="Search symbol name, component ID, file ref..."
             value={search}
             onChange={e => { setSearch(e.target.value); setPage(0); }}
             style={{
-              backgroundColor: '#0f172a',
-              border: '1px solid #334155',
-              color: '#f8fafc',
+              backgroundColor: '#121215',
+              border: '1px solid #27272a',
+              color: '#f4f4f5',
               padding: '8px 12px',
-              borderRadius: '6px',
+              borderRadius: '4px',
               fontSize: '13px',
               flexGrow: 1,
               minWidth: '220px'
             }}
           />
-
-          <select
-            value={selectedImplStatus}
-            onChange={e => { setSelectedImplStatus(e.target.value); setPage(0); }}
-            style={selectStyle}>
-            <option value="all">All Implementation Statuses</option>
-            <option value="Not implemented">Not implemented</option>
-            <option value="Stub">Stub</option>
-            <option value="Partial">Partial</option>
-            <option value="Implemented">Implemented</option>
-          </select>
-
-          <select
-            value={selectedTestStatus}
-            onChange={e => { setSelectedTestStatus(e.target.value); setPage(0); }}
-            style={selectStyle}>
-            <option value="all">All Testing Statuses</option>
-            <option value="Not tested">Not tested</option>
-            <option value="Running">Running</option>
-            <option value="Failed">Failed</option>
-            <option value="Passed">Passed</option>
-          </select>
-
-          <select
-            value={selectedValStatus}
-            onChange={e => { setSelectedValStatus(e.target.value); setPage(0); }}
-            style={selectStyle}>
-            <option value="all">All Validation Statuses</option>
-            <option value="Not validated">Not validated</option>
-            <option value="Partially validated">Partially validated</option>
-            <option value="Behaviorally validated">Behaviorally validated</option>
-          </select>
 
           <select
             value={selectedSubsystem}
@@ -271,48 +144,81 @@ export const ImplementationView: React.FC<ImplementationViewProps> = ({ data }) 
               <option key={s} value={s}>{s}</option>
             ))}
           </select>
+
+          <select
+            value={selectedImplStatus}
+            onChange={e => { setSelectedImplStatus(e.target.value); setPage(0); }}
+            style={selectStyle}>
+            <option value="all">All Impl States</option>
+            <option value="Implemented">Implemented</option>
+            <option value="Stub">Stub</option>
+            <option value="Partial">Partial</option>
+            <option value="Not implemented">Not implemented</option>
+          </select>
+
+          <select
+            value={selectedTestStatus}
+            onChange={e => { setSelectedTestStatus(e.target.value); setPage(0); }}
+            style={selectStyle}>
+            <option value="all">All Test States</option>
+            <option value="Passed">Passed</option>
+            <option value="Failed">Failed</option>
+            <option value="Running">Running</option>
+            <option value="Not tested">Not tested</option>
+          </select>
+
+          <select
+            value={selectedValStatus}
+            onChange={e => { setSelectedValStatus(e.target.value); setPage(0); }}
+            style={selectStyle}>
+            <option value="all">All Validation States</option>
+            <option value="Behaviorally validated">Behaviorally validated</option>
+            <option value="Partially validated">Partially validated</option>
+            <option value="Not validated">Not validated</option>
+          </select>
         </div>
 
-        {/* Quick Filter Checkboxes */}
-        <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', fontSize: '13px', color: '#cbd5e1' }}>
+        <div style={{ display: 'flex', gap: '18px', flexWrap: 'wrap', fontSize: '13px', color: '#a1a1aa' }}>
           <label style={{ display: 'flex', alignItems: 'center', gap: '6px', cursor: 'pointer' }}>
             <input
               type="checkbox"
               checked={onlyNotValidated}
               onChange={e => { setOnlyNotValidated(e.target.checked); setPage(0); }}
             />
-            Implemented But Not Validated
+            Implemented but Not Validated
           </label>
+
           <label style={{ display: 'flex', alignItems: 'center', gap: '6px', cursor: 'pointer' }}>
             <input
               type="checkbox"
               checked={onlyFlagged}
               onChange={e => { setOnlyFlagged(e.target.checked); setPage(0); }}
             />
-            Flagged for Review (Git Drift)
+            Flagged for Review
           </label>
+
           <label style={{ display: 'flex', alignItems: 'center', gap: '6px', cursor: 'pointer' }}>
             <input
               type="checkbox"
               checked={onlyStubs}
               onChange={e => { setOnlyStubs(e.target.checked); setPage(0); }}
             />
-            Detected Stubs Only
+            Detected Stubs
           </label>
         </div>
       </div>
 
-      {/* Results Table */}
+      {/* Main Table */}
       <div style={{
-        backgroundColor: '#0f172a',
-        borderRadius: '8px',
-        border: '1px solid #1e293b',
+        backgroundColor: '#0a0a0c',
+        borderRadius: '6px',
+        border: '1px solid #1f1f24',
         overflow: 'hidden'
       }}>
         <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '13px' }}>
           <thead>
-            <tr style={{ backgroundColor: '#1e293b', borderBottom: '1px solid #334155', color: '#94a3b8' }}>
-              <th style={{ padding: '10px 14px' }}>Component Name</th>
+            <tr style={{ backgroundColor: '#121215', borderBottom: '1px solid #1f1f24', color: '#71717a' }}>
+              <th style={{ padding: '10px 14px' }}>Symbol / Component</th>
               <th style={{ padding: '10px 14px' }}>Subsystem</th>
               <th style={{ padding: '10px 14px' }}>Implementation</th>
               <th style={{ padding: '10px 14px' }}>Testing</th>
@@ -325,25 +231,25 @@ export const ImplementationView: React.FC<ImplementationViewProps> = ({ data }) 
           <tbody>
             {displayed.length === 0 ? (
               <tr>
-                <td colSpan={8} style={{ padding: '30px', textAlign: 'center', color: '#64748b' }}>
+                <td colSpan={8} style={{ padding: '30px', textAlign: 'center', color: '#71717a' }}>
                   No implementation records match the current filters.
                 </td>
               </tr>
             ) : (
               displayed.map((item, idx) => (
                 <tr key={item.component_id} style={{
-                  borderBottom: '1px solid #1e293b',
-                  backgroundColor: idx % 2 === 0 ? 'transparent' : '#090e1a'
+                  borderBottom: '1px solid #1f1f24',
+                  backgroundColor: idx % 2 === 0 ? 'transparent' : '#08080a'
                 }}>
-                  <td style={{ padding: '10px 14px', color: '#f8fafc', fontWeight: 600, fontFamily: 'monospace' }}>
+                  <td style={{ padding: '10px 14px', color: '#f4f4f5', fontWeight: 600, fontFamily: 'monospace' }}>
                     {item.name}
                     {item.flagged_for_review && (
                       <span style={{ marginLeft: '6px', color: '#f87171', fontSize: '11px', fontWeight: 700 }}>
-                        ⚠️ Review
+                        [Review]
                       </span>
                     )}
                   </td>
-                  <td style={{ padding: '10px 14px', color: '#94a3b8' }}>
+                  <td style={{ padding: '10px 14px', color: '#a1a1aa' }}>
                     {item.subsystem}
                   </td>
                   <td style={{ padding: '10px 14px' }}>
@@ -361,25 +267,25 @@ export const ImplementationView: React.FC<ImplementationViewProps> = ({ data }) 
                       {item.validation_status}
                     </span>
                   </td>
-                  <td style={{ padding: '10px 14px', color: '#38bdf8', fontFamily: 'monospace', fontSize: '12px' }}>
+                  <td style={{ padding: '10px 14px', color: '#ef4444', fontFamily: 'monospace', fontSize: '12px' }}>
                     {item.source_file_ref}
                   </td>
-                  <td style={{ padding: '10px 14px', color: '#94a3b8', fontFamily: 'monospace', fontSize: '12px' }}>
-                    {item.git_commit_ref || '—'}
+                  <td style={{ padding: '10px 14px', color: '#71717a', fontFamily: 'monospace', fontSize: '12px' }}>
+                    {item.git_commit_ref || 'None'}
                   </td>
                   <td style={{ padding: '10px 14px' }}>
                     <button
                       onClick={() => setSelectedRecord(item)}
                       style={{
-                        backgroundColor: '#1e293b',
-                        border: '1px solid #334155',
-                        color: '#38bdf8',
+                        backgroundColor: '#121215',
+                        border: '1px solid #27272a',
+                        color: '#f87171',
                         padding: '4px 10px',
                         borderRadius: '4px',
                         cursor: 'pointer',
                         fontSize: '11px'
                       }}>
-                      Evidence
+                      Details
                     </button>
                   </td>
                 </tr>
@@ -389,8 +295,8 @@ export const ImplementationView: React.FC<ImplementationViewProps> = ({ data }) 
         </table>
       </div>
 
-      {/* Pagination */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '13px', color: '#94a3b8' }}>
+      {/* Pagination Controls */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '13px', color: '#71717a' }}>
         <span>
           Showing {displayed.length > 0 ? page * pageSize + 1 : 0} - {Math.min((page + 1) * pageSize, filtered.length)} of {filtered.length}
         </span>
@@ -413,7 +319,7 @@ export const ImplementationView: React.FC<ImplementationViewProps> = ({ data }) 
         </div>
       </div>
 
-      {/* Evidence Detail Modal / Drawer */}
+      {/* Detailed Modal/Drawer */}
       {selectedRecord && (
         <div style={{
           position: 'fixed',
@@ -421,7 +327,7 @@ export const ImplementationView: React.FC<ImplementationViewProps> = ({ data }) 
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundColor: 'rgba(0,0,0,0.7)',
+          backgroundColor: 'rgba(5, 5, 5, 0.85)',
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
@@ -429,39 +335,38 @@ export const ImplementationView: React.FC<ImplementationViewProps> = ({ data }) 
           padding: '20px'
         }}>
           <div style={{
-            backgroundColor: '#0f172a',
-            border: '1px solid #334155',
-            borderRadius: '12px',
-            maxWidth: '680px',
+            backgroundColor: '#0a0a0c',
+            border: '1px solid #1f1f24',
+            borderRadius: '6px',
+            maxWidth: '650px',
             width: '100%',
-            maxHeight: '90vh',
-            overflowY: 'auto',
             padding: '24px',
             display: 'flex',
             flexDirection: 'column',
-            gap: '16px'
+            gap: '16px',
+            maxHeight: '90vh',
+            overflowY: 'auto'
           }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
               <div>
-                <span style={{ fontSize: '11px', color: '#94a3b8', fontFamily: 'monospace' }}>
-                  {selectedRecord.component_id}
-                </span>
-                <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#f8fafc', margin: '4px 0 0 0' }}>
+                <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#f4f4f5', margin: 0, fontFamily: 'monospace' }}>
                   {selectedRecord.name}
                 </h3>
+                <div style={{ fontSize: '12px', color: '#71717a', marginTop: '2px' }}>
+                  ID: {selectedRecord.component_id}
+                </div>
               </div>
               <button
                 onClick={() => setSelectedRecord(null)}
                 style={{
-                  backgroundColor: '#1e293b',
+                  backgroundColor: 'transparent',
                   border: 'none',
-                  color: '#94a3b8',
-                  padding: '6px 12px',
-                  borderRadius: '6px',
+                  color: '#71717a',
+                  fontSize: '18px',
                   cursor: 'pointer',
-                  fontWeight: 600
+                  fontWeight: 700
                 }}>
-                Close
+                ✕
               </button>
             </div>
 
@@ -476,8 +381,8 @@ export const ImplementationView: React.FC<ImplementationViewProps> = ({ data }) 
                 Val: {selectedRecord.validation_status}
               </span>
               {selectedRecord.flagged_for_review && (
-                <span style={{ backgroundColor: '#450a0a', color: '#fca5a5', padding: '3px 10px', borderRadius: '9999px', fontSize: '11px', fontWeight: 700 }}>
-                  ⚠️ Flagged: {selectedRecord.review_reason}
+                <span style={{ backgroundColor: '#2b070b', color: '#f87171', border: '1px solid #7f1d1d', padding: '3px 8px', borderRadius: '4px', fontSize: '11px', fontWeight: 700 }}>
+                  Flagged: {selectedRecord.review_reason}
                 </span>
               )}
             </div>
@@ -489,7 +394,7 @@ export const ImplementationView: React.FC<ImplementationViewProps> = ({ data }) 
 
             <div style={detailRowStyle}>
               <span style={detailLabelStyle}>Source File Reference:</span>
-              <span style={{ ...detailValStyle, color: '#38bdf8', fontFamily: 'monospace' }}>
+              <span style={{ ...detailValStyle, color: '#ef4444', fontFamily: 'monospace' }}>
                 {selectedRecord.source_file_ref}
               </span>
             </div>
@@ -510,25 +415,25 @@ export const ImplementationView: React.FC<ImplementationViewProps> = ({ data }) 
 
             <div>
               <span style={detailLabelStyle}>Developer Notes & Justification:</span>
-              <p style={{ backgroundColor: '#1e293b', padding: '10px 14px', borderRadius: '6px', fontSize: '13px', color: '#cbd5e1', margin: '4px 0 0 0' }}>
+              <p style={{ backgroundColor: '#121215', padding: '10px 14px', borderRadius: '4px', fontSize: '13px', color: '#a1a1aa', margin: '4px 0 0 0', border: '1px solid #1f1f24' }}>
                 {selectedRecord.developer_notes || 'No developer notes provided.'}
               </p>
             </div>
 
             <div>
               <span style={detailLabelStyle}>Associated Tests:</span>
-              <div style={{ backgroundColor: '#1e293b', padding: '10px 14px', borderRadius: '6px', fontSize: '12px', color: '#cbd5e1', margin: '4px 0 0 0', display: 'flex', flexDirection: 'column', gap: '4px' }}>
+              <div style={{ backgroundColor: '#121215', padding: '10px 14px', borderRadius: '4px', fontSize: '12px', color: '#a1a1aa', margin: '4px 0 0 0', display: 'flex', flexDirection: 'column', gap: '4px', border: '1px solid #1f1f24' }}>
                 <div><strong>Summary:</strong> {selectedRecord.test_summary}</div>
                 {selectedRecord.test_identifiers.map(t => (
-                  <div key={t} style={{ fontFamily: 'monospace', color: '#38bdf8' }}>• {t}</div>
+                  <div key={t} style={{ fontFamily: 'monospace', color: '#ef4444' }}>• {t}</div>
                 ))}
               </div>
             </div>
 
             <div>
               <span style={detailLabelStyle}>Behavioral Hardware Parity Evidence:</span>
-              <p style={{ backgroundColor: '#1e293b', padding: '10px 14px', borderRadius: '6px', fontSize: '13px', color: selectedRecord.validation_evidence ? '#6ee7b7' : '#94a3b8', margin: '4px 0 0 0' }}>
-                {selectedRecord.validation_evidence || 'No behavioral hardware golden traces provided. Validation remains Not validated.'}
+              <p style={{ backgroundColor: '#121215', padding: '10px 14px', borderRadius: '4px', fontSize: '13px', color: selectedRecord.validation_evidence ? '#f87171' : '#71717a', margin: '4px 0 0 0', border: '1px solid #1f1f24' }}>
+                {selectedRecord.validation_evidence || 'No behavioral hardware traces recorded. Validation remains Not validated.'}
               </p>
             </div>
           </div>
@@ -539,9 +444,9 @@ export const ImplementationView: React.FC<ImplementationViewProps> = ({ data }) 
 };
 
 const kpiBoxStyle: React.CSSProperties = {
-  backgroundColor: '#1e293b',
-  border: '1px solid #334155',
-  borderRadius: '8px',
+  backgroundColor: '#0a0a0c',
+  border: '1px solid #1f1f24',
+  borderRadius: '6px',
   padding: '14px',
   display: 'flex',
   flexDirection: 'column',
@@ -550,7 +455,7 @@ const kpiBoxStyle: React.CSSProperties = {
 
 const kpiLabel: React.CSSProperties = {
   fontSize: '11px',
-  color: '#94a3b8',
+  color: '#71717a',
   textTransform: 'uppercase',
   fontWeight: 600
 };
@@ -558,68 +463,68 @@ const kpiLabel: React.CSSProperties = {
 const kpiVal: React.CSSProperties = {
   fontSize: '20px',
   fontWeight: 700,
-  color: '#f8fafc'
+  color: '#f4f4f5'
 };
 
 const kpiSub: React.CSSProperties = {
   fontSize: '10px',
-  color: '#64748b'
+  color: '#52525b'
 };
 
 const selectStyle: React.CSSProperties = {
-  backgroundColor: '#0f172a',
-  border: '1px solid #334155',
-  color: '#f8fafc',
+  backgroundColor: '#121215',
+  border: '1px solid #27272a',
+  color: '#f4f4f5',
   padding: '8px 12px',
-  borderRadius: '6px',
+  borderRadius: '4px',
   fontSize: '13px',
   minWidth: '160px'
 };
 
 const pageBtnStyle = (disabled: boolean): React.CSSProperties => ({
-  backgroundColor: disabled ? '#1e293b' : '#0284c7',
-  color: disabled ? '#64748b' : '#f8fafc',
-  border: 'none',
+  backgroundColor: disabled ? '#121215' : '#2b070b',
+  color: disabled ? '#52525b' : '#f87171',
+  border: disabled ? '1px solid #1f1f24' : '1px solid #7f1d1d',
   padding: '6px 14px',
-  borderRadius: '6px',
+  borderRadius: '4px',
   fontSize: '12px',
   fontWeight: 600,
   cursor: disabled ? 'not-allowed' : 'pointer'
 });
 
 const statusBadgeStyle = (status: string): React.CSSProperties => {
-  if (status === 'Implemented') return { backgroundColor: '#064e3b', color: '#6ee7b7', padding: '2px 8px', borderRadius: '9999px', fontSize: '11px', fontWeight: 600 };
-  if (status === 'Stub') return { backgroundColor: '#451a03', color: '#fde047', padding: '2px 8px', borderRadius: '9999px', fontSize: '11px', fontWeight: 600 };
-  if (status === 'Partial') return { backgroundColor: '#1e3a8a', color: '#93c5fd', padding: '2px 8px', borderRadius: '9999px', fontSize: '11px', fontWeight: 600 };
-  return { backgroundColor: '#334155', color: '#94a3b8', padding: '2px 8px', borderRadius: '9999px', fontSize: '11px', fontWeight: 600 };
+  if (status === 'Implemented') return { backgroundColor: '#160406', color: '#fca5a5', border: '1px solid #520810', padding: '2px 8px', borderRadius: '4px', fontSize: '11px', fontWeight: 600 };
+  if (status === 'Stub') return { backgroundColor: '#26080b', color: '#f87171', border: '1px solid #7f1d1d', padding: '2px 8px', borderRadius: '4px', fontSize: '11px', fontWeight: 600 };
+  if (status === 'Partial') return { backgroundColor: '#1f0709', color: '#f87171', border: '1px solid #520810', padding: '2px 8px', borderRadius: '4px', fontSize: '11px', fontWeight: 600 };
+  return { backgroundColor: '#121215', color: '#71717a', border: '1px solid #27272a', padding: '2px 8px', borderRadius: '4px', fontSize: '11px', fontWeight: 600 };
 };
 
 const testingBadgeStyle = (status: string): React.CSSProperties => {
-  if (status === 'Passed' || status === 'Tests passed') return { backgroundColor: '#064e3b', color: '#6ee7b7', padding: '2px 8px', borderRadius: '9999px', fontSize: '11px', fontWeight: 600 };
-  if (status === 'Failed' || status === 'Tests failed') return { backgroundColor: '#450a0a', color: '#fca5a5', padding: '2px 8px', borderRadius: '9999px', fontSize: '11px', fontWeight: 600 };
-  if (status === 'Running' || status === 'Tests running') return { backgroundColor: '#0369a1', color: '#bae6fd', padding: '2px 8px', borderRadius: '9999px', fontSize: '11px', fontWeight: 600 };
-  return { backgroundColor: '#1e293b', color: '#64748b', padding: '2px 8px', borderRadius: '9999px', fontSize: '11px', fontWeight: 600 };
+  if (status === 'Passed' || status === 'Tests passed') return { backgroundColor: '#160406', color: '#fca5a5', border: '1px solid #520810', padding: '2px 8px', borderRadius: '4px', fontSize: '11px', fontWeight: 600 };
+  if (status === 'Failed' || status === 'Tests failed') return { backgroundColor: '#3b080d', color: '#f87171', border: '1px solid #991b1b', padding: '2px 8px', borderRadius: '4px', fontSize: '11px', fontWeight: 600 };
+  if (status === 'Running' || status === 'Tests running') return { backgroundColor: '#1a0507', color: '#ef4444', border: '1px solid #7f1d1d', padding: '2px 8px', borderRadius: '4px', fontSize: '11px', fontWeight: 600 };
+  return { backgroundColor: '#121215', color: '#71717a', border: '1px solid #27272a', padding: '2px 8px', borderRadius: '4px', fontSize: '11px', fontWeight: 600 };
 };
 
 const valBadgeStyle = (status: string): React.CSSProperties => {
-  if (status === 'Behaviorally validated') return { backgroundColor: '#047857', color: '#a7f3d0', padding: '2px 8px', borderRadius: '9999px', fontSize: '11px', fontWeight: 600 };
-  if (status === 'Partially validated') return { backgroundColor: '#0284c7', color: '#e0f2fe', padding: '2px 8px', borderRadius: '9999px', fontSize: '11px', fontWeight: 600 };
-  return { backgroundColor: '#1e293b', color: '#64748b', padding: '2px 8px', borderRadius: '9999px', fontSize: '11px', fontWeight: 600 };
+  if (status === 'Behaviorally validated') return { backgroundColor: '#2b070b', color: '#f87171', border: '1px solid #7f1d1d', padding: '2px 8px', borderRadius: '4px', fontSize: '11px', fontWeight: 600 };
+  if (status === 'Partially validated') return { backgroundColor: '#1a0507', color: '#ef4444', border: '1px solid #7f1d1d', padding: '2px 8px', borderRadius: '4px', fontSize: '11px', fontWeight: 600 };
+  return { backgroundColor: '#121215', color: '#71717a', border: '1px solid #27272a', padding: '2px 8px', borderRadius: '4px', fontSize: '11px', fontWeight: 600 };
 };
 
 const detailRowStyle: React.CSSProperties = {
   display: 'flex',
   justifyContent: 'space-between',
   fontSize: '13px',
-  borderBottom: '1px solid #1e293b',
+  borderBottom: '1px solid #1f1f24',
   paddingBottom: '8px'
 };
 
 const detailLabelStyle: React.CSSProperties = {
-  color: '#94a3b8',
+  color: '#71717a',
   fontWeight: 600
 };
 
 const detailValStyle: React.CSSProperties = {
-  color: '#f8fafc'
+  color: '#f4f4f5'
 };

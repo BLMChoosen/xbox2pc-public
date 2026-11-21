@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { PublicCatalogData, PublicCatalogItem } from '../types';
+import { PublicCatalogData } from '../types';
 
 interface PublicCatalogTableProps {
   data: PublicCatalogData;
@@ -44,11 +44,11 @@ export const PublicCatalogTable: React.FC<PublicCatalogTableProps> = ({ data }) 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
       <div>
-        <h2 style={{ fontSize: '18px', fontWeight: 600, color: '#f8fafc', margin: 0 }}>
-          Approved Public Architecture & ISA Catalog ({filteredItems.length.toLocaleString()} items)
+        <h2 style={{ fontSize: '18px', fontWeight: 600, color: '#f4f4f5', margin: 0 }}>
+          Approved Architecture & ISA Catalog ({filteredItems.length.toLocaleString()} items)
         </h2>
-        <p style={{ fontSize: '13px', color: '#94a3b8', margin: '4px 0 0 0' }}>
-          Audited public index of discovered system libraries, decoded AMD RDNA2 GPU instructions, and Microsoft GDK platform references.
+        <p style={{ fontSize: '13px', color: '#71717a', margin: '4px 0 0 0' }}>
+          Index of discovered system libraries, decoded AMD RDNA2 GPU instructions, and Microsoft GDK platform references.
         </p>
       </div>
 
@@ -57,9 +57,10 @@ export const PublicCatalogTable: React.FC<PublicCatalogTableProps> = ({ data }) 
         display: 'flex',
         flexWrap: 'wrap',
         gap: '12px',
-        backgroundColor: '#1e293b',
+        backgroundColor: '#0a0a0c',
+        border: '1px solid #1f1f24',
         padding: '14px 16px',
-        borderRadius: '8px'
+        borderRadius: '6px'
       }}>
         <input
           type="text"
@@ -67,11 +68,11 @@ export const PublicCatalogTable: React.FC<PublicCatalogTableProps> = ({ data }) 
           value={search}
           onChange={e => { setSearch(e.target.value); setPage(0); }}
           style={{
-            backgroundColor: '#0f172a',
-            border: '1px solid #334155',
-            color: '#f8fafc',
+            backgroundColor: '#121215',
+            border: '1px solid #27272a',
+            color: '#f4f4f5',
             padding: '8px 12px',
-            borderRadius: '6px',
+            borderRadius: '4px',
             fontSize: '13px',
             flexGrow: 1,
             minWidth: '240px'
@@ -101,14 +102,14 @@ export const PublicCatalogTable: React.FC<PublicCatalogTableProps> = ({ data }) 
 
       {/* Results Table */}
       <div style={{
-        backgroundColor: '#0f172a',
-        borderRadius: '8px',
-        border: '1px solid #1e293b',
+        backgroundColor: '#0a0a0c',
+        borderRadius: '6px',
+        border: '1px solid #1f1f24',
         overflow: 'hidden'
       }}>
         <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '13px' }}>
           <thead>
-            <tr style={{ backgroundColor: '#1e293b', borderBottom: '1px solid #334155', color: '#94a3b8' }}>
+            <tr style={{ backgroundColor: '#121215', borderBottom: '1px solid #1f1f24', color: '#71717a' }}>
               <th style={{ padding: '10px 14px' }}>Name / Identifier</th>
               <th style={{ padding: '10px 14px' }}>Type</th>
               <th style={{ padding: '10px 14px' }}>Subsystem / Category</th>
@@ -119,39 +120,40 @@ export const PublicCatalogTable: React.FC<PublicCatalogTableProps> = ({ data }) 
           <tbody>
             {displayed.length === 0 ? (
               <tr>
-                <td colSpan={5} style={{ padding: '30px', textAlign: 'center', color: '#64748b' }}>
-                  No matching approved public components found.
+                <td colSpan={5} style={{ padding: '30px', textAlign: 'center', color: '#71717a' }}>
+                  No matching components found.
                 </td>
               </tr>
             ) : (
               displayed.map((item, idx) => (
                 <tr key={item.id} style={{
-                  borderBottom: '1px solid #1e293b',
-                  backgroundColor: idx % 2 === 0 ? 'transparent' : '#090e1a'
+                  borderBottom: '1px solid #1f1f24',
+                  backgroundColor: idx % 2 === 0 ? 'transparent' : '#08080a'
                 }}>
-                  <td style={{ padding: '10px 14px', fontFamily: 'monospace', color: '#f8fafc', fontWeight: 600 }}>
+                  <td style={{ padding: '10px 14px', fontFamily: 'monospace', color: '#f4f4f5', fontWeight: 600 }}>
                     {item.name}
                   </td>
-                  <td style={{ padding: '10px 14px', color: '#38bdf8' }}>
+                  <td style={{ padding: '10px 14px', color: '#ef4444' }}>
                     {item.type}
                   </td>
-                  <td style={{ padding: '10px 14px', color: '#cbd5e1' }}>
+                  <td style={{ padding: '10px 14px', color: '#d4d4d8' }}>
                     {item.subsystem}
-                    <div style={{ fontSize: '11px', color: '#64748b' }}>{item.category}</div>
+                    <div style={{ fontSize: '11px', color: '#71717a' }}>{item.category}</div>
                   </td>
                   <td style={{ padding: '10px 14px' }}>
                     <span style={{
-                      backgroundColor: item.status.includes('Missing') ? '#450a0a' : '#064e3b',
-                      color: item.status.includes('Missing') ? '#fca5a5' : '#6ee7b7',
+                      backgroundColor: item.status.includes('Missing') ? '#2b070b' : '#160406',
+                      color: item.status.includes('Missing') ? '#f87171' : '#fca5a5',
+                      border: item.status.includes('Missing') ? '1px solid #7f1d1d' : '1px solid #520810',
                       padding: '2px 8px',
-                      borderRadius: '9999px',
+                      borderRadius: '4px',
                       fontSize: '11px',
                       fontWeight: 600
                     }}>
                       {item.status}
                     </span>
                   </td>
-                  <td style={{ padding: '10px 14px', color: '#94a3b8', fontSize: '12px' }}>
+                  <td style={{ padding: '10px 14px', color: '#71717a', fontSize: '12px' }}>
                     {item.description}
                   </td>
                 </tr>
@@ -162,7 +164,7 @@ export const PublicCatalogTable: React.FC<PublicCatalogTableProps> = ({ data }) 
       </div>
 
       {/* Pagination Controls */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '13px', color: '#94a3b8' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '13px', color: '#71717a' }}>
         <span>
           Showing {displayed.length > 0 ? page * pageSize + 1 : 0} - {Math.min((page + 1) * pageSize, filteredItems.length)} of {filteredItems.length}
         </span>
@@ -189,21 +191,21 @@ export const PublicCatalogTable: React.FC<PublicCatalogTableProps> = ({ data }) 
 };
 
 const selectStyle: React.CSSProperties = {
-  backgroundColor: '#0f172a',
-  border: '1px solid #334155',
-  color: '#f8fafc',
+  backgroundColor: '#121215',
+  border: '1px solid #27272a',
+  color: '#f4f4f5',
   padding: '8px 12px',
-  borderRadius: '6px',
+  borderRadius: '4px',
   fontSize: '13px',
   minWidth: '180px'
 };
 
 const pageBtnStyle = (disabled: boolean): React.CSSProperties => ({
-  backgroundColor: disabled ? '#1e293b' : '#0284c7',
-  color: disabled ? '#64748b' : '#f8fafc',
-  border: 'none',
+  backgroundColor: disabled ? '#121215' : '#2b070b',
+  color: disabled ? '#52525b' : '#f87171',
+  border: disabled ? '1px solid #1f1f24' : '1px solid #7f1d1d',
   padding: '6px 14px',
-  borderRadius: '6px',
+  borderRadius: '4px',
   fontSize: '12px',
   fontWeight: 600,
   cursor: disabled ? 'not-allowed' : 'pointer'

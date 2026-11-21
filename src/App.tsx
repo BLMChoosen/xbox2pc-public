@@ -61,16 +61,16 @@ export const App: React.FC = () => {
     loadPublicData().then(setData).catch(error => setLoadError(error instanceof Error ? error.message : 'Could not load approved public data.'));
   }, []);
 
-  if (loadError) return <main role="alert" style={{ padding: '2rem', color: '#fecaca', backgroundColor: '#0b1329', minHeight: '100vh' }}>{loadError}</main>;
-  if (!data) return <main aria-busy="true" style={{ padding: '2rem', color: '#cbd5e1', backgroundColor: '#0b1329', minHeight: '100vh' }}>Loading approved public snapshot…</main>;
+  if (loadError) return <main role="alert" style={{ padding: '2rem', color: '#fca5a5', backgroundColor: '#050505', minHeight: '100vh' }}>{loadError}</main>;
+  if (!data) return <main aria-busy="true" style={{ padding: '2rem', color: '#a1a1aa', backgroundColor: '#050505', minHeight: '100vh' }}>Loading approved public snapshot…</main>;
   const { overview, coverage, libraryStats, shaderStats, dependencyStats, snapshotsIndex, catalog, implementationStats, auditStatus } = data;
 
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: '#0b1329', color: '#f8fafc' }}>
+    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: '#050505', color: '#f4f4f5' }}>
       {/* Top Navbar */}
       <header style={{
-        backgroundColor: '#0f172a',
-        borderBottom: '1px solid #1e293b',
+        backgroundColor: '#0a0a0c',
+        borderBottom: '1px solid #1f1f24',
         padding: '14px 28px',
         display: 'flex',
         justifyContent: 'space-between',
@@ -82,38 +82,42 @@ export const App: React.FC = () => {
           <div style={{
             width: '36px',
             height: '36px',
-            borderRadius: '8px',
-            backgroundColor: '#10b981',
+            borderRadius: '6px',
+            backgroundColor: '#1a0507',
+            border: '1px solid #7f1d1d',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             fontWeight: 800,
             fontSize: '18px',
-            color: '#022c22'
+            color: '#ef4444',
+            boxShadow: '0 0 12px rgba(239, 68, 68, 0.2)'
           }}>
             X
           </div>
           <div>
-            <h1 style={{ fontSize: '18px', fontWeight: 700, letterSpacing: '-0.02em', color: '#f8fafc', margin: 0 }}>
-              Xbox2PC — Public Discovery & Compatibility Dashboard
+            <h1 style={{ fontSize: '18px', fontWeight: 700, letterSpacing: '-0.02em', color: '#f4f4f5', margin: 0 }}>
+              Xbox2PC: Discovery & Compatibility Dashboard
             </h1>
-            <div style={{ fontSize: '12px', color: '#64748b' }}>
-              Target: Xbox Series X|S (Scarlett) • AMD Zen 2 (x86-64) • AMD RDNA2 (GFX10.3)
+            <div style={{ fontSize: '12px', color: '#71717a' }}>
+              Target: Xbox Series X|S (Scarlett) | AMD Zen 2 (x86-64) | AMD RDNA2 (GFX10.3)
             </div>
           </div>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '14px', fontSize: '12px', color: '#94a3b8' }}>
-          <span style={{ backgroundColor: '#1e293b', padding: '6px 12px', borderRadius: '6px', fontFamily: 'monospace' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '14px', fontSize: '12px', color: '#a1a1aa' }}>
+          <span style={{ backgroundColor: '#121215', border: '1px solid #27272a', padding: '6px 12px', borderRadius: '4px', fontFamily: 'monospace', color: '#d4d4d8' }}>
             Snapshot: {overview.public_snapshot_id}
           </span>
           <span style={{
-            backgroundColor: '#064e3b',
-            color: '#6ee7b7',
+            backgroundColor: '#2b070b',
+            color: '#f87171',
+            border: '1px solid #7f1d1d',
             padding: '4px 10px',
-            borderRadius: '9999px',
+            borderRadius: '4px',
             fontWeight: 600,
-            fontSize: '11px'
+            fontSize: '11px',
+            letterSpacing: '0.04em'
           }}>
             Discovery Phase Active
           </span>
@@ -122,8 +126,8 @@ export const App: React.FC = () => {
 
       {/* Navigation Sub-header */}
       <nav style={{
-        backgroundColor: '#0f172a',
-        borderBottom: '1px solid #1e293b',
+        backgroundColor: '#0a0a0c',
+        borderBottom: '1px solid #1f1f24',
         padding: '0 28px',
         display: 'flex',
         gap: '20px',
@@ -162,7 +166,7 @@ export const App: React.FC = () => {
         <button
           onClick={() => setActiveTab('impl')}
           style={tabButtonStyle(activeTab === 'impl')}>
-          Implementation & Tracking
+          Implementation Tracking
         </button>
         <button
           onClick={() => setActiveTab('transparency')}
@@ -193,22 +197,22 @@ export const App: React.FC = () => {
 
       {/* Footer */}
       <footer style={{
-        backgroundColor: '#0f172a',
-        borderTop: '1px solid #1e293b',
+        backgroundColor: '#0a0a0c',
+        borderTop: '1px solid #1f1f24',
         padding: '16px 28px',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
         fontSize: '12px',
-        color: '#64748b',
+        color: '#71717a',
         flexWrap: 'wrap',
         gap: '8px'
       }}>
         <div>
-          Xbox2PC Open Research Dashboard • Generated {new Date(overview.generated_at).toLocaleDateString()}
+          Xbox2PC Research Dashboard | Generated {new Date(overview.generated_at).toLocaleDateString()}
         </div>
         <div>
-          Independent empirical research. Zero proprietary game binaries or copyrighted assets are published.
+          Clean-room engineering research for 64-bit Windows. Zero proprietary game binaries or copyrighted assets are published.
         </div>
       </footer>
     </div>
@@ -218,8 +222,8 @@ export const App: React.FC = () => {
 const tabButtonStyle = (isActive: boolean): React.CSSProperties => ({
   backgroundColor: 'transparent',
   border: 'none',
-  borderBottom: isActive ? '2px solid #38bdf8' : '2px solid transparent',
-  color: isActive ? '#38bdf8' : '#94a3b8',
+  borderBottom: isActive ? '2px solid #ef4444' : '2px solid transparent',
+  color: isActive ? '#ef4444' : '#a1a1aa',
   fontWeight: isActive ? 600 : 500,
   fontSize: '13px',
   padding: '14px 4px',

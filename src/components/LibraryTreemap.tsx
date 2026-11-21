@@ -72,13 +72,13 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
     const getColor = (d: any) => {
       if (d.data.component) {
         const c: PublicLibraryItem = d.data.component;
-        if (c.name.endsWith('.exe')) return '#ea580c'; // Target Exe
-        if (!c.is_physical) return '#dc2626'; // Missing platform library
-        if (c.status === 'Implemented') return '#16a34a';
-        if (c.status === 'Stub') return '#ca8a04';
-        return '#2563eb'; // Analyzed Physical DLL
+        if (c.name.endsWith('.exe')) return '#ff2a4b'; // Target Exe
+        if (!c.is_physical) return '#b91c1c'; // Missing platform library
+        if (c.status === 'Implemented') return '#ef4444';
+        if (c.status === 'Stub') return '#9a3412';
+        return '#520810'; // Analyzed Physical DLL
       }
-      return '#334155'; // Subsystem parent header
+      return '#1a0507'; // Subsystem parent header
     };
 
     const nodes = svg.selectAll('g')
@@ -92,7 +92,7 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
       .attr('width', (d: any) => Math.max(0, d.x1 - d.x0))
       .attr('height', (d: any) => Math.max(0, d.y1 - d.y0))
       .attr('fill', (d: any) => getColor(d))
-      .attr('stroke', '#0f172a')
+      .attr('stroke', '#050505')
       .attr('stroke-width', (d: any) => (d.depth === 1 ? 2 : 1))
       .attr('rx', (d: any) => (d.depth === 2 ? 4 : 2))
       .style('cursor', (d: any) => (d.depth === 2 ? 'pointer' : 'default'))
@@ -110,7 +110,7 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
       .text((d: any) => `${d.data.name} (${d.children ? d.children.length : 0})`)
       .attr('font-size', '11px')
       .attr('font-weight', '700')
-      .attr('fill', '#94a3b8');
+      .attr('fill', '#a1a1aa');
 
     // Library Label (Depth 2)
     nodes.filter((d: any) => d.depth === 2)
@@ -119,49 +119,66 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
       .attr('y', 16)
       .text((d: any) => {
         const boxW = d.x1 - d.x0;
-        return boxW > 60 ? d.data.name : '';
+        const name = d.data.name;
+        if (boxW < 40) return '';
+        if (boxW < 80 && name.length > 8) return name.slice(0, 6) + '…';
+        return name;
       })
       .attr('font-size', '11px')
       .attr('font-weight', '600')
-      .attr('fill', '#f8fafc');
+      .attr('fill', '#f4f4f5')
+      .style('pointer-events', 'none');
 
+    // Symbol Count Sub-label (Depth 2)
     nodes.filter((d: any) => d.depth === 2)
       .append('text')
       .attr('x', 6)
       .attr('y', 30)
       .text((d: any) => {
+        const boxH = d.y1 - d.y0;
         const boxW = d.x1 - d.x0;
-        return boxW > 70 ? `${d.data.exportsCount} exports` : '';
+        if (boxH < 38 || boxW < 50) return '';
+        const exp = d.data.exportsCount;
+        return exp > 0 ? `${exp} sym` : '0 sym';
       })
       .attr('font-size', '10px')
-      .attr('fill', '#cbd5e1');
+      .attr('fill', '#fca5a5')
+      .style('pointer-events', 'none');
 
   }, [data, subsystemFilter]);
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
-        <div>
-          <h2 style={{ fontSize: '18px', fontWeight: 600, color: '#f8fafc', margin: 0 }}>
-            Xbox Platform & Middleware System Libraries Treemap
-          </h2>
-          <p style={{ fontSize: '13px', color: '#94a3b8', margin: '4px 0 0 0' }}>
-            Visualizes system subsystems and logical libraries. Sized by exported symbol counts.
-          </p>
-        </div>
+      <div>
+        <h2 style={{ fontSize: '18px', fontWeight: 600, color: '#f4f4f5', margin: 0 }}>
+          System Library Architecture Treemap ({data.libraries.length} Libraries)
+        </h2>
+        <p style={{ fontSize: '13px', color: '#71717a', margin: '4px 0 0 0' }}>
+          Visual volume mapping of discovered physical DLLs, target executables, and platform interfaces.
+        </p>
+      </div>
 
-        {/* Filter Subsystems */}
+      {/* Filter and Legend Bar */}
+      <div style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        flexWrap: 'wrap',
+        gap: '12px',
+        fontSize: '12px',
+        color: '#a1a1aa'
+      }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <label style={{ fontSize: '13px', color: '#94a3b8' }}>Filter Subsystem:</label>
+          <span>Filter Subsystem:</span>
           <select
             value={subsystemFilter}
             onChange={e => setSubsystemFilter(e.target.value)}
             style={{
-              backgroundColor: '#1e293b',
-              color: '#f8fafc',
-              border: '1px solid #334155',
+              backgroundColor: '#121215',
+              color: '#f4f4f5',
+              border: '1px solid #27272a',
               padding: '6px 12px',
-              borderRadius: '6px',
+              borderRadius: '4px',
               fontSize: '13px'
             }}>
             <option value="all">All Subsystems ({data.libraries.length} libs)</option>
@@ -170,30 +187,30 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
             ))}
           </select>
         </div>
-      </div>
 
-      {/* Legend */}
-      <div style={{ display: 'flex', gap: '16px', fontSize: '12px', color: '#cbd5e1', flexWrap: 'wrap' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-          <span style={{ width: '12px', height: '12px', backgroundColor: '#2563eb', borderRadius: '3px' }}></span>
-          Discovered Physical DLL
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-          <span style={{ width: '12px', height: '12px', backgroundColor: '#dc2626', borderRadius: '3px' }}></span>
-          Missing Platform Requirement
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-          <span style={{ width: '12px', height: '12px', backgroundColor: '#ea580c', borderRadius: '3px' }}></span>
-          Target Executable
+        {/* Treemap Color Legend */}
+        <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <span style={{ width: '12px', height: '12px', backgroundColor: '#520810', borderRadius: '3px' }}></span>
+            Analyzed Physical DLL
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <span style={{ width: '12px', height: '12px', backgroundColor: '#b91c1c', borderRadius: '3px' }}></span>
+            Missing Platform Requirement
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <span style={{ width: '12px', height: '12px', backgroundColor: '#ff2a4b', borderRadius: '3px' }}></span>
+            Target Executable
+          </div>
         </div>
       </div>
 
       {/* SVG Container */}
       <div style={{
-        backgroundColor: '#0f172a',
-        borderRadius: '10px',
+        backgroundColor: '#0a0a0c',
+        borderRadius: '6px',
         padding: '16px',
-        border: '1px solid #1e293b'
+        border: '1px solid #1f1f24'
       }}>
         <svg ref={svgRef} />
       </div>
@@ -201,38 +218,39 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
       {/* Selected Node Details Card */}
       {selectedNode && (
         <div style={{
-          backgroundColor: '#1e293b',
-          borderRadius: '8px',
+          backgroundColor: '#0a0a0c',
+          borderRadius: '6px',
           padding: '16px 20px',
-          border: '1px solid #334155',
+          border: '1px solid #1f1f24',
           display: 'flex',
           flexDirection: 'column',
           gap: '8px'
         }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <h3 style={{ fontSize: '16px', fontWeight: 600, color: '#f8fafc', margin: 0 }}>
+            <h3 style={{ fontSize: '16px', fontWeight: 600, color: '#f4f4f5', margin: 0 }}>
               {selectedNode.name}
             </h3>
             <span style={{
-              backgroundColor: selectedNode.is_physical ? '#064e3b' : '#450a0a',
-              color: selectedNode.is_physical ? '#6ee7b7' : '#fca5a5',
-              padding: '3px 10px',
-              borderRadius: '9999px',
+              backgroundColor: selectedNode.is_physical ? '#160406' : '#2b070b',
+              color: selectedNode.is_physical ? '#fca5a5' : '#f87171',
+              border: selectedNode.is_physical ? '1px solid #520810' : '1px solid #7f1d1d',
+              padding: '3px 8px',
+              borderRadius: '4px',
               fontSize: '11px',
               fontWeight: 600
             }}>
               {selectedNode.status}
             </span>
           </div>
-          <div style={{ fontSize: '13px', color: '#94a3b8' }}>
-            Subsystem: <strong style={{ color: '#e2e8f0' }}>{selectedNode.subsystem}</strong> • Category: <strong style={{ color: '#e2e8f0' }}>{selectedNode.category}</strong>
+          <div style={{ fontSize: '13px', color: '#71717a' }}>
+            Subsystem: <strong style={{ color: '#d4d4d8' }}>{selectedNode.subsystem}</strong> | Category: <strong style={{ color: '#d4d4d8' }}>{selectedNode.category}</strong>
           </div>
-          <p style={{ fontSize: '13px', color: '#cbd5e1', margin: '4px 0' }}>
+          <p style={{ fontSize: '13px', color: '#a1a1aa', margin: '4px 0' }}>
             {selectedNode.description}
           </p>
-          <div style={{ display: 'flex', gap: '20px', fontSize: '12px', color: '#94a3b8' }}>
-            <span>Exported Symbols: <strong style={{ color: '#38bdf8' }}>{selectedNode.exports_count.toLocaleString()}</strong></span>
-            <span>Import Dependencies: <strong style={{ color: '#38bdf8' }}>{selectedNode.imports_count.toLocaleString()}</strong></span>
+          <div style={{ display: 'flex', gap: '20px', fontSize: '12px', color: '#71717a' }}>
+            <span>Exported Symbols: <strong style={{ color: '#ef4444' }}>{selectedNode.exports_count.toLocaleString()}</strong></span>
+            <span>Import Dependencies: <strong style={{ color: '#ef4444' }}>{selectedNode.imports_count.toLocaleString()}</strong></span>
           </div>
         </div>
       )}

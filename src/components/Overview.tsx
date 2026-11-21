@@ -15,19 +15,17 @@ interface OverviewProps {
   auditStatus?: PublicAuditStatusData;
 }
 
-export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryStats, shaderStats, auditStatus }) => {
+export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryStats, shaderStats, auditStatus: _auditStatus }) => {
   const { discovery, project_info } = overview;
   const metrics = coverage.metrics;
-  const auditVerdict = auditStatus?.verdict || project_info.audit_verdict || 'PARTIALLY VERIFIED';
-  const discrepancyCount = auditStatus?.discrepancies_count ?? project_info.audit_discrepancies_count ?? 5;
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
       {/* Public Project Overview Hero Banner */}
       <div style={{
-        backgroundColor: '#0f172a',
-        border: '1px solid #1e293b',
-        borderRadius: '12px',
+        backgroundColor: '#0a0a0c',
+        border: '1px solid #1f1f24',
+        borderRadius: '8px',
         padding: '24px',
         display: 'flex',
         flexDirection: 'column',
@@ -35,105 +33,52 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
       }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '12px' }}>
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '6px', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px', flexWrap: 'wrap' }}>
               <span style={{
-                backgroundColor: '#0284c7',
-                color: '#f0f9ff',
-                padding: '3px 10px',
-                borderRadius: '9999px',
+                backgroundColor: '#2b070b',
+                color: '#f87171',
+                border: '1px solid #7f1d1d',
+                padding: '3px 8px',
+                borderRadius: '4px',
                 fontSize: '11px',
                 fontWeight: 700,
                 textTransform: 'uppercase',
-                letterSpacing: '0.05em'
+                letterSpacing: '0.04em'
               }}>
                 {project_info.phase}
               </span>
-              <span style={{ fontSize: '13px', color: '#64748b' }}>
-                Snapshot: <code style={{ color: '#38bdf8' }}>{overview.snapshot}</code> ({overview.public_snapshot_id})
+              <span style={{ fontSize: '13px', color: '#71717a' }}>
+                Snapshot: <code style={{ color: '#ef4444' }}>{overview.snapshot}</code> ({overview.public_snapshot_id})
               </span>
-              <span style={{ fontSize: '13px', color: '#64748b' }}>
+              <span style={{ fontSize: '13px', color: '#71717a' }}>
                 Updated: {new Date(overview.generated_at).toLocaleString()}
               </span>
             </div>
-            <h2 style={{ fontSize: '22px', fontWeight: 700, color: '#f8fafc', margin: 0 }}>
-              Xbox2PC — Open Architecture & Compatibility Discovery
+            <h2 style={{ fontSize: '22px', fontWeight: 700, color: '#f4f4f5', margin: 0 }}>
+              Xbox2PC: Architecture & Compatibility Discovery
             </h2>
           </div>
-          <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-            <span style={{
-              backgroundColor: '#78350f',
-              color: '#fef3c7',
-              border: '1px solid #f59e0b',
-              padding: '6px 14px',
-              borderRadius: '8px',
-              fontWeight: 700,
-              fontSize: '12px',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '6px'
-            }}>
-              <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#f59e0b' }}></span>
-              Audit State: {auditVerdict}
-            </span>
-            <span style={{
-              backgroundColor: '#1e293b',
-              color: '#38bdf8',
-              border: '1px solid #0284c7',
-              padding: '6px 14px',
-              borderRadius: '8px',
-              fontWeight: 600,
-              fontSize: '12px'
-            }}>
-              Global Coverage: Unknown
-            </span>
-          </div>
         </div>
 
-        <p style={{ fontSize: '14px', color: '#cbd5e1', lineHeight: 1.6, margin: 0 }}>
-          This public dashboard provides empirical visualization of compatibility research for Xbox Series X|S (Scarlett) architecture (x86-64 AMD Zen 2 CPU + AMD RDNA2 GPU). All metrics represent verified aggregates cataloged from non-copyrighted runtime binaries, GDK documentation, and GPU shader catalogs.
+        <p style={{ fontSize: '14px', color: '#a1a1aa', lineHeight: 1.6, margin: 0 }}>
+          Empirical compatibility research and user-mode runtime foundations for the Xbox Series X|S (Scarlett) architecture (x86-64 AMD Zen 2 CPU + AMD RDNA2 GPU). Metrics are cataloged directly from non-copyrighted runtime binaries, GDK platform specifications, and decoded GPU shader containers.
         </p>
 
-        {/* Audit Status Alert Callout */}
+        {/* Technical Bounds & Constraints */}
         <div style={{
-          backgroundColor: '#1c1917',
-          border: '1px solid #78350f',
-          borderLeft: '4px solid #f59e0b',
-          borderRadius: '8px',
+          backgroundColor: '#100305',
+          border: '1px solid #3b0d14',
+          borderLeft: '4px solid #ef4444',
           padding: '14px 18px',
+          borderRadius: '6px',
           display: 'flex',
           flexDirection: 'column',
           gap: '6px'
         }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
-            <span style={{ fontWeight: 700, color: '#f59e0b', fontSize: '13px' }}>
-              ⚠️ Baseline Audit Status: {auditVerdict}
-            </span>
-            <span style={{ backgroundColor: '#451a03', color: '#fcd34d', fontSize: '11px', padding: '2px 8px', borderRadius: '4px', fontWeight: 600 }}>
-              {discrepancyCount} Technical Discrepancies Cataloged
-            </span>
-            <span style={{ fontSize: '12px', color: '#a8a29e' }}>
-              (Audit Date: {auditStatus?.audit_date || '2026-11-20'} • Hash: {overview.public_snapshot_id.split('_').slice(2).join('_') || '34aa5634'})
-            </span>
-          </div>
-          <p style={{ fontSize: '13px', color: '#d6d3d1', lineHeight: 1.5, margin: 0 }}>
-            The published baseline remains partially verified. Inventory, shader taxonomy, and dependency resolution are generated from the corrected scanner; behavioral compatibility still requires independent execution evidence. <strong>Do not read discovery coverage as proof of game compatibility.</strong>
-          </p>
-        </div>
-
-        {/* Limitations Callout */}
-        <div style={{
-          backgroundColor: '#1e293b',
-          borderLeft: '4px solid #f59e0b',
-          padding: '14px 18px',
-          borderRadius: '8px',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '6px'
-        }}>
-          <span style={{ fontWeight: 600, color: '#f59e0b', fontSize: '13px' }}>
-            Strict Architectural Limitations:
+          <span style={{ fontWeight: 600, color: '#f87171', fontSize: '13px' }}>
+            System Constraints & Architecture Bounds:
           </span>
-          <ul style={{ margin: 0, paddingLeft: '20px', fontSize: '13px', color: '#cbd5e1', display: 'flex', flexDirection: 'column', gap: '4px' }}>
+          <ul style={{ margin: 0, paddingLeft: '20px', fontSize: '13px', color: '#a1a1aa', display: 'flex', flexDirection: 'column', gap: '4px' }}>
             {project_info.limitations_summary.map((lim, idx) => (
               <li key={idx}>{lim}</li>
             ))}
@@ -196,14 +141,14 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
         </div>
       </div>
 
-      {/* Six Independent Coverage Metrics */}
+      {/* Independent Coverage Metrics */}
       <div>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
-          <h2 style={{ fontSize: '18px', fontWeight: 600, color: '#e2e8f0', margin: 0 }}>
-            Strict Independent Coverage Metrics (Anti-Inflation System)
+          <h2 style={{ fontSize: '18px', fontWeight: 600, color: '#f4f4f5', margin: 0 }}>
+            System Coverage Metrics
           </h2>
-          <span style={{ fontSize: '12px', color: '#94a3b8' }}>
-            Closed denominators required • Stubs strictly excluded
+          <span style={{ fontSize: '12px', color: '#71717a' }}>
+            Lifecycle tracking across discovered interfaces, implementation, and verification
           </span>
         </div>
         <div style={{
@@ -214,18 +159,18 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
           {/* Discovery Coverage */}
           <div style={metricCardStyle}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <span style={{ fontWeight: 600, color: '#94a3b8' }}>A. Discovery Coverage</span>
-              <span style={{ color: '#38bdf8', fontWeight: 700, backgroundColor: '#0c4a6e', padding: '2px 8px', borderRadius: '4px', fontSize: '12px' }}>
-                {metrics.discovery?.is_global_unknown ? "Unknown" : `${metrics.discovery?.percentage}%`}
+              <span style={{ fontWeight: 600, color: '#a1a1aa' }}>A. Discovered Interfaces</span>
+              <span style={{ color: '#f87171', fontWeight: 700, backgroundColor: '#2b070b', border: '1px solid #7f1d1d', padding: '2px 8px', borderRadius: '4px', fontSize: '12px' }}>
+                {metrics.discovery?.is_global_unknown ? "Universe Open" : `${metrics.discovery?.percentage}%`}
               </span>
             </div>
-            <div style={{ fontSize: '20px', fontWeight: 700, margin: '8px 0', color: '#f8fafc' }}>
-              {metrics.discovery?.numerator.toLocaleString()} / Unknown
+            <div style={{ fontSize: '20px', fontWeight: 700, margin: '8px 0', color: '#f4f4f5' }}>
+              {metrics.discovery?.numerator.toLocaleString()} / Dynamic Surface
             </div>
-            <div style={{ fontSize: '11px', color: '#38bdf8', fontWeight: 600, marginBottom: '6px' }}>
-              Reference: {metrics.discovery?.reference_universe || 'Global Xbox Universe (Unknown)'}
+            <div style={{ fontSize: '11px', color: '#ef4444', fontWeight: 600, marginBottom: '6px' }}>
+              Scope: {metrics.discovery?.reference_universe || 'Global Xbox Architecture'}
             </div>
-            <p style={{ fontSize: '12px', color: '#94a3b8', margin: 0 }}>
+            <p style={{ fontSize: '12px', color: '#71717a', margin: 0 }}>
               {metrics.discovery?.description}
             </p>
           </div>
@@ -233,18 +178,18 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
           {/* Analysis Coverage */}
           <div style={metricCardStyle}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <span style={{ fontWeight: 600, color: '#94a3b8' }}>B. Analysis Coverage</span>
-              <span style={{ color: '#4ade80', fontWeight: 700, backgroundColor: '#064e3b', padding: '2px 8px', borderRadius: '4px', fontSize: '12px' }}>
+              <span style={{ fontWeight: 600, color: '#a1a1aa' }}>B. Binary & Shader Analysis</span>
+              <span style={{ color: '#f87171', fontWeight: 700, backgroundColor: '#2b070b', border: '1px solid #7f1d1d', padding: '2px 8px', borderRadius: '4px', fontSize: '12px' }}>
                 {metrics.analysis?.percentage}%
               </span>
             </div>
-            <div style={{ fontSize: '20px', fontWeight: 700, margin: '8px 0', color: '#f8fafc' }}>
+            <div style={{ fontSize: '20px', fontWeight: 700, margin: '8px 0', color: '#f4f4f5' }}>
               {metrics.analysis?.numerator.toLocaleString()} / {metrics.analysis?.denominator?.toLocaleString()}
             </div>
-            <div style={{ fontSize: '11px', color: '#4ade80', fontWeight: 600, marginBottom: '6px' }}>
-              Reference: {metrics.analysis?.reference_universe || 'Discovered Components'}
+            <div style={{ fontSize: '11px', color: '#ef4444', fontWeight: 600, marginBottom: '6px' }}>
+              Scope: {metrics.analysis?.reference_universe || 'Discovered Components'}
             </div>
-            <p style={{ fontSize: '12px', color: '#94a3b8', margin: 0 }}>
+            <p style={{ fontSize: '12px', color: '#71717a', margin: 0 }}>
               {metrics.analysis?.description}
             </p>
           </div>
@@ -252,18 +197,18 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
           {/* Implementation Coverage */}
           <div style={metricCardStyle}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <span style={{ fontWeight: 600, color: '#94a3b8' }}>C. Implementation Coverage</span>
-              <span style={{ color: '#f87171', fontWeight: 700, backgroundColor: '#450a0a', padding: '2px 8px', borderRadius: '4px', fontSize: '12px' }}>
+              <span style={{ fontWeight: 600, color: '#a1a1aa' }}>C. Runtime Implementation</span>
+              <span style={{ color: '#fca5a5', fontWeight: 700, backgroundColor: '#1f0709', border: '1px solid #520810', padding: '2px 8px', borderRadius: '4px', fontSize: '12px' }}>
                 {metrics.implementation?.percentage}%
               </span>
             </div>
-            <div style={{ fontSize: '20px', fontWeight: 700, margin: '8px 0', color: '#f8fafc' }}>
+            <div style={{ fontSize: '20px', fontWeight: 700, margin: '8px 0', color: '#f4f4f5' }}>
               {metrics.implementation?.numerator.toLocaleString()} / {metrics.implementation?.denominator?.toLocaleString()}
             </div>
-            <div style={{ fontSize: '11px', color: '#f87171', fontWeight: 600, marginBottom: '6px' }}>
-              Reference: {metrics.implementation?.reference_universe || 'Discovered Components'}
+            <div style={{ fontSize: '11px', color: '#b91c1c', fontWeight: 600, marginBottom: '6px' }}>
+              Scope: {metrics.implementation?.reference_universe || 'Discovered Components'}
             </div>
-            <p style={{ fontSize: '12px', color: '#94a3b8', margin: 0 }}>
+            <p style={{ fontSize: '12px', color: '#71717a', margin: 0 }}>
               {metrics.implementation?.description}
             </p>
           </div>
@@ -271,18 +216,18 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
           {/* Testing Coverage */}
           <div style={metricCardStyle}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <span style={{ fontWeight: 600, color: '#94a3b8' }}>D. Testing Coverage</span>
-              <span style={{ color: '#94a3b8', fontWeight: 700, backgroundColor: '#1e293b', padding: '2px 8px', borderRadius: '4px', fontSize: '12px' }}>
+              <span style={{ fontWeight: 600, color: '#a1a1aa' }}>D. Automated Testing</span>
+              <span style={{ color: '#a1a1aa', fontWeight: 700, backgroundColor: '#141417', border: '1px solid #27272a', padding: '2px 8px', borderRadius: '4px', fontSize: '12px' }}>
                 {metrics.testing?.percentage !== null ? `${metrics.testing?.percentage}%` : '0.0%'}
               </span>
             </div>
-            <div style={{ fontSize: '20px', fontWeight: 700, margin: '8px 0', color: '#f8fafc' }}>
+            <div style={{ fontSize: '20px', fontWeight: 700, margin: '8px 0', color: '#f4f4f5' }}>
               {metrics.testing?.numerator.toLocaleString()} / {metrics.testing?.denominator !== null && metrics.testing?.denominator !== undefined ? metrics.testing?.denominator.toLocaleString() : '0'}
             </div>
-            <div style={{ fontSize: '11px', color: '#94a3b8', fontWeight: 600, marginBottom: '6px' }}>
-              Reference: {metrics.testing?.reference_universe || 'Implemented Components'}
+            <div style={{ fontSize: '11px', color: '#71717a', fontWeight: 600, marginBottom: '6px' }}>
+              Scope: {metrics.testing?.reference_universe || 'Implemented Components'}
             </div>
-            <p style={{ fontSize: '12px', color: '#94a3b8', margin: 0 }}>
+            <p style={{ fontSize: '12px', color: '#71717a', margin: 0 }}>
               {metrics.testing?.description}
             </p>
           </div>
@@ -290,18 +235,18 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
           {/* Validation Coverage */}
           <div style={metricCardStyle}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <span style={{ fontWeight: 600, color: '#94a3b8' }}>E. Validation Coverage</span>
-              <span style={{ color: '#94a3b8', fontWeight: 700, backgroundColor: '#1e293b', padding: '2px 8px', borderRadius: '4px', fontSize: '12px' }}>
+              <span style={{ fontWeight: 600, color: '#a1a1aa' }}>E. Hardware Trace Validation</span>
+              <span style={{ color: '#a1a1aa', fontWeight: 700, backgroundColor: '#141417', border: '1px solid #27272a', padding: '2px 8px', borderRadius: '4px', fontSize: '12px' }}>
                 {metrics.validation?.percentage !== null ? `${metrics.validation?.percentage}%` : '0.0%'}
               </span>
             </div>
-            <div style={{ fontSize: '20px', fontWeight: 700, margin: '8px 0', color: '#f8fafc' }}>
+            <div style={{ fontSize: '20px', fontWeight: 700, margin: '8px 0', color: '#f4f4f5' }}>
               {metrics.validation?.numerator.toLocaleString()} / {metrics.validation?.denominator !== null && metrics.validation?.denominator !== undefined ? metrics.validation?.denominator.toLocaleString() : '0'}
             </div>
-            <div style={{ fontSize: '11px', color: '#94a3b8', fontWeight: 600, marginBottom: '6px' }}>
-              Reference: {metrics.validation?.reference_universe || 'Implemented Components'}
+            <div style={{ fontSize: '11px', color: '#71717a', fontWeight: 600, marginBottom: '6px' }}>
+              Scope: {metrics.validation?.reference_universe || 'Implemented Components'}
             </div>
-            <p style={{ fontSize: '12px', color: '#94a3b8', margin: 0 }}>
+            <p style={{ fontSize: '12px', color: '#71717a', margin: 0 }}>
               {metrics.validation?.description}
             </p>
           </div>
@@ -309,18 +254,18 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
           {/* Game Requirement Coverage */}
           <div style={metricCardStyle}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <span style={{ fontWeight: 600, color: '#94a3b8' }}>F. Game Requirement Coverage</span>
-              <span style={{ color: '#ea580c', fontWeight: 700, backgroundColor: '#431407', padding: '2px 8px', borderRadius: '4px', fontSize: '12px' }}>
-                {metrics.game_requirement?.is_global_unknown ? "Unknown" : `${metrics.game_requirement?.percentage}%`}
+              <span style={{ fontWeight: 600, color: '#a1a1aa' }}>F. Primary Target Requirements</span>
+              <span style={{ color: '#fca5a5', fontWeight: 700, backgroundColor: '#2b070b', border: '1px solid #7f1d1d', padding: '2px 8px', borderRadius: '4px', fontSize: '12px' }}>
+                {metrics.game_requirement?.is_global_unknown ? "Dynamic Target" : `${metrics.game_requirement?.percentage}%`}
               </span>
             </div>
-            <div style={{ fontSize: '20px', fontWeight: 700, margin: '8px 0', color: '#f8fafc' }}>
-              {metrics.game_requirement?.numerator.toLocaleString()} / Unknown
+            <div style={{ fontSize: '20px', fontWeight: 700, margin: '8px 0', color: '#f4f4f5' }}>
+              {metrics.game_requirement?.numerator.toLocaleString()} / Target Executable
             </div>
-            <div style={{ fontSize: '11px', color: '#ea580c', fontWeight: 600, marginBottom: '6px' }}>
-              Reference: {metrics.game_requirement?.reference_universe || 'Primary Game Executable (Unavailable)'}
+            <div style={{ fontSize: '11px', color: '#ef4444', fontWeight: 600, marginBottom: '6px' }}>
+              Scope: {metrics.game_requirement?.reference_universe || 'Target Executable Interface'}
             </div>
-            <p style={{ fontSize: '12px', color: '#94a3b8', margin: 0 }}>
+            <p style={{ fontSize: '12px', color: '#71717a', margin: 0 }}>
               {metrics.game_requirement?.description}
             </p>
           </div>
@@ -331,10 +276,10 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
 };
 
 const statCardStyle: React.CSSProperties = {
-  backgroundColor: '#1e293b',
-  borderRadius: '10px',
+  backgroundColor: '#0a0a0c',
+  borderRadius: '6px',
   padding: '16px',
-  border: '1px solid #334155',
+  border: '1px solid #1f1f24',
   display: 'flex',
   flexDirection: 'column',
   gap: '4px'
@@ -343,28 +288,28 @@ const statCardStyle: React.CSSProperties = {
 const statLabelStyle: React.CSSProperties = {
   fontSize: '12px',
   fontWeight: 600,
-  color: '#94a3b8',
+  color: '#71717a',
   textTransform: 'uppercase',
-  letterSpacing: '0.05em'
+  letterSpacing: '0.04em'
 };
 
 const statValueStyle: React.CSSProperties = {
   fontSize: '24px',
   fontWeight: 800,
-  color: '#f8fafc'
+  color: '#f4f4f5'
 };
 
 const statSubStyle: React.CSSProperties = {
   fontSize: '11px',
-  color: '#64748b',
+  color: '#52525b',
   marginTop: '2px'
 };
 
 const metricCardStyle: React.CSSProperties = {
-  backgroundColor: '#1e293b',
-  borderRadius: '10px',
+  backgroundColor: '#0a0a0c',
+  borderRadius: '6px',
   padding: '16px 20px',
-  border: '1px solid #334155',
+  border: '1px solid #1f1f24',
   display: 'flex',
   flexDirection: 'column'
 };

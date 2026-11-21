@@ -115,14 +115,14 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
                 letterSpacing: '0.06em',
                 textTransform: 'uppercase'
               }}>
-                Progresso Geral do Projeto
+                Overall Project Progress
               </span>
               <span style={{ fontSize: '13px', color: '#94a3b8' }}>
-                6 de 8 Marcos de Infraestrutura Concluídos
+                6 of 8 Foundation Milestones Completed
               </span>
             </div>
             <h2 style={{ fontSize: '24px', fontWeight: 800, color: '#f8fafc', margin: 0, letterSpacing: '-0.02em' }}>
-              Estimativa de Prontidão da Camada de Compatibilidade
+              Compatibility Layer Readiness Estimate
             </h2>
           </div>
 
@@ -135,7 +135,7 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
             padding: '8px 16px',
             borderRadius: '8px'
           }}>
-            <span style={{ fontSize: '13px', color: '#94a3b8', fontWeight: 600 }}>Esforço Global Estimado:</span>
+            <span style={{ fontSize: '13px', color: '#94a3b8', fontWeight: 600 }}>Estimated Global Effort to Boot:</span>
             <span style={{ fontSize: '26px', fontWeight: 900, color: '#38bdf8' }}>~65%</span>
           </div>
         </div>
@@ -168,10 +168,10 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
             </div>
             <div>
               <div style={{ fontSize: '16px', fontWeight: 700, color: '#f1f5f9' }}>
-                Infraestrutura do Runtime Pronta
+                Runtime Infrastructure Ready
               </div>
               <div style={{ fontSize: '12px', color: '#cbd5e1', marginTop: '4px' }}>
-                6 dos 8 marcos arquiteturais (M0 a M5) 100% finalizados e validados com 175 testes unitários.
+                6 of 8 foundational milestones (M0 through M5) verified and passing 100% of 175 automated tests.
               </div>
             </div>
           </div>
@@ -188,10 +188,10 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
             gap: '6px'
           }}>
             <span style={{ fontSize: '13px', fontWeight: 700, color: '#fbbf24', display: 'flex', alignItems: 'center', gap: '6px' }}>
-              💡 O que isso significa na prática?
+              💡 What does this mean in practice?
             </span>
             <p style={{ fontSize: '12px', color: '#94a3b8', margin: 0, lineHeight: 1.5 }}>
-              A engenharia de base mais difícil (carregador de memória em 64 KB, 7 núcleos de CPU e sistema de arquivos virtual D:\) já está funcionando perfeitamente. Faltam apenas o áudio e a ponte gráfica DirectX 12 para iniciar os testes com o executável!
+              The most challenging low-level engineering foundations (64 KB memory allocator, 7-core Zen 2 CPU topology virtualization, and virtual filesystem D:\) are fully operational. Only the audio subsystem and Direct3D 12 graphics bridge remain before initial title boot testing!
             </p>
           </div>
         </div>
@@ -199,8 +199,8 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
         {/* Visual Progress Bar */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', fontWeight: 600 }}>
-            <span style={{ color: '#34d399' }}>● M0 a M5: Fundação, Memória, Threads & VFS (Concluídos)</span>
-            <span style={{ color: '#94a3b8' }}>M6 (Áudio) + M7 (DirectX 12) + M8 (Executável)</span>
+            <span style={{ color: '#34d399' }}>● M0 to M5: Core Foundations, Memory, Threads & VFS (Completed)</span>
+            <span style={{ color: '#94a3b8' }}>M6 (Audio) + M7 (DirectX 12) + M8 (Executable Boot)</span>
           </div>
           <div style={{
             width: '100%',
@@ -228,13 +228,13 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
           marginTop: '4px'
         }}>
           {[
-            { tag: 'M0-M2', label: 'Engenharia Reversa', status: 'done', desc: '100%' },
-            { tag: 'M3', label: 'PE Loader Nativo', status: 'done', desc: '100%' },
-            { tag: 'M4', label: 'Memória 64KB & CPU', status: 'done', desc: '100%' },
-            { tag: 'M5', label: 'Ciclo de Vida & VFS', status: 'done', desc: '100%' },
-            { tag: 'M6', label: 'Áudio WASAPI', status: 'active', desc: 'Próximo' },
-            { tag: 'M7', label: 'DirectX 12 Agility', status: 'pending', desc: 'Pendente' },
-            { tag: 'M8', label: 'Boot do Executável', status: 'gated', desc: 'Com o .exe' },
+            { tag: 'M0-M2', label: 'Reverse Engineering', status: 'done', desc: '100%' },
+            { tag: 'M3', label: 'Native PE Loader', status: 'done', desc: '100%' },
+            { tag: 'M4', label: '64KB Memory & CPU', status: 'done', desc: '100%' },
+            { tag: 'M5', label: 'App Lifecycle & VFS', status: 'done', desc: '100%' },
+            { tag: 'M6', label: 'WASAPI Audio Bridge', status: 'active', desc: 'Next' },
+            { tag: 'M7', label: 'Direct3D 12 Agility', status: 'pending', desc: 'Pending' },
+            { tag: 'M8', label: 'Title Binary Boot', status: 'gated', desc: 'With .exe' },
           ].map((m, idx) => {
             const isDone = m.status === 'done';
             const isActive = m.status === 'active';

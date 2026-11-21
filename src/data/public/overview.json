@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "project": "Xbox2PC",
-  "snapshot": "0.1.0",
-  "public_snapshot_id": "pub_0.1.0_1216a566008f",
+  "snapshot": "0.2.0",
+  "public_snapshot_id": "pub_0.2.0_5c53fb3f3ddf",
   "generated_at": "2026-11-20T23:32:34.062918+00:00",
   "discovery": {
     "physical_binaries": 17,

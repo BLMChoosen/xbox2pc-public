@@ -105,16 +105,16 @@ export const App: React.FC = () => {
             Snapshot: {overview.public_snapshot_id}
           </span>
           <span style={{
-            backgroundColor: '#2b070b',
-            color: '#f87171',
-            border: '1px solid #7f1d1d',
+            backgroundColor: 'rgba(6, 78, 59, 0.4)',
+            color: '#34d399',
+            border: '1px solid #059669',
             padding: '4px 10px',
             borderRadius: '4px',
             fontWeight: 600,
             fontSize: '11px',
             letterSpacing: '0.04em'
           }}>
-            Discovery Phase Active
+            Runtime Active: M0–M7 Complete | M8 Gated (.exe)
           </span>
         </div>
       </header>

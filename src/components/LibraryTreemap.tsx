@@ -339,7 +339,7 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
                 cursor: 'pointer'
               }}
             >
-              AnyPS5 Module Grid
+              Scarlett Module Grid
             </button>
             <button
               onClick={() => setViewMode('treemap')}
@@ -360,7 +360,7 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
         </div>
       </div>
 
-      {/* VIEW 1: AnyPS5 Module Matrix (Red for Analyzed, Green for Implemented) */}
+      {/* VIEW 1: Scarlett Module Matrix (Red for Analyzed, Green for Implemented) */}
       {viewMode === 'matrix' && (
         <div style={{
           backgroundColor: '#0a0a0c',

@@ -142,9 +142,15 @@ export const PublicCatalogTable: React.FC<PublicCatalogTableProps> = ({ data }) 
                   </td>
                   <td style={{ padding: '10px 14px' }}>
                     <span style={{
-                      backgroundColor: item.status.includes('Missing') ? '#2b070b' : '#160406',
-                      color: item.status.includes('Missing') ? '#f87171' : '#fca5a5',
-                      border: item.status.includes('Missing') ? '1px solid #7f1d1d' : '1px solid #520810',
+                      backgroundColor: item.status === 'Implemented'
+                        ? '#14532d'
+                        : (item.status === 'Analyzed' ? '#2b070b' : '#18181b'),
+                      color: item.status === 'Implemented'
+                        ? '#4ade80'
+                        : (item.status === 'Analyzed' ? '#ef4444' : '#a1a1aa'),
+                      border: item.status === 'Implemented'
+                        ? '1px solid #16a34a'
+                        : (item.status === 'Analyzed' ? '1px solid #7f1d1d' : '1px solid #27272a'),
                       padding: '2px 8px',
                       borderRadius: '4px',
                       fontSize: '11px',

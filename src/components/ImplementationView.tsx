@@ -84,7 +84,7 @@ export const ImplementationView: React.FC<ImplementationViewProps> = ({ data }) 
 
         <div style={kpiBoxStyle}>
           <span style={kpiLabel}>Implemented Components</span>
-          <span style={{ ...kpiVal, color: '#f87171' }}>{summary.implemented}</span>
+          <span style={{ ...kpiVal, color: '#4ade80' }}>{summary.implemented}</span>
           <span style={kpiSub}>Functional runtime code</span>
         </div>
 
@@ -493,7 +493,7 @@ const pageBtnStyle = (disabled: boolean): React.CSSProperties => ({
 });
 
 const statusBadgeStyle = (status: string): React.CSSProperties => {
-  if (status === 'Implemented') return { backgroundColor: '#160406', color: '#fca5a5', border: '1px solid #520810', padding: '2px 8px', borderRadius: '4px', fontSize: '11px', fontWeight: 600 };
+  if (status === 'Implemented') return { backgroundColor: '#14532d', color: '#4ade80', border: '1px solid #16a34a', padding: '2px 8px', borderRadius: '4px', fontSize: '11px', fontWeight: 600 };
   if (status === 'Stub') return { backgroundColor: '#26080b', color: '#f87171', border: '1px solid #7f1d1d', padding: '2px 8px', borderRadius: '4px', fontSize: '11px', fontWeight: 600 };
   if (status === 'Partial') return { backgroundColor: '#1f0709', color: '#f87171', border: '1px solid #520810', padding: '2px 8px', borderRadius: '4px', fontSize: '11px', fontWeight: 600 };
   return { backgroundColor: '#121215', color: '#71717a', border: '1px solid #27272a', padding: '2px 8px', borderRadius: '4px', fontSize: '11px', fontWeight: 600 };

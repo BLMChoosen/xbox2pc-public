@@ -104,7 +104,7 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
       .text((d: any) => `${d.data.name} (${d.children ? d.children.length : 0})`)
       .attr('font-size', '11px')
       .attr('font-weight', '700')
-      .attr('fill', '#22c55e')
+      .attr('fill', '#a1a1aa')
       .style('cursor', 'pointer')
       .on('click', (_, d: any) => {
         setZoomedFamily(zoomedFamily === d.data.name ? null : d.data.name);
@@ -113,7 +113,6 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
     // Depth 2: Leaf instructions
     const leafNodes = nodes.filter((d: any) => d.depth === 2);
 
-    // Add unique clip-path for each leaf
     leafNodes.each(function(d: any, i: number) {
       const clipId = `clip-shader-${i}`;
       defs.append('clipPath')
@@ -130,13 +129,14 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
       .attr('fill', (d: any) => {
         const isMatch = !searchTerm || d.data.name.toLowerCase().includes(searchTerm.toLowerCase());
         const isSelected = selectedInst?.mnemonic.mnemonic === d.data.name;
-        if (isSelected) return '#4ade80';
+        if (isSelected) return '#ef4444';
         if (!isMatch) return '#1e293b';
-        return '#15803d'; // AnyPS5 Green
+        // Analyzed in RED, only implemented in GREEN
+        return '#991b1b'; // Red for analyzed instructions
       })
       .attr('stroke', (d: any) => {
         const isSelected = selectedInst?.mnemonic.mnemonic === d.data.name;
-        return isSelected ? '#ffffff' : '#050505';
+        return isSelected ? '#ffffff' : '#450a0a';
       })
       .attr('stroke-width', (d: any) => (selectedInst?.mnemonic.mnemonic === d.data.name ? 2 : 1))
       .attr('rx', 3)
@@ -165,17 +165,15 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
         }
       });
 
-    // Intelligent Text: Render ONLY if box is large enough to contain it without overflow
+    // Intelligent Text
     leafNodes.each(function(d: any, i: number) {
       const boxW = d.x1 - d.x0;
       const boxH = d.y1 - d.y0;
 
-      // Only render text if the box has sufficient space
       if (boxW >= 50 && boxH >= 24) {
         const g = d3.select(this);
         const clipId = `clip-shader-${i}`;
 
-        // Mnemonic name
         g.append('text')
           .attr('x', 4)
           .attr('y', 13)
@@ -186,7 +184,6 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
           .attr('fill', '#ffffff')
           .style('pointer-events', 'none');
 
-        // Occurrences count if height allows
         if (boxH >= 36) {
           g.append('text')
             .attr('x', 4)
@@ -194,7 +191,7 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
             .attr('clip-path', `url(#${clipId})`)
             .text(`${d.data.count.toLocaleString()}`)
             .attr('font-size', '8px')
-            .attr('fill', '#bbf7d0')
+            .attr('fill', '#fca5a5')
             .style('pointer-events', 'none');
         }
       }
@@ -204,7 +201,7 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-      {/* AnyPS5 Reference Header & Metrics Banner */}
+      {/* Header & Metrics Banner */}
       <div style={{
         backgroundColor: '#0a0a0c',
         border: '1px solid #1f1f24',
@@ -215,9 +212,9 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
               <span style={{
-                backgroundColor: '#14532d',
-                color: '#4ade80',
-                border: '1px solid #16a34a',
+                backgroundColor: '#2b070b',
+                color: '#ef4444',
+                border: '1px solid #7f1d1d',
                 padding: '2px 8px',
                 borderRadius: '4px',
                 fontSize: '11px',
@@ -226,7 +223,7 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
                 RDNA2 SHADER TAXONOMY
               </span>
               <span style={{ fontSize: '12px', color: '#71717a' }}>
-                Scarlett ACO / BVH / FSR Containers
+                Status: Analyzed in Red &bull; Implemented in Green
               </span>
             </div>
             <h2 style={{ fontSize: '18px', fontWeight: 700, color: '#f4f4f5', margin: 0 }}>
@@ -234,7 +231,7 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
             </h2>
           </div>
 
-          {/* AnyPS5 Style Stats Block */}
+          {/* Stats Block */}
           <div style={{
             backgroundColor: '#121215',
             border: '1px solid #27272a',
@@ -243,15 +240,15 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
             textAlign: 'right'
           }}>
             <div style={{ fontSize: '11px', color: '#a1a1aa' }}>
-              RDNA2 reference forms decoded: <strong style={{ color: '#22c55e' }}>100.0%</strong> ({totalMnemonics}/{totalMnemonics})
+              RDNA2 reference forms: <strong style={{ color: '#ef4444' }}>{totalMnemonics}</strong> analyzed (red) &bull; <strong style={{ color: '#22c55e' }}>0</strong> implemented (green)
             </div>
-            <div style={{ fontSize: '12px', fontWeight: 700, color: '#22c55e', fontFamily: 'monospace', marginTop: '2px' }}>
+            <div style={{ fontSize: '12px', fontWeight: 700, color: '#f87171', fontFamily: 'monospace', marginTop: '2px' }}>
               {totalDecoded.toLocaleString()} decoded occurrences
             </div>
           </div>
         </div>
 
-        {/* Controls Bar: Search, Family Filter, View Mode Toggle */}
+        {/* Controls Bar */}
         <div style={{
           display: 'flex',
           justifyContent: 'space-between',
@@ -315,14 +312,14 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
             )}
           </div>
 
-          {/* Mode Switcher: AnyPS5 Matrix vs Treemap */}
+          {/* Mode Switcher */}
           <div style={{ display: 'flex', gap: '4px', backgroundColor: '#141417', padding: '3px', borderRadius: '4px', border: '1px solid #27272a' }}>
             <button
               onClick={() => setViewMode('matrix')}
               style={{
-                backgroundColor: viewMode === 'matrix' ? '#15803d' : 'transparent',
-                color: viewMode === 'matrix' ? '#ffffff' : '#a1a1aa',
-                border: 'none',
+                backgroundColor: viewMode === 'matrix' ? '#2b070b' : 'transparent',
+                color: viewMode === 'matrix' ? '#ef4444' : '#a1a1aa',
+                border: viewMode === 'matrix' ? '1px solid #7f1d1d' : 'none',
                 padding: '5px 12px',
                 borderRadius: '3px',
                 fontSize: '11px',
@@ -335,9 +332,9 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
             <button
               onClick={() => setViewMode('treemap')}
               style={{
-                backgroundColor: viewMode === 'treemap' ? '#15803d' : 'transparent',
-                color: viewMode === 'treemap' ? '#ffffff' : '#a1a1aa',
-                border: 'none',
+                backgroundColor: viewMode === 'treemap' ? '#2b070b' : 'transparent',
+                color: viewMode === 'treemap' ? '#ef4444' : '#a1a1aa',
+                border: viewMode === 'treemap' ? '1px solid #7f1d1d' : 'none',
                 padding: '5px 12px',
                 borderRadius: '3px',
                 fontSize: '11px',
@@ -351,7 +348,7 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
         </div>
       </div>
 
-      {/* VIEW 1: AnyPS5 Matrix View (Grid of Green & Gray Squares) */}
+      {/* VIEW 1: AnyPS5 Matrix View (Red for Analyzed, Green for Implemented) */}
       {viewMode === 'matrix' && (
         <div style={{
           backgroundColor: '#0a0a0c',
@@ -379,12 +376,12 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
                 <span style={{ fontSize: '13px', fontWeight: 700, color: '#f4f4f5', fontFamily: 'monospace' }}>
                   {fam.family}
                 </span>
-                <span style={{ fontSize: '11px', color: '#22c55e', fontWeight: 600 }}>
+                <span style={{ fontSize: '11px', color: '#ef4444', fontWeight: 600 }}>
                   {fam.mnemonics.length} mnemonics
                 </span>
               </div>
 
-              {/* Grid of tiles (AnyPS5 Style) */}
+              {/* Grid of tiles (Red for Analyzed) */}
               <div style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fill, minmax(22px, 1fr))',
@@ -402,25 +399,25 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
                   return (
                     <div
                       key={m.mnemonic}
-                      title={`${m.mnemonic} (${m.occurrences.toLocaleString()} occurrences)`}
+                      title={`${m.mnemonic} (${m.occurrences.toLocaleString()} occurrences • Analyzed)`}
                       onClick={() => setSelectedInst({ mnemonic: m, family: fam.family })}
                       style={{
                         aspectRatio: '1',
                         borderRadius: '3px',
                         backgroundColor: isSelected
-                          ? '#4ade80'
+                          ? '#ef4444'
                           : isMatch
-                            ? (isDecoded ? '#22c55e' : '#334155')
+                            ? (isDecoded ? '#dc2626' : '#334155')
                             : '#1f2937',
                         border: isSelected
                           ? '1px solid #ffffff'
                           : isMatch
-                            ? '1px solid #16a34a'
-                            : '1px solid #374151',
+                            ? (isDecoded ? '1px solid #7f1d1d' : '1px solid #374151')
+                            : '1px solid #27272a',
                         opacity: isMatch ? 1 : 0.25,
                         cursor: 'pointer',
                         transition: 'transform 0.1s ease, background-color 0.1s ease',
-                        boxShadow: isSelected ? '0 0 8px rgba(74, 222, 128, 0.6)' : 'none'
+                        boxShadow: isSelected ? '0 0 8px rgba(239, 68, 68, 0.6)' : 'none'
                       }}
                       onMouseEnter={e => {
                         (e.currentTarget as HTMLElement).style.transform = 'scale(1.25)';
@@ -444,7 +441,7 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
         </div>
       )}
 
-      {/* VIEW 2: D3 Hierarchical Treemap with Clamping & Sizing Fixes */}
+      {/* VIEW 2: D3 Hierarchical Treemap */}
       {viewMode === 'treemap' && (
         <div style={{
           backgroundColor: '#0a0a0c',
@@ -464,7 +461,7 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
           left: Math.min(hoveredInst.x + 12, window.innerWidth - 240),
           top: hoveredInst.y + 12,
           backgroundColor: '#0a0a0c',
-          border: '1px solid #22c55e',
+          border: '1px solid #ef4444',
           borderRadius: '4px',
           padding: '8px 12px',
           zIndex: 9999,
@@ -474,8 +471,8 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
           <div style={{ fontWeight: 700, color: '#f4f4f5', fontFamily: 'monospace', fontSize: '12px' }}>
             {hoveredInst.mnemonic.mnemonic}
           </div>
-          <div style={{ fontSize: '11px', color: '#22c55e', marginTop: '2px' }}>
-            Family: {hoveredInst.family} | {hoveredInst.mnemonic.occurrences.toLocaleString()} ops
+          <div style={{ fontSize: '11px', color: '#ef4444', marginTop: '2px' }}>
+            Status: Analyzed &bull; {hoveredInst.mnemonic.occurrences.toLocaleString()} ops
           </div>
         </div>
       )}
@@ -486,7 +483,7 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
           backgroundColor: '#0a0a0c',
           borderRadius: '8px',
           padding: '16px 20px',
-          border: '1px solid #16a34a',
+          border: '1px solid #7f1d1d',
           display: 'flex',
           flexDirection: 'column',
           gap: '8px'
@@ -494,15 +491,15 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
               <span style={{
-                backgroundColor: '#14532d',
-                color: '#4ade80',
-                border: '1px solid #16a34a',
+                backgroundColor: '#2b070b',
+                color: '#ef4444',
+                border: '1px solid #7f1d1d',
                 padding: '2px 8px',
                 borderRadius: '4px',
                 fontSize: '11px',
                 fontWeight: 700
               }}>
-                SELECTED INSTRUCTION
+                ANALYZED INSTRUCTION
               </span>
               <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#f4f4f5', margin: 0, fontFamily: 'monospace' }}>
                 {selectedInst.mnemonic.mnemonic}
@@ -525,7 +522,7 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '12px', fontSize: '12px', marginTop: '4px' }}>
             <div>
               <span style={{ color: '#71717a' }}>ISA Family:</span>
-              <div style={{ fontWeight: 600, color: '#22c55e' }}>{selectedInst.family}</div>
+              <div style={{ fontWeight: 600, color: '#ef4444' }}>{selectedInst.family}</div>
             </div>
             <div>
               <span style={{ color: '#71717a' }}>Instruction Format:</span>
@@ -533,13 +530,13 @@ export const ShaderTreemap: React.FC<ShaderTreemapProps> = ({ data, filterFamily
             </div>
             <div>
               <span style={{ color: '#71717a' }}>Decoded Occurrences:</span>
-              <div style={{ fontWeight: 700, color: '#4ade80', fontFamily: 'monospace' }}>
+              <div style={{ fontWeight: 700, color: '#ef4444', fontFamily: 'monospace' }}>
                 {selectedInst.mnemonic.occurrences.toLocaleString()}
               </div>
             </div>
             <div>
-              <span style={{ color: '#71717a' }}>Container Status:</span>
-              <div style={{ fontWeight: 600, color: '#a1a1aa' }}>Decoded in ACO/BVH</div>
+              <span style={{ color: '#71717a' }}>Resolution Status:</span>
+              <div style={{ fontWeight: 600, color: '#ef4444' }}>Analyzed (Decoded in ACO/BVH)</div>
             </div>
           </div>
 

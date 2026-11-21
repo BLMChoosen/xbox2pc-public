@@ -64,7 +64,6 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
           name: lib.name,
           subsystem: sub,
           exportsCount: lib.exports_count,
-          // Using square root scaling to balance large libraries (msvcp140) with smaller ones
           value: Math.sqrt(Math.max(lib.exports_count, 1)) + 6,
           component: lib
         }))
@@ -117,7 +116,7 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
       .text((d: any) => `${d.data.name} (${d.children ? d.children.length : 0})`)
       .attr('font-size', '11px')
       .attr('font-weight', '700')
-      .attr('fill', '#22c55e')
+      .attr('fill', '#a1a1aa')
       .style('cursor', 'pointer')
       .on('click', (_, d: any) => {
         setZoomedSubsystem(zoomedSubsystem === d.data.name ? null : d.data.name);
@@ -126,7 +125,6 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
     // Depth 2: Library leaves
     const leafNodes = nodes.filter((d: any) => d.depth === 2);
 
-    // Add unique clip-path for each leaf
     leafNodes.each(function(d: any, i: number) {
       const clipId = `clip-lib-${i}`;
       defs.append('clipPath')
@@ -143,16 +141,18 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
       .attr('fill', (d: any) => {
         const c: PublicLibraryItem = d.data.component;
         const isSelected = selectedNode?.name === c.name;
-        if (isSelected) return '#4ade80';
-        if (!c.is_physical) return '#27272a'; // Gray for missing exe
-        return '#15803d'; // AnyPS5 Green for physical DLLs
+        if (isSelected) return c.status === 'Implemented' ? '#4ade80' : '#ef4444';
+        if (c.status === 'Implemented') return '#15803d'; // Green for implemented
+        if (c.status === 'Analyzed') return '#991b1b'; // Red for analyzed
+        return '#27272a'; // Gray for missing requirement
       })
       .attr('stroke', (d: any) => {
         const c: PublicLibraryItem = d.data.component;
         const isSelected = selectedNode?.name === c.name;
         if (isSelected) return '#ffffff';
-        if (!c.is_physical) return '#7f1d1d';
-        return '#16a34a';
+        if (c.status === 'Implemented') return '#22c55e';
+        if (c.status === 'Analyzed') return '#7f1d1d';
+        return '#3f3f46';
       })
       .attr('stroke-width', (d: any) => (selectedNode?.name === d.data.name ? 2 : 1))
       .attr('rx', 3)
@@ -173,12 +173,11 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
         }
       });
 
-    // Intelligent Text: Render strictly inside clip path without overflow
+    // Intelligent Text
     leafNodes.each(function(d: any, i: number) {
       const boxW = d.x1 - d.x0;
       const boxH = d.y1 - d.y0;
 
-      // Only render text if box is large enough
       if (boxW >= 55 && boxH >= 24) {
         const g = d3.select(this);
         const clipId = `clip-lib-${i}`;
@@ -200,7 +199,7 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
             .attr('clip-path', `url(#${clipId})`)
             .text(`${d.data.exportsCount} exports`)
             .attr('font-size', '8px')
-            .attr('fill', '#bbf7d0')
+            .attr('fill', d.data.component.status === 'Implemented' ? '#bbf7d0' : '#fca5a5')
             .style('pointer-events', 'none');
         }
       }
@@ -208,12 +207,13 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
 
   }, [filteredLibraries, viewMode, selectedNode, zoomedSubsystem]);
 
-  const physicalCount = data.libraries.filter(l => l.is_physical).length;
-  const missingCount = data.libraries.filter(l => !l.is_physical).length;
+  const implementedCount = data.libraries.filter(l => l.status === 'Implemented').length;
+  const analyzedCount = data.libraries.filter(l => l.status === 'Analyzed').length;
+  const missingCount = data.libraries.filter(l => !l.is_physical || l.status.includes('Missing')).length;
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-      {/* AnyPS5 Reference Header & Metrics Banner */}
+      {/* Metrics Banner */}
       <div style={{
         backgroundColor: '#0a0a0c',
         border: '1px solid #1f1f24',
@@ -224,9 +224,9 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
               <span style={{
-                backgroundColor: '#14532d',
-                color: '#4ade80',
-                border: '1px solid #16a34a',
+                backgroundColor: '#2b070b',
+                color: '#ef4444',
+                border: '1px solid #7f1d1d',
                 padding: '2px 8px',
                 borderRadius: '4px',
                 fontSize: '11px',
@@ -235,7 +235,7 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
                 MODULE TAXONOMY
               </span>
               <span style={{ fontSize: '12px', color: '#71717a' }}>
-                17 Authenticated Physical DLLs • 1 Missing Requirement
+                Status: Analyzed in Red &bull; Implemented in Green
               </span>
             </div>
             <h2 style={{ fontSize: '18px', fontWeight: 700, color: '#f4f4f5', margin: 0 }}>
@@ -243,7 +243,7 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
             </h2>
           </div>
 
-          {/* AnyPS5 Style Stats Block */}
+          {/* Stats Indicators Block */}
           <div style={{
             backgroundColor: '#121215',
             border: '1px solid #27272a',
@@ -252,15 +252,15 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
             textAlign: 'right'
           }}>
             <div style={{ fontSize: '11px', color: '#a1a1aa' }}>
-              Target modules analyzed: <strong style={{ color: '#22c55e' }}>{physicalCount}</strong> physical / <strong style={{ color: '#f87171' }}>{missingCount}</strong> missing
+              Modules: <strong style={{ color: '#ef4444' }}>{analyzedCount}</strong> analyzed (red) &bull; <strong style={{ color: '#22c55e' }}>{implementedCount}</strong> implemented (green)
             </div>
-            <div style={{ fontSize: '12px', fontWeight: 700, color: '#22c55e', fontFamily: 'monospace', marginTop: '2px' }}>
-              6 Subsystem Domains Mapped
+            <div style={{ fontSize: '12px', fontWeight: 700, color: '#71717a', fontFamily: 'monospace', marginTop: '2px' }}>
+              {missingCount} missing requirements (gray)
             </div>
           </div>
         </div>
 
-        {/* Controls Bar: Search, Subsystem Filter, View Mode Toggle */}
+        {/* Controls Bar */}
         <div style={{
           display: 'flex',
           justifyContent: 'space-between',
@@ -324,14 +324,14 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
             )}
           </div>
 
-          {/* Mode Switcher: AnyPS5 Matrix vs Treemap */}
+          {/* Mode Switcher */}
           <div style={{ display: 'flex', gap: '4px', backgroundColor: '#141417', padding: '3px', borderRadius: '4px', border: '1px solid #27272a' }}>
             <button
               onClick={() => setViewMode('matrix')}
               style={{
-                backgroundColor: viewMode === 'matrix' ? '#15803d' : 'transparent',
-                color: viewMode === 'matrix' ? '#ffffff' : '#a1a1aa',
-                border: 'none',
+                backgroundColor: viewMode === 'matrix' ? '#2b070b' : 'transparent',
+                color: viewMode === 'matrix' ? '#ef4444' : '#a1a1aa',
+                border: viewMode === 'matrix' ? '1px solid #7f1d1d' : 'none',
                 padding: '5px 12px',
                 borderRadius: '3px',
                 fontSize: '11px',
@@ -344,9 +344,9 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
             <button
               onClick={() => setViewMode('treemap')}
               style={{
-                backgroundColor: viewMode === 'treemap' ? '#15803d' : 'transparent',
-                color: viewMode === 'treemap' ? '#ffffff' : '#a1a1aa',
-                border: 'none',
+                backgroundColor: viewMode === 'treemap' ? '#2b070b' : 'transparent',
+                color: viewMode === 'treemap' ? '#ef4444' : '#a1a1aa',
+                border: viewMode === 'treemap' ? '1px solid #7f1d1d' : 'none',
                 padding: '5px 12px',
                 borderRadius: '3px',
                 fontSize: '11px',
@@ -360,7 +360,7 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
         </div>
       </div>
 
-      {/* VIEW 1: AnyPS5 Module Matrix (Clean Grid of Green & Gray Module Cards) */}
+      {/* VIEW 1: AnyPS5 Module Matrix (Red for Analyzed, Green for Implemented) */}
       {viewMode === 'matrix' && (
         <div style={{
           backgroundColor: '#0a0a0c',
@@ -368,12 +368,13 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
           borderRadius: '8px',
           padding: '20px',
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(190px, 1fr))',
           gap: '10px'
         }}>
           {filteredLibraries.map(lib => {
-            const isPhysical = lib.is_physical;
             const isSelected = selectedNode?.name === lib.name;
+            const isImplemented = lib.status === 'Implemented';
+            const isAnalyzed = lib.status === 'Analyzed';
 
             return (
               <div
@@ -381,15 +382,19 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
                 onClick={() => setSelectedNode(lib)}
                 style={{
                   backgroundColor: isSelected
-                    ? '#166534'
-                    : isPhysical
+                    ? (isImplemented ? '#166534' : '#450a0a')
+                    : isImplemented
                       ? '#14532d'
-                      : '#1c1917',
+                      : isAnalyzed
+                        ? '#2b070b'
+                        : '#18181b',
                   border: isSelected
-                    ? '1.5px solid #4ade80'
-                    : isPhysical
+                    ? (isImplemented ? '1.5px solid #4ade80' : '1.5px solid #ef4444')
+                    : isImplemented
                       ? '1px solid #16a34a'
-                      : '1px solid #7f1d1d',
+                      : isAnalyzed
+                        ? '1px solid #7f1d1d'
+                        : '1px solid #27272a',
                   borderRadius: '4px',
                   padding: '10px 12px',
                   cursor: 'pointer',
@@ -397,7 +402,9 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
                   flexDirection: 'column',
                   gap: '4px',
                   transition: 'transform 0.1s ease, border-color 0.1s ease',
-                  boxShadow: isSelected ? '0 0 10px rgba(74, 222, 128, 0.4)' : 'none'
+                  boxShadow: isSelected
+                    ? (isImplemented ? '0 0 10px rgba(74, 222, 128, 0.4)' : '0 0 10px rgba(239, 68, 68, 0.4)')
+                    : 'none'
                 }}
                 onMouseEnter={e => {
                   (e.currentTarget as HTMLElement).style.transform = 'translateY(-2px)';
@@ -409,7 +416,7 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
                 <div style={{
                   fontSize: '12px',
                   fontWeight: 700,
-                  color: isPhysical ? '#ffffff' : '#fca5a5',
+                  color: isImplemented ? '#ffffff' : (isAnalyzed ? '#fca5a5' : '#a1a1aa'),
                   fontFamily: 'monospace',
                   whiteSpace: 'nowrap',
                   overflow: 'hidden',
@@ -418,11 +425,16 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
                   {lib.name}
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '10px' }}>
-                  <span style={{ color: isPhysical ? '#86efac' : '#f87171' }}>
-                    {isPhysical ? `${lib.exports_count} exports` : 'Missing .exe'}
+                  <span style={{ color: isImplemented ? '#86efac' : (isAnalyzed ? '#ef4444' : '#71717a') }}>
+                    {lib.exports_count} exports
                   </span>
-                  <span style={{ color: '#a1a1aa' }}>
-                    {lib.subsystem?.split(' ')[0] || 'System'}
+                  <span style={{
+                    color: isImplemented ? '#4ade80' : (isAnalyzed ? '#f87171' : '#71717a'),
+                    fontSize: '9px',
+                    fontWeight: 700,
+                    textTransform: 'uppercase'
+                  }}>
+                    {lib.status}
                   </span>
                 </div>
               </div>
@@ -431,7 +443,7 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
         </div>
       )}
 
-      {/* VIEW 2: D3 Subsystem Treemap with Clamping & Sizing Fixes */}
+      {/* VIEW 2: D3 Subsystem Treemap */}
       {viewMode === 'treemap' && (
         <div style={{
           backgroundColor: '#0a0a0c',
@@ -451,7 +463,7 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
           left: Math.min(hoveredNode.x + 12, window.innerWidth - 240),
           top: hoveredNode.y + 12,
           backgroundColor: '#0a0a0c',
-          border: '1px solid #22c55e',
+          border: `1px solid ${hoveredNode.targetItem.status === 'Implemented' ? '#22c55e' : '#ef4444'}`,
           borderRadius: '4px',
           padding: '8px 12px',
           zIndex: 9999,
@@ -461,8 +473,8 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
           <div style={{ fontWeight: 700, color: '#f4f4f5', fontFamily: 'monospace', fontSize: '12px' }}>
             {hoveredNode.targetItem.name}
           </div>
-          <div style={{ fontSize: '11px', color: '#22c55e', marginTop: '2px' }}>
-            {hoveredNode.targetItem.subsystem} | {hoveredNode.targetItem.exports_count} exports
+          <div style={{ fontSize: '11px', color: hoveredNode.targetItem.status === 'Implemented' ? '#22c55e' : '#ef4444', marginTop: '2px' }}>
+            Status: {hoveredNode.targetItem.status} | {hoveredNode.targetItem.exports_count} exports
           </div>
         </div>
       )}
@@ -473,7 +485,7 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
           backgroundColor: '#0a0a0c',
           borderRadius: '8px',
           padding: '18px 22px',
-          border: '1px solid #16a34a',
+          border: `1px solid ${selectedNode.status === 'Implemented' ? '#16a34a' : '#7f1d1d'}`,
           display: 'flex',
           flexDirection: 'column',
           gap: '10px'
@@ -481,15 +493,15 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
               <span style={{
-                backgroundColor: selectedNode.is_physical ? '#14532d' : '#2b070b',
-                color: selectedNode.is_physical ? '#4ade80' : '#f87171',
-                border: `1px solid ${selectedNode.is_physical ? '#16a34a' : '#7f1d1d'}`,
+                backgroundColor: selectedNode.status === 'Implemented' ? '#14532d' : '#2b070b',
+                color: selectedNode.status === 'Implemented' ? '#4ade80' : '#ef4444',
+                border: `1px solid ${selectedNode.status === 'Implemented' ? '#16a34a' : '#7f1d1d'}`,
                 padding: '2px 8px',
                 borderRadius: '4px',
                 fontSize: '11px',
                 fontWeight: 700
               }}>
-                {selectedNode.is_physical ? 'PHYSICAL DLL' : 'MISSING REQUIREMENT'}
+                {selectedNode.status.toUpperCase()}
               </span>
               <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#f4f4f5', margin: 0, fontFamily: 'monospace' }}>
                 {selectedNode.name}
@@ -512,21 +524,21 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '12px', fontSize: '12px' }}>
             <div>
               <span style={{ color: '#71717a' }}>Subsystem Domain:</span>
-              <div style={{ fontWeight: 600, color: '#22c55e' }}>{selectedNode.subsystem}</div>
+              <div style={{ fontWeight: 600, color: '#f4f4f5' }}>{selectedNode.subsystem}</div>
             </div>
             <div>
               <span style={{ color: '#71717a' }}>Category:</span>
-              <div style={{ fontWeight: 600, color: '#f4f4f5' }}>{selectedNode.category}</div>
+              <div style={{ fontWeight: 600, color: '#a1a1aa' }}>{selectedNode.category}</div>
             </div>
             <div>
               <span style={{ color: '#71717a' }}>Exported Symbols:</span>
-              <div style={{ fontWeight: 700, color: '#4ade80', fontFamily: 'monospace' }}>
+              <div style={{ fontWeight: 700, color: '#ef4444', fontFamily: 'monospace' }}>
                 {selectedNode.exports_count.toLocaleString()}
               </div>
             </div>
             <div>
               <span style={{ color: '#71717a' }}>Resolution Status:</span>
-              <div style={{ fontWeight: 600, color: selectedNode.is_physical ? '#4ade80' : '#f87171' }}>
+              <div style={{ fontWeight: 600, color: selectedNode.status === 'Implemented' ? '#4ade80' : '#ef4444' }}>
                 {selectedNode.status}
               </div>
             </div>

@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0",
   "project": "Xbox2PC",
-  "snapshot": "0.4.0",
-  "public_snapshot_id": "pub_0.4.0_72b410b9924f",
-  "generated_at": "2026-11-21T05:03:04.251567+00:00",
+  "snapshot": "0.5.0",
+  "public_snapshot_id": "pub_0.5.0_a96915af1739",
+  "generated_at": "2026-11-21T16:42:33.317546+00:00",
   "discovery": {
     "physical_binaries": 17,
     "logical_libraries": 18,
@@ -12,29 +12,29 @@
     "unique_shader_instructions": 202,
     "decoded_shader_occurrences": 48154,
     "total_workspace_files": 193,
-    "total_components": 3518
+    "total_components": 3519
   },
   "coverage": {
     "global": null,
     "analysis": {
-      "completed": 3517,
-      "known": 3518,
+      "completed": 3518,
+      "known": 3519,
       "percentage": 99.97
     },
     "implementation": {
-      "completed": 12,
-      "known": 3518,
-      "percentage": 0.34
+      "completed": 15,
+      "known": 3519,
+      "percentage": 0.43
     },
     "testing": {
-      "completed": 12,
-      "known": 12,
+      "completed": 15,
+      "known": 15,
       "percentage": 100.0
     },
     "validation": {
-      "completed": 0,
-      "known": 12,
-      "percentage": 0.0
+      "completed": 4,
+      "known": 15,
+      "percentage": 26.67
     },
     "game_requirement": {
       "completed": 0,

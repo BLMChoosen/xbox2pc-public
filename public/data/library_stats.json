@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-21T05:33:49.438951+00:00",
-  "snapshot": "0.4.0",
-  "public_snapshot_id": "pub_0.4.0_72b410b9924f",
+  "generated_at": "2026-11-21T16:43:46.209495+00:00",
+  "snapshot": "0.5.0",
+  "public_snapshot_id": "pub_0.5.0_a96915af1739",
   "summary": {
     "unique_physical_files": 17,
     "unique_logical_identities": 18,

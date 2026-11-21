@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-20T23:09:18.641928+00:00",
-  "snapshot": "0.1.1",
-  "public_snapshot_id": "pub_0.1.1_ea208942ff6e",
+  "generated_at": "2026-11-21T02:57:04.472120+00:00",
+  "snapshot": "0.1.0",
+  "public_snapshot_id": "pub_0.1.0_1216a566008f",
   "metrics": {
     "discovery": {
       "name": "Discovery Coverage",
@@ -16,8 +16,8 @@
     },
     "analysis": {
       "name": "Analysis Coverage",
-      "numerator": 3511,
-      "denominator": 3512,
+      "numerator": 3513,
+      "denominator": 3514,
       "percentage": 99.97,
       "display_string": "99.97%",
       "reference_universe": "Discovered Components",
@@ -26,20 +26,20 @@
     },
     "implementation": {
       "name": "Implementation Coverage",
-      "numerator": 0,
-      "denominator": 3512,
-      "percentage": 0.0,
-      "display_string": "0.0%",
+      "numerator": 2,
+      "denominator": 3514,
+      "percentage": 0.06,
+      "display_string": "0.06%",
       "reference_universe": "Discovered Components",
       "is_global_unknown": false,
       "description": "Components with functional translation or proxy implementations. Stubs are strictly excluded."
     },
     "testing": {
       "name": "Testing Coverage",
-      "numerator": 0,
-      "denominator": 0,
-      "percentage": 0.0,
-      "display_string": "0.0%",
+      "numerator": 2,
+      "denominator": 2,
+      "percentage": 100.0,
+      "display_string": "100.0%",
       "reference_universe": "Implemented Components",
       "is_global_unknown": false,
       "description": "Implemented components with passing automated unit tests."
@@ -47,7 +47,7 @@
     "validation": {
       "name": "Validation Coverage",
       "numerator": 0,
-      "denominator": 0,
+      "denominator": 2,
       "percentage": 0.0,
       "display_string": "0.0%",
       "reference_universe": "Implemented Components",

@@ -1,18 +1,67 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-20T23:09:18.641928+00:00",
-  "snapshot": "0.1.1",
-  "public_snapshot_id": "pub_0.1.1_ea208942ff6e",
+  "generated_at": "2026-11-21T02:57:04.472120+00:00",
+  "snapshot": "0.1.0",
+  "public_snapshot_id": "pub_0.1.0_1216a566008f",
   "summary": {
-    "total_discovered": 3512,
+    "total_discovered": 3514,
     "game_required": 1,
-    "implemented": 0,
+    "implemented": 2,
     "stubs": 0,
     "partial": 0,
-    "tested": 0,
+    "tested": 2,
     "validated": 0,
-    "implemented_not_validated": 0,
+    "implemented_not_validated": 2,
     "flagged_for_review": 0
   },
-  "implementations": []
+  "implementations": [
+    {
+      "component_id": "mod_19aacb44c40c",
+      "name": "xbox2pc_resolver",
+      "subsystem": "Kernel and system services",
+      "category": "Module and Symbol Resolver Subsystem",
+      "implementation_status": "Implemented",
+      "testing_status": "Passed",
+      "validation_status": "Not validated",
+      "source_file_ref": "runtime/src/module_resolver.cpp",
+      "git_commit_ref": "3dbd9628",
+      "implemented_at": "2026-11-21T00:40:49.673363+00:00",
+      "developer_notes": "M3 Module Resolver subsystem implemented in C++20 with C-ABI exports",
+      "test_identifiers": [
+        "test_synthetic_dependency_cycle_detection",
+        "test_explicit_symbol_registration_and_evidence",
+        "test_native_symbol_resolution_and_shims",
+        "test_synthetic_duplicate_module_registration"
+      ],
+      "test_summary": "4 tests registered",
+      "validation_evidence": null,
+      "is_stub": false,
+      "flagged_for_review": false,
+      "review_reason": null
+    },
+    {
+      "component_id": "mod_fb9d0ce8bd86",
+      "name": "xbox2pc_loader",
+      "subsystem": "Kernel and system services",
+      "category": "PE Loader Subsystem",
+      "implementation_status": "Implemented",
+      "testing_status": "Passed",
+      "validation_status": "Not validated",
+      "source_file_ref": "runtime/src/pe_loader.cpp",
+      "git_commit_ref": "d3e70823",
+      "implemented_at": "2026-11-21T00:40:49.440996+00:00",
+      "developer_notes": "M3 PE Loader subsystem implemented in C++20 with C-ABI exports",
+      "test_identifiers": [
+        "test_controlled_native_loading_xcurl",
+        "test_catalog000_custom_mapping_behavior",
+        "test_all_17_binaries_pe_validity",
+        "test_synthetic_valid_pe"
+      ],
+      "test_summary": "4 tests registered",
+      "validation_evidence": null,
+      "is_stub": false,
+      "flagged_for_review": false,
+      "review_reason": null
+    }
+  ]
 }

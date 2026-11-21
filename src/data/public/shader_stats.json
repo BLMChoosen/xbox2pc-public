@@ -1,0 +1,1390 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-11-21T02:57:04.472120+00:00",
+  "snapshot": "0.1.0",
+  "public_snapshot_id": "pub_0.1.0_1216a566008f",
+  "architecture": "AMD RDNA2 (GFX10.3 / Scarlett)",
+  "summary": {
+    "unique_instructions": 202,
+    "unique_mnemonic_variants": 202,
+    "distinct_family_opcode_pairs": 194,
+    "distinct_semantic_operations": 194,
+    "unique_instruction_encodings": 202,
+    "supported_instruction_variants": 202,
+    "instruction_formats": 15,
+    "operand_combinations": 194,
+    "total_decoded_occurrences": 48154
+  },
+  "families": [
+    {
+      "family": "VOP2",
+      "occurrences": 31162,
+      "unique_mnemonics": 35,
+      "description": "Vector ALU 2-operand instructions (arithmetic, logical, shifts)",
+      "mnemonics": [
+        {
+          "mnemonic": "v_max_i32",
+          "occurrences": 25813,
+          "format": "VOP2",
+          "description": "AMD RDNA2 v_max_i32 instruction"
+        },
+        {
+          "mnemonic": "v_subrev_f32",
+          "occurrences": 1614,
+          "format": "VOP2",
+          "description": "AMD RDNA2 v_subrev_f32 instruction"
+        },
+        {
+          "mnemonic": "v_mul_u32_u24",
+          "occurrences": 592,
+          "format": "VOP2",
+          "description": "AMD RDNA2 v_mul_u32_u24 instruction"
+        },
+        {
+          "mnemonic": "v_madmk_f16",
+          "occurrences": 512,
+          "format": "VOP2",
+          "description": "AMD RDNA2 v_madmk_f16 instruction"
+        },
+        {
+          "mnemonic": "v_max_u32",
+          "occurrences": 504,
+          "format": "VOP2",
+          "description": "AMD RDNA2 v_max_u32 instruction"
+        },
+        {
+          "mnemonic": "v_lshlrev_b16",
+          "occurrences": 338,
+          "format": "VOP2",
+          "description": "AMD RDNA2 v_lshlrev_b16 instruction"
+        },
+        {
+          "mnemonic": "v_cndmask_b32",
+          "occurrences": 263,
+          "format": "VOP2",
+          "description": "AMD RDNA2 v_cndmask_b32 instruction"
+        },
+        {
+          "mnemonic": "v_subb_co_u32",
+          "occurrences": 245,
+          "format": "VOP2",
+          "description": "AMD RDNA2 v_subb_co_u32 instruction"
+        },
+        {
+          "mnemonic": "v_sub_co_u32",
+          "occurrences": 159,
+          "format": "VOP2",
+          "description": "AMD RDNA2 v_sub_co_u32 instruction"
+        },
+        {
+          "mnemonic": "v_madmk_f16_dpp16",
+          "occurrences": 156,
+          "format": "VOP2_DPP16",
+          "description": "AMD RDNA2 v_madmk_f16_dpp16 instruction"
+        },
+        {
+          "mnemonic": "v_madak_f16",
+          "occurrences": 127,
+          "format": "VOP2",
+          "description": "AMD RDNA2 v_madak_f16 instruction"
+        },
+        {
+          "mnemonic": "v_sub_co_u32_dpp16",
+          "occurrences": 120,
+          "format": "VOP2_DPP16",
+          "description": "AMD RDNA2 v_sub_co_u32_dpp16 instruction"
+        },
+        {
+          "mnemonic": "v_add_f32",
+          "occurrences": 105,
+          "format": "VOP2",
+          "description": "AMD RDNA2 v_add_f32 instruction"
+        },
+        {
+          "mnemonic": "v_mac_f32",
+          "occurrences": 92,
+          "format": "VOP2",
+          "description": "AMD RDNA2 v_mac_f32 instruction"
+        },
+        {
+          "mnemonic": "v_add_u16",
+          "occurrences": 76,
+          "format": "VOP2",
+          "description": "AMD RDNA2 v_add_u16 instruction"
+        },
+        {
+          "mnemonic": "v_mac_f32_dpp16",
+          "occurrences": 56,
+          "format": "VOP2_DPP16",
+          "description": "AMD RDNA2 v_mac_f32_dpp16 instruction"
+        },
+        {
+          "mnemonic": "v_vop2_op_60",
+          "occurrences": 54,
+          "format": "VOP2",
+          "description": "AMD RDNA2 v_vop2_op_60 instruction"
+        },
+        {
+          "mnemonic": "v_subrev_f32_dpp8",
+          "occurrences": 48,
+          "format": "VOP2_DPP8",
+          "description": "AMD RDNA2 v_subrev_f32_dpp8 instruction"
+        },
+        {
+          "mnemonic": "v_addc_co_u32",
+          "occurrences": 44,
+          "format": "VOP2",
+          "description": "AMD RDNA2 v_addc_co_u32 instruction"
+        },
+        {
+          "mnemonic": "v_mul_legacy_f32",
+          "occurrences": 35,
+          "format": "VOP2",
+          "description": "AMD RDNA2 v_mul_legacy_f32 instruction"
+        },
+        {
+          "mnemonic": "v_lshrrev_b32",
+          "occurrences": 33,
+          "format": "VOP2",
+          "description": "AMD RDNA2 v_lshrrev_b32 instruction"
+        },
+        {
+          "mnemonic": "v_subrev_co_u32",
+          "occurrences": 30,
+          "format": "VOP2",
+          "description": "AMD RDNA2 v_subrev_co_u32 instruction"
+        },
+        {
+          "mnemonic": "v_addc_co_u32_dpp8",
+          "occurrences": 28,
+          "format": "VOP2_DPP8",
+          "description": "AMD RDNA2 v_addc_co_u32_dpp8 instruction"
+        },
+        {
+          "mnemonic": "v_sub_u16",
+          "occurrences": 27,
+          "format": "VOP2",
+          "description": "AMD RDNA2 v_sub_u16 instruction"
+        },
+        {
+          "mnemonic": "v_lshlrev_b32",
+          "occurrences": 26,
+          "format": "VOP2",
+          "description": "AMD RDNA2 v_lshlrev_b32 instruction"
+        },
+        {
+          "mnemonic": "v_subb_co_u32_dpp16",
+          "occurrences": 18,
+          "format": "VOP2_DPP16",
+          "description": "AMD RDNA2 v_subb_co_u32_dpp16 instruction"
+        },
+        {
+          "mnemonic": "v_madak_f32",
+          "occurrences": 12,
+          "format": "VOP2",
+          "description": "AMD RDNA2 v_madak_f32 instruction"
+        },
+        {
+          "mnemonic": "v_lshrrev_b16",
+          "occurrences": 10,
+          "format": "VOP2",
+          "description": "AMD RDNA2 v_lshrrev_b16 instruction"
+        },
+        {
+          "mnemonic": "v_and_b32",
+          "occurrences": 9,
+          "format": "VOP2",
+          "description": "AMD RDNA2 v_and_b32 instruction"
+        },
+        {
+          "mnemonic": "v_max_f32",
+          "occurrences": 5,
+          "format": "VOP2",
+          "description": "AMD RDNA2 v_max_f32 instruction"
+        },
+        {
+          "mnemonic": "v_sub_f16",
+          "occurrences": 4,
+          "format": "VOP2",
+          "description": "AMD RDNA2 v_sub_f16 instruction"
+        },
+        {
+          "mnemonic": "v_add_f16",
+          "occurrences": 2,
+          "format": "VOP2",
+          "description": "AMD RDNA2 v_add_f16 instruction"
+        },
+        {
+          "mnemonic": "v_subbrev_co_u32",
+          "occurrences": 2,
+          "format": "VOP2",
+          "description": "AMD RDNA2 v_subbrev_co_u32 instruction"
+        },
+        {
+          "mnemonic": "v_vop2_op_31",
+          "occurrences": 2,
+          "format": "VOP2",
+          "description": "AMD RDNA2 v_vop2_op_31 instruction"
+        },
+        {
+          "mnemonic": "v_ashrrev_i16",
+          "occurrences": 1,
+          "format": "VOP2",
+          "description": "AMD RDNA2 v_ashrrev_i16 instruction"
+        }
+      ]
+    },
+    {
+      "family": "VOP3",
+      "occurrences": 4457,
+      "unique_mnemonics": 50,
+      "description": "Vector ALU 3-operand extended instructions (fused multiply-add, packing)",
+      "mnemonics": [
+        {
+          "mnemonic": "v_mac_f32_e64",
+          "occurrences": 1547,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_mac_f32_e64 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_350",
+          "occurrences": 1404,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_350 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_331",
+          "occurrences": 256,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_331 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_343",
+          "occurrences": 186,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_343 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_257",
+          "occurrences": 151,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_257 instruction"
+        },
+        {
+          "mnemonic": "v_fma_f32",
+          "occurrences": 87,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_fma_f32 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_361",
+          "occurrences": 67,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_361 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_768",
+          "occurrences": 63,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_768 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_838",
+          "occurrences": 59,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_838 instruction"
+        },
+        {
+          "mnemonic": "v_lshrrev_b32_e64",
+          "occurrences": 58,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_lshrrev_b32_e64 instruction"
+        },
+        {
+          "mnemonic": "v_lshlrev_b32_e64",
+          "occurrences": 40,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_lshlrev_b32_e64 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_877",
+          "occurrences": 40,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_877 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_362",
+          "occurrences": 37,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_362 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_864",
+          "occurrences": 37,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_864 instruction"
+        },
+        {
+          "mnemonic": "v_min_u32_e64",
+          "occurrences": 36,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_min_u32_e64 instruction"
+        },
+        {
+          "mnemonic": "v_add_f16_e64",
+          "occurrences": 34,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_add_f16_e64 instruction"
+        },
+        {
+          "mnemonic": "v_ashrrev_i32_e64",
+          "occurrences": 34,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_ashrrev_i32_e64 instruction"
+        },
+        {
+          "mnemonic": "v_max_u32_e64",
+          "occurrences": 32,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_max_u32_e64 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_839",
+          "occurrences": 26,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_839 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_344",
+          "occurrences": 23,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_344 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_865",
+          "occurrences": 23,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_865 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_296",
+          "occurrences": 21,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_296 instruction"
+        },
+        {
+          "mnemonic": "v_min_f32_e64",
+          "occurrences": 18,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_min_f32_e64 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_879",
+          "occurrences": 18,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_879 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_426",
+          "occurrences": 14,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_426 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_130",
+          "occurrences": 13,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_130 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_132",
+          "occurrences": 13,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_132 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_198",
+          "occurrences": 13,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_198 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_881",
+          "occurrences": 13,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_881 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_882",
+          "occurrences": 12,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_882 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_133",
+          "occurrences": 9,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_133 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_260",
+          "occurrences": 7,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_260 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_264",
+          "occurrences": 7,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_264 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_888",
+          "occurrences": 7,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_888 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_195",
+          "occurrences": 6,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_195 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_843",
+          "occurrences": 6,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_843 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_869",
+          "occurrences": 6,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_869 instruction"
+        },
+        {
+          "mnemonic": "v_max_f32_e64",
+          "occurrences": 4,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_max_f32_e64 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_193",
+          "occurrences": 4,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_193 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_785",
+          "occurrences": 4,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_785 instruction"
+        },
+        {
+          "mnemonic": "v_add_f32_e64",
+          "occurrences": 3,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_add_f32_e64 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_328",
+          "occurrences": 3,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_328 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_329",
+          "occurrences": 3,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_329 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_870",
+          "occurrences": 3,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_870 instruction"
+        },
+        {
+          "mnemonic": "v_mul_i32_i24_e64",
+          "occurrences": 2,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_mul_i32_i24_e64 instruction"
+        },
+        {
+          "mnemonic": "v_sub_f32_e64",
+          "occurrences": 2,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_sub_f32_e64 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_196",
+          "occurrences": 2,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_196 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_323",
+          "occurrences": 2,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_323 instruction"
+        },
+        {
+          "mnemonic": "v_subrev_f32_e64",
+          "occurrences": 1,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_subrev_f32_e64 instruction"
+        },
+        {
+          "mnemonic": "v_vop3_op_340",
+          "occurrences": 1,
+          "format": "VOP3A/B",
+          "description": "AMD RDNA2 v_vop3_op_340 instruction"
+        }
+      ]
+    },
+    {
+      "family": "SOP1",
+      "occurrences": 4008,
+      "unique_mnemonics": 13,
+      "description": "Scalar ALU 1-operand instructions (moves, bit counts, shifts)",
+      "mnemonics": [
+        {
+          "mnemonic": "s_cmov_b64",
+          "occurrences": 2629,
+          "format": "SOP1",
+          "description": "AMD RDNA2 s_cmov_b64 instruction"
+        },
+        {
+          "mnemonic": "s_not_b32",
+          "occurrences": 1325,
+          "format": "SOP1",
+          "description": "AMD RDNA2 s_not_b32 instruction"
+        },
+        {
+          "mnemonic": "s_xor_saveexec_b64",
+          "occurrences": 16,
+          "format": "SOP1",
+          "description": "AMD RDNA2 s_xor_saveexec_b64 instruction"
+        },
+        {
+          "mnemonic": "s_setpc_b64",
+          "occurrences": 11,
+          "format": "SOP1",
+          "description": "AMD RDNA2 s_setpc_b64 instruction"
+        },
+        {
+          "mnemonic": "s_bcnt0_i32_b64",
+          "occurrences": 7,
+          "format": "SOP1",
+          "description": "AMD RDNA2 s_bcnt0_i32_b64 instruction"
+        },
+        {
+          "mnemonic": "s_sop1_op_61",
+          "occurrences": 4,
+          "format": "SOP1",
+          "description": "AMD RDNA2 s_sop1_op_61 instruction"
+        },
+        {
+          "mnemonic": "s_wqm_b64",
+          "occurrences": 4,
+          "format": "SOP1",
+          "description": "AMD RDNA2 s_wqm_b64 instruction"
+        },
+        {
+          "mnemonic": "s_andn2_saveexec_b64",
+          "occurrences": 3,
+          "format": "SOP1",
+          "description": "AMD RDNA2 s_andn2_saveexec_b64 instruction"
+        },
+        {
+          "mnemonic": "s_sop1_op_58",
+          "occurrences": 3,
+          "format": "SOP1",
+          "description": "AMD RDNA2 s_sop1_op_58 instruction"
+        },
+        {
+          "mnemonic": "s_sop1_op_52",
+          "occurrences": 2,
+          "format": "SOP1",
+          "description": "AMD RDNA2 s_sop1_op_52 instruction"
+        },
+        {
+          "mnemonic": "s_sop1_op_60",
+          "occurrences": 2,
+          "format": "SOP1",
+          "description": "AMD RDNA2 s_sop1_op_60 instruction"
+        },
+        {
+          "mnemonic": "s_ff0_u32_b64",
+          "occurrences": 1,
+          "format": "SOP1",
+          "description": "AMD RDNA2 s_ff0_u32_b64 instruction"
+        },
+        {
+          "mnemonic": "s_sop1_op_71",
+          "occurrences": 1,
+          "format": "SOP1",
+          "description": "AMD RDNA2 s_sop1_op_71 instruction"
+        }
+      ]
+    },
+    {
+      "family": "SOPP",
+      "occurrences": 2691,
+      "unique_mnemonics": 12,
+      "description": "Scalar program control & branching instructions (barriers, jumps)",
+      "mnemonics": [
+        {
+          "mnemonic": "s_sopp_op_31",
+          "occurrences": 1420,
+          "format": "SOPP",
+          "description": "AMD RDNA2 s_sopp_op_31 instruction"
+        },
+        {
+          "mnemonic": "s_waitcnt",
+          "occurrences": 848,
+          "format": "SOPP",
+          "description": "AMD RDNA2 s_waitcnt instruction"
+        },
+        {
+          "mnemonic": "s_endpgm_saved",
+          "occurrences": 173,
+          "format": "SOPP",
+          "description": "AMD RDNA2 s_endpgm_saved instruction"
+        },
+        {
+          "mnemonic": "s_barrier",
+          "occurrences": 100,
+          "format": "SOPP",
+          "description": "AMD RDNA2 s_barrier instruction"
+        },
+        {
+          "mnemonic": "s_endpgm",
+          "occurrences": 41,
+          "format": "SOPP",
+          "description": "AMD RDNA2 s_endpgm instruction"
+        },
+        {
+          "mnemonic": "s_cbranch_vccz",
+          "occurrences": 40,
+          "format": "SOPP",
+          "description": "AMD RDNA2 s_cbranch_vccz instruction"
+        },
+        {
+          "mnemonic": "s_setkill",
+          "occurrences": 29,
+          "format": "SOPP",
+          "description": "AMD RDNA2 s_setkill instruction"
+        },
+        {
+          "mnemonic": "s_setreg_imm32_b32",
+          "occurrences": 12,
+          "format": "SOPP",
+          "description": "AMD RDNA2 s_setreg_imm32_b32 instruction"
+        },
+        {
+          "mnemonic": "s_inst_prefetch",
+          "occurrences": 11,
+          "format": "SOPP",
+          "description": "AMD RDNA2 s_inst_prefetch instruction"
+        },
+        {
+          "mnemonic": "s_nop",
+          "occurrences": 8,
+          "format": "SOPP",
+          "description": "AMD RDNA2 s_nop instruction"
+        },
+        {
+          "mnemonic": "s_cbranch_scc0",
+          "occurrences": 5,
+          "format": "SOPP",
+          "description": "AMD RDNA2 s_cbranch_scc0 instruction"
+        },
+        {
+          "mnemonic": "s_cbranch_vccnz",
+          "occurrences": 4,
+          "format": "SOPP",
+          "description": "AMD RDNA2 s_cbranch_vccnz instruction"
+        }
+      ]
+    },
+    {
+      "family": "SOP2",
+      "occurrences": 2578,
+      "unique_mnemonics": 27,
+      "description": "Scalar ALU 2-operand instructions (scalar arithmetic, logic)",
+      "mnemonics": [
+        {
+          "mnemonic": "s_add_u32",
+          "occurrences": 1554,
+          "format": "SOP2",
+          "description": "AMD RDNA2 s_add_u32 instruction"
+        },
+        {
+          "mnemonic": "s_lshr_b32",
+          "occurrences": 195,
+          "format": "SOP2",
+          "description": "AMD RDNA2 s_lshr_b32 instruction"
+        },
+        {
+          "mnemonic": "s_xor_b32",
+          "occurrences": 189,
+          "format": "SOP2",
+          "description": "AMD RDNA2 s_xor_b32 instruction"
+        },
+        {
+          "mnemonic": "s_or_b32",
+          "occurrences": 157,
+          "format": "SOP2",
+          "description": "AMD RDNA2 s_or_b32 instruction"
+        },
+        {
+          "mnemonic": "s_bfe_i32",
+          "occurrences": 102,
+          "format": "SOP2",
+          "description": "AMD RDNA2 s_bfe_i32 instruction"
+        },
+        {
+          "mnemonic": "s_bfe_u64",
+          "occurrences": 55,
+          "format": "SOP2",
+          "description": "AMD RDNA2 s_bfe_u64 instruction"
+        },
+        {
+          "mnemonic": "s_max_u32",
+          "occurrences": 55,
+          "format": "SOP2",
+          "description": "AMD RDNA2 s_max_u32 instruction"
+        },
+        {
+          "mnemonic": "s_orn2_b32",
+          "occurrences": 52,
+          "format": "SOP2",
+          "description": "AMD RDNA2 s_orn2_b32 instruction"
+        },
+        {
+          "mnemonic": "s_sub_i32",
+          "occurrences": 37,
+          "format": "SOP2",
+          "description": "AMD RDNA2 s_sub_i32 instruction"
+        },
+        {
+          "mnemonic": "s_cselect_b64",
+          "occurrences": 30,
+          "format": "SOP2",
+          "description": "AMD RDNA2 s_cselect_b64 instruction"
+        },
+        {
+          "mnemonic": "s_or_b64",
+          "occurrences": 29,
+          "format": "SOP2",
+          "description": "AMD RDNA2 s_or_b64 instruction"
+        },
+        {
+          "mnemonic": "s_min_u32",
+          "occurrences": 28,
+          "format": "SOP2",
+          "description": "AMD RDNA2 s_min_u32 instruction"
+        },
+        {
+          "mnemonic": "s_mul_i32",
+          "occurrences": 22,
+          "format": "SOP2",
+          "description": "AMD RDNA2 s_mul_i32 instruction"
+        },
+        {
+          "mnemonic": "s_ashr_i32",
+          "occurrences": 14,
+          "format": "SOP2",
+          "description": "AMD RDNA2 s_ashr_i32 instruction"
+        },
+        {
+          "mnemonic": "s_cselect_b32",
+          "occurrences": 11,
+          "format": "SOP2",
+          "description": "AMD RDNA2 s_cselect_b32 instruction"
+        },
+        {
+          "mnemonic": "s_orn2_b64",
+          "occurrences": 11,
+          "format": "SOP2",
+          "description": "AMD RDNA2 s_orn2_b64 instruction"
+        },
+        {
+          "mnemonic": "s_xnor_b32",
+          "occurrences": 9,
+          "format": "SOP2",
+          "description": "AMD RDNA2 s_xnor_b32 instruction"
+        },
+        {
+          "mnemonic": "s_nand_b64",
+          "occurrences": 5,
+          "format": "SOP2",
+          "description": "AMD RDNA2 s_nand_b64 instruction"
+        },
+        {
+          "mnemonic": "s_sop2_op_53",
+          "occurrences": 5,
+          "format": "SOP2",
+          "description": "AMD RDNA2 s_sop2_op_53 instruction"
+        },
+        {
+          "mnemonic": "s_sop2_op_46",
+          "occurrences": 4,
+          "format": "SOP2",
+          "description": "AMD RDNA2 s_sop2_op_46 instruction"
+        },
+        {
+          "mnemonic": "s_xnor_b64",
+          "occurrences": 3,
+          "format": "SOP2",
+          "description": "AMD RDNA2 s_xnor_b64 instruction"
+        },
+        {
+          "mnemonic": "s_xor_b64",
+          "occurrences": 3,
+          "format": "SOP2",
+          "description": "AMD RDNA2 s_xor_b64 instruction"
+        },
+        {
+          "mnemonic": "s_max_i32",
+          "occurrences": 2,
+          "format": "SOP2",
+          "description": "AMD RDNA2 s_max_i32 instruction"
+        },
+        {
+          "mnemonic": "s_min_i32",
+          "occurrences": 2,
+          "format": "SOP2",
+          "description": "AMD RDNA2 s_min_i32 instruction"
+        },
+        {
+          "mnemonic": "s_sop2_op_49",
+          "occurrences": 2,
+          "format": "SOP2",
+          "description": "AMD RDNA2 s_sop2_op_49 instruction"
+        },
+        {
+          "mnemonic": "s_nand_b32",
+          "occurrences": 1,
+          "format": "SOP2",
+          "description": "AMD RDNA2 s_nand_b32 instruction"
+        },
+        {
+          "mnemonic": "s_sop2_op_47",
+          "occurrences": 1,
+          "format": "SOP2",
+          "description": "AMD RDNA2 s_sop2_op_47 instruction"
+        }
+      ]
+    },
+    {
+      "family": "SMEM",
+      "occurrences": 1481,
+      "unique_mnemonics": 8,
+      "description": "Scalar memory reads and constant buffer loads",
+      "mnemonics": [
+        {
+          "mnemonic": "s_buffer_load_dwordx16",
+          "occurrences": 1168,
+          "format": "SMEM",
+          "description": "AMD RDNA2 s_buffer_load_dwordx16 instruction"
+        },
+        {
+          "mnemonic": "s_buffer_load_dwordx4",
+          "occurrences": 103,
+          "format": "SMEM",
+          "description": "AMD RDNA2 s_buffer_load_dwordx4 instruction"
+        },
+        {
+          "mnemonic": "s_buffer_load_dwordx8",
+          "occurrences": 78,
+          "format": "SMEM",
+          "description": "AMD RDNA2 s_buffer_load_dwordx8 instruction"
+        },
+        {
+          "mnemonic": "s_load_dwordx4",
+          "occurrences": 72,
+          "format": "SMEM",
+          "description": "AMD RDNA2 s_load_dwordx4 instruction"
+        },
+        {
+          "mnemonic": "s_buffer_load_dwordx2",
+          "occurrences": 28,
+          "format": "SMEM",
+          "description": "AMD RDNA2 s_buffer_load_dwordx2 instruction"
+        },
+        {
+          "mnemonic": "s_load_dwordx8",
+          "occurrences": 18,
+          "format": "SMEM",
+          "description": "AMD RDNA2 s_load_dwordx8 instruction"
+        },
+        {
+          "mnemonic": "s_buffer_load_dword",
+          "occurrences": 12,
+          "format": "SMEM",
+          "description": "AMD RDNA2 s_buffer_load_dword instruction"
+        },
+        {
+          "mnemonic": "s_load_dwordx16",
+          "occurrences": 2,
+          "format": "SMEM",
+          "description": "AMD RDNA2 s_load_dwordx16 instruction"
+        }
+      ]
+    },
+    {
+      "family": "VOP1",
+      "occurrences": 866,
+      "unique_mnemonics": 18,
+      "description": "Vector ALU 1-operand unary instructions (conversions, math functions)",
+      "mnemonics": [
+        {
+          "mnemonic": "v_mov_b32",
+          "occurrences": 199,
+          "format": "VOP1",
+          "description": "AMD RDNA2 v_mov_b32 instruction"
+        },
+        {
+          "mnemonic": "v_exp_f32",
+          "occurrences": 187,
+          "format": "VOP1",
+          "description": "AMD RDNA2 v_exp_f32 instruction"
+        },
+        {
+          "mnemonic": "v_rcp_f32",
+          "occurrences": 157,
+          "format": "VOP1",
+          "description": "AMD RDNA2 v_rcp_f32 instruction"
+        },
+        {
+          "mnemonic": "v_rcp_f64",
+          "occurrences": 94,
+          "format": "VOP1",
+          "description": "AMD RDNA2 v_rcp_f64 instruction"
+        },
+        {
+          "mnemonic": "v_cvt_f32_i32",
+          "occurrences": 59,
+          "format": "VOP1",
+          "description": "AMD RDNA2 v_cvt_f32_i32 instruction"
+        },
+        {
+          "mnemonic": "v_cvt_f32_u32",
+          "occurrences": 46,
+          "format": "VOP1",
+          "description": "AMD RDNA2 v_cvt_f32_u32 instruction"
+        },
+        {
+          "mnemonic": "v_cvt_u32_f32",
+          "occurrences": 22,
+          "format": "VOP1",
+          "description": "AMD RDNA2 v_cvt_u32_f32 instruction"
+        },
+        {
+          "mnemonic": "v_mov_b32_dpp16",
+          "occurrences": 22,
+          "format": "VOP1_DPP16",
+          "description": "AMD RDNA2 v_mov_b32_dpp16 instruction"
+        },
+        {
+          "mnemonic": "v_vop1_op_84",
+          "occurrences": 14,
+          "format": "VOP1",
+          "description": "AMD RDNA2 v_vop1_op_84 instruction"
+        },
+        {
+          "mnemonic": "v_vop1_op_84_dpp16",
+          "occurrences": 14,
+          "format": "VOP1_DPP16",
+          "description": "AMD RDNA2 v_vop1_op_84_dpp16 instruction"
+        },
+        {
+          "mnemonic": "v_cvt_i32_f32",
+          "occurrences": 12,
+          "format": "VOP1",
+          "description": "AMD RDNA2 v_cvt_i32_f32 instruction"
+        },
+        {
+          "mnemonic": "v_readfirstlane_b32",
+          "occurrences": 12,
+          "format": "VOP1",
+          "description": "AMD RDNA2 v_readfirstlane_b32 instruction"
+        },
+        {
+          "mnemonic": "v_rndne_f32",
+          "occurrences": 10,
+          "format": "VOP1",
+          "description": "AMD RDNA2 v_rndne_f32 instruction"
+        },
+        {
+          "mnemonic": "v_cvt_f16_f32",
+          "occurrences": 7,
+          "format": "VOP1",
+          "description": "AMD RDNA2 v_cvt_f16_f32 instruction"
+        },
+        {
+          "mnemonic": "v_floor_f32",
+          "occurrences": 4,
+          "format": "VOP1",
+          "description": "AMD RDNA2 v_floor_f32 instruction"
+        },
+        {
+          "mnemonic": "v_frexp_mant_f64",
+          "occurrences": 4,
+          "format": "VOP1",
+          "description": "AMD RDNA2 v_frexp_mant_f64 instruction"
+        },
+        {
+          "mnemonic": "v_vop1_op_101",
+          "occurrences": 2,
+          "format": "VOP1",
+          "description": "AMD RDNA2 v_vop1_op_101 instruction"
+        },
+        {
+          "mnemonic": "v_ffbh_u32",
+          "occurrences": 1,
+          "format": "VOP1",
+          "description": "AMD RDNA2 v_ffbh_u32 instruction"
+        }
+      ]
+    },
+    {
+      "family": "MUBUF",
+      "occurrences": 328,
+      "unique_mnemonics": 7,
+      "description": "Untyped memory buffer access instructions",
+      "mnemonics": [
+        {
+          "mnemonic": "buffer_load_dwordx3",
+          "occurrences": 161,
+          "format": "MUBUF",
+          "description": "AMD RDNA2 buffer_load_dwordx3 instruction"
+        },
+        {
+          "mnemonic": "mubuf_op_30",
+          "occurrences": 79,
+          "format": "MUBUF",
+          "description": "AMD RDNA2 mubuf_op_30 instruction"
+        },
+        {
+          "mnemonic": "buffer_load_dword",
+          "occurrences": 60,
+          "format": "MUBUF",
+          "description": "AMD RDNA2 buffer_load_dword instruction"
+        },
+        {
+          "mnemonic": "buffer_store_dwordx4",
+          "occurrences": 13,
+          "format": "MUBUF",
+          "description": "AMD RDNA2 buffer_store_dwordx4 instruction"
+        },
+        {
+          "mnemonic": "buffer_store_dwordx3",
+          "occurrences": 10,
+          "format": "MUBUF",
+          "description": "AMD RDNA2 buffer_store_dwordx3 instruction"
+        },
+        {
+          "mnemonic": "buffer_load_dwordx4",
+          "occurrences": 4,
+          "format": "MUBUF",
+          "description": "AMD RDNA2 buffer_load_dwordx4 instruction"
+        },
+        {
+          "mnemonic": "mubuf_op_50",
+          "occurrences": 1,
+          "format": "MUBUF",
+          "description": "AMD RDNA2 mubuf_op_50 instruction"
+        }
+      ]
+    },
+    {
+      "family": "VOPC",
+      "occurrences": 170,
+      "unique_mnemonics": 17,
+      "description": "Vector comparison and condition code instructions",
+      "mnemonics": [
+        {
+          "mnemonic": "v_cmp_op_212",
+          "occurrences": 37,
+          "format": "VOPC",
+          "description": "AMD RDNA2 v_cmp_op_212 instruction"
+        },
+        {
+          "mnemonic": "v_cmp_op_198",
+          "occurrences": 19,
+          "format": "VOPC",
+          "description": "AMD RDNA2 v_cmp_op_198 instruction"
+        },
+        {
+          "mnemonic": "v_cmp_op_195",
+          "occurrences": 18,
+          "format": "VOPC",
+          "description": "AMD RDNA2 v_cmp_op_195 instruction"
+        },
+        {
+          "mnemonic": "v_cmp_op_196",
+          "occurrences": 17,
+          "format": "VOPC",
+          "description": "AMD RDNA2 v_cmp_op_196 instruction"
+        },
+        {
+          "mnemonic": "v_cmp_op_132",
+          "occurrences": 15,
+          "format": "VOPC",
+          "description": "AMD RDNA2 v_cmp_op_132 instruction"
+        },
+        {
+          "mnemonic": "v_cmp_op_211",
+          "occurrences": 14,
+          "format": "VOPC",
+          "description": "AMD RDNA2 v_cmp_op_211 instruction"
+        },
+        {
+          "mnemonic": "v_cmp_op_147",
+          "occurrences": 13,
+          "format": "VOPC",
+          "description": "AMD RDNA2 v_cmp_op_147 instruction"
+        },
+        {
+          "mnemonic": "v_cmp_op_193",
+          "occurrences": 10,
+          "format": "VOPC",
+          "description": "AMD RDNA2 v_cmp_op_193 instruction"
+        },
+        {
+          "mnemonic": "v_cmp_op_1",
+          "occurrences": 6,
+          "format": "VOPC",
+          "description": "AMD RDNA2 v_cmp_op_1 instruction"
+        },
+        {
+          "mnemonic": "v_cmp_op_130",
+          "occurrences": 5,
+          "format": "VOPC",
+          "description": "AMD RDNA2 v_cmp_op_130 instruction"
+        },
+        {
+          "mnemonic": "v_cmp_op_148",
+          "occurrences": 4,
+          "format": "VOPC",
+          "description": "AMD RDNA2 v_cmp_op_148 instruction"
+        },
+        {
+          "mnemonic": "v_cmp_op_209",
+          "occurrences": 3,
+          "format": "VOPC",
+          "description": "AMD RDNA2 v_cmp_op_209 instruction"
+        },
+        {
+          "mnemonic": "v_cmp_op_214",
+          "occurrences": 3,
+          "format": "VOPC",
+          "description": "AMD RDNA2 v_cmp_op_214 instruction"
+        },
+        {
+          "mnemonic": "v_cmp_op_146",
+          "occurrences": 2,
+          "format": "VOPC",
+          "description": "AMD RDNA2 v_cmp_op_146 instruction"
+        },
+        {
+          "mnemonic": "v_cmp_op_6",
+          "occurrences": 2,
+          "format": "VOPC",
+          "description": "AMD RDNA2 v_cmp_op_6 instruction"
+        },
+        {
+          "mnemonic": "v_cmp_op_3",
+          "occurrences": 1,
+          "format": "VOPC",
+          "description": "AMD RDNA2 v_cmp_op_3 instruction"
+        },
+        {
+          "mnemonic": "v_cmp_op_8",
+          "occurrences": 1,
+          "format": "VOPC",
+          "description": "AMD RDNA2 v_cmp_op_8 instruction"
+        }
+      ]
+    },
+    {
+      "family": "MIMG",
+      "occurrences": 157,
+      "unique_mnemonics": 4,
+      "description": "Masked image memory instructions (textures, samplers, surfaces)",
+      "mnemonics": [
+        {
+          "mnemonic": "image_load",
+          "occurrences": 115,
+          "format": "MIMG",
+          "description": "AMD RDNA2 image_load instruction"
+        },
+        {
+          "mnemonic": "image_store",
+          "occurrences": 31,
+          "format": "MIMG",
+          "description": "AMD RDNA2 image_store instruction"
+        },
+        {
+          "mnemonic": "image_sample_lz",
+          "occurrences": 10,
+          "format": "MIMG",
+          "description": "AMD RDNA2 image_sample_lz instruction"
+        },
+        {
+          "mnemonic": "image_mimg_op_17",
+          "occurrences": 1,
+          "format": "MIMG",
+          "description": "AMD RDNA2 image_mimg_op_17 instruction"
+        }
+      ]
+    },
+    {
+      "family": "DS",
+      "occurrences": 149,
+      "unique_mnemonics": 6,
+      "description": "Dual / Local Data Share LDS memory operations",
+      "mnemonics": [
+        {
+          "mnemonic": "ds_op_118",
+          "occurrences": 58,
+          "format": "DS",
+          "description": "AMD RDNA2 ds_op_118 instruction"
+        },
+        {
+          "mnemonic": "ds_read2_b32",
+          "occurrences": 52,
+          "format": "DS",
+          "description": "AMD RDNA2 ds_read2_b32 instruction"
+        },
+        {
+          "mnemonic": "ds_write_b32",
+          "occurrences": 14,
+          "format": "DS",
+          "description": "AMD RDNA2 ds_write_b32 instruction"
+        },
+        {
+          "mnemonic": "ds_read_b32",
+          "occurrences": 13,
+          "format": "DS",
+          "description": "AMD RDNA2 ds_read_b32 instruction"
+        },
+        {
+          "mnemonic": "ds_write2_b32",
+          "occurrences": 8,
+          "format": "DS",
+          "description": "AMD RDNA2 ds_write2_b32 instruction"
+        },
+        {
+          "mnemonic": "ds_op_223",
+          "occurrences": 4,
+          "format": "DS",
+          "description": "AMD RDNA2 ds_op_223 instruction"
+        }
+      ]
+    },
+    {
+      "family": "SOPK",
+      "occurrences": 107,
+      "unique_mnemonics": 5,
+      "description": "Scalar ALU with 16-bit signed immediate operand",
+      "mnemonics": [
+        {
+          "mnemonic": "s_sopk_op_30",
+          "occurrences": 65,
+          "format": "SOPK",
+          "description": "AMD RDNA2 s_sopk_op_30 instruction"
+        },
+        {
+          "mnemonic": "s_movk_i32",
+          "occurrences": 23,
+          "format": "SOPK",
+          "description": "AMD RDNA2 s_movk_i32 instruction"
+        },
+        {
+          "mnemonic": "s_mulk_i32",
+          "occurrences": 8,
+          "format": "SOPK",
+          "description": "AMD RDNA2 s_mulk_i32 instruction"
+        },
+        {
+          "mnemonic": "s_cmpk_gt_u32",
+          "occurrences": 6,
+          "format": "SOPK",
+          "description": "AMD RDNA2 s_cmpk_gt_u32 instruction"
+        },
+        {
+          "mnemonic": "s_addk_i32",
+          "occurrences": 5,
+          "format": "SOPK",
+          "description": "AMD RDNA2 s_addk_i32 instruction"
+        }
+      ]
+    }
+  ],
+  "formats": [
+    {
+      "format": "VOP3A/B",
+      "count": 50
+    },
+    {
+      "format": "VOP2",
+      "count": 29
+    },
+    {
+      "format": "SOP2",
+      "count": 27
+    },
+    {
+      "format": "VOPC",
+      "count": 17
+    },
+    {
+      "format": "VOP1",
+      "count": 16
+    },
+    {
+      "format": "SOP1",
+      "count": 13
+    },
+    {
+      "format": "SOPP",
+      "count": 12
+    },
+    {
+      "format": "SMEM",
+      "count": 8
+    },
+    {
+      "format": "MUBUF",
+      "count": 7
+    },
+    {
+      "format": "DS",
+      "count": 6
+    },
+    {
+      "format": "SOPK",
+      "count": 5
+    },
+    {
+      "format": "VOP2_DPP16",
+      "count": 4
+    },
+    {
+      "format": "MIMG",
+      "count": 4
+    },
+    {
+      "format": "VOP2_DPP8",
+      "count": 2
+    },
+    {
+      "format": "VOP1_DPP16",
+      "count": 2
+    }
+  ]
+}

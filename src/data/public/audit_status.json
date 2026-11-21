@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-11-21T02:57:04.472120+00:00",
+  "snapshot": "0.1.0",
+  "public_snapshot_id": "pub_0.1.0_1216a566008f",
+  "audit_date": "2026-11-20",
+  "verdict": "PARTIALLY VERIFIED",
+  "discrepancies_count": 1,
+  "discrepancies": [
+    {
+      "id": "DISC-005",
+      "category": "Testing Verification",
+      "title": "Automated Testing Scope vs Behavioral Compatibility",
+      "status": "Identified / Documented",
+      "impact": "Testing Scope Boundary",
+      "description": "Passing test suite covers scanner parser utility functions and data model validation. Unit test execution does not execute x86-64 machine instructions or prove binary execution compatibility.",
+      "evidence_reference": "INDEPENDENT_AUDIT.md#Section-6.1"
+    }
+  ],
+  "verified_public_snapshot_id": "pub_0.1.0_1216a566008f",
+  "auditor": "Independent Discovery Audit Worker",
+  "evidence_references": [
+    "Public methodology and validation policy"
+  ]
+}

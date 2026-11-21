@@ -1,0 +1,2669 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-11-21T02:57:04.472120+00:00",
+  "snapshot": "0.1.0",
+  "public_snapshot_id": "pub_0.1.0_1216a566008f",
+  "summary": {
+    "total_edges": 1662,
+    "resolved_edges": 288,
+    "unresolved_edges": 1374,
+    "circular_cycles": 0
+  },
+  "unresolved_platform_targets": [
+    {
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-processthreads-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 15,
+      "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-processthreads-l1-1-0.dll"
+    },
+    {
+      "target": "Bink2Scarlett.dll imports api-ms-win-crt-runtime-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 15,
+      "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-crt-runtime-l1-1-0.dll"
+    },
+    {
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-profile-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 15,
+      "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-profile-l1-1-0.dll"
+    },
+    {
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-sysinfo-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 15,
+      "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-sysinfo-l1-1-0.dll"
+    },
+    {
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-errorhandling-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 13,
+      "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-errorhandling-l1-1-0.dll"
+    },
+    {
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-interlocked-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 13,
+      "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-interlocked-l1-1-0.dll"
+    },
+    {
+      "target": "XCurl.dll imports api-ms-win-core-libraryloader-l1-2-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 13,
+      "description": "Required platform library dependency XCurl.dll imports api-ms-win-core-libraryloader-l1-2-0.dll"
+    },
+    {
+      "target": "XCurl.dll imports api-ms-win-crt-heap-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 13,
+      "description": "Required platform library dependency XCurl.dll imports api-ms-win-crt-heap-l1-1-0.dll"
+    },
+    {
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-rtlsupport-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 13,
+      "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-rtlsupport-l1-1-0.dll"
+    },
+    {
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-processthreads-l1-1-1.dll",
+      "subsystem": "System Services",
+      "dependent_count": 13,
+      "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-processthreads-l1-1-1.dll"
+    },
+    {
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-debug-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 12,
+      "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-debug-l1-1-0.dll"
+    },
+    {
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-synch-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 11,
+      "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-synch-l1-1-0.dll"
+    },
+    {
+      "target": "XCurl.dll imports api-ms-win-crt-string-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 11,
+      "description": "Required platform library dependency XCurl.dll imports api-ms-win-crt-string-l1-1-0.dll"
+    },
+    {
+      "target": "XCurl.dll imports api-ms-win-crt-stdio-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 10,
+      "description": "Required platform library dependency XCurl.dll imports api-ms-win-crt-stdio-l1-1-0.dll"
+    },
+    {
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-synch-l1-2-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 8,
+      "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-synch-l1-2-0.dll"
+    },
+    {
+      "target": "XCurl.dll imports api-ms-win-core-util-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 7,
+      "description": "Required platform library dependency XCurl.dll imports api-ms-win-core-util-l1-1-0.dll"
+    },
+    {
+      "target": "XCurl.dll imports api-ms-win-crt-convert-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 6,
+      "description": "Required platform library dependency XCurl.dll imports api-ms-win-crt-convert-l1-1-0.dll"
+    },
+    {
+      "target": "XboxBvhBuilder.dll imports api-ms-win-crt-math-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 6,
+      "description": "Required platform library dependency XboxBvhBuilder.dll imports api-ms-win-crt-math-l1-1-0.dll"
+    },
+    {
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-handle-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 6,
+      "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-handle-l1-1-0.dll"
+    },
+    {
+      "target": "XCurl.dll imports api-ms-win-core-string-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 5,
+      "description": "Required platform library dependency XCurl.dll imports api-ms-win-core-string-l1-1-0.dll"
+    },
+    {
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-file-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 4,
+      "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-file-l1-1-0.dll"
+    },
+    {
+      "target": "XCurl.dll imports api-ms-win-core-fibers-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 4,
+      "description": "Required platform library dependency XCurl.dll imports api-ms-win-core-fibers-l1-1-0.dll"
+    },
+    {
+      "target": "amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-localization-l1-2-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 4,
+      "description": "Required platform library dependency amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-localization-l1-2-0.dll"
+    },
+    {
+      "target": "XCurl.dll imports api-ms-win-core-threadpool-l1-2-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 4,
+      "description": "Required platform library dependency XCurl.dll imports api-ms-win-core-threadpool-l1-2-0.dll"
+    },
+    {
+      "target": "XCurl.dll imports api-ms-win-core-heap-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 3,
+      "description": "Required platform library dependency XCurl.dll imports api-ms-win-core-heap-l1-1-0.dll"
+    },
+    {
+      "target": "msvcp140.dll imports api-ms-win-crt-locale-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 3,
+      "description": "Required platform library dependency msvcp140.dll imports api-ms-win-crt-locale-l1-1-0.dll"
+    },
+    {
+      "target": "concrt140.dll imports api-ms-win-core-sysinfo-l1-2-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 3,
+      "description": "Required platform library dependency concrt140.dll imports api-ms-win-core-sysinfo-l1-2-0.dll"
+    },
+    {
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-com-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 3,
+      "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-com-l1-1-0.dll"
+    },
+    {
+      "target": "Bink2Scarlett.dll imports xmem.dll",
+      "subsystem": "System Services",
+      "dependent_count": 3,
+      "description": "Required platform library dependency Bink2Scarlett.dll imports xmem.dll"
+    },
+    {
+      "target": "amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-processenvironment-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 2,
+      "description": "Required platform library dependency amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-processenvironment-l1-1-0.dll"
+    },
+    {
+      "target": "XCurl.dll imports api-ms-win-core-libraryloader-l1-2-1.dll",
+      "subsystem": "System Services",
+      "dependent_count": 2,
+      "description": "Required platform library dependency XCurl.dll imports api-ms-win-core-libraryloader-l1-2-1.dll"
+    },
+    {
+      "target": "XCurl.dll imports api-ms-win-core-registry-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 2,
+      "description": "Required platform library dependency XCurl.dll imports api-ms-win-core-registry-l1-1-0.dll"
+    },
+    {
+      "target": "XboxBvhBuilder.dll imports d3d12_xs.dll",
+      "subsystem": "System Services",
+      "dependent_count": 2,
+      "description": "Required platform library dependency XboxBvhBuilder.dll imports d3d12_xs.dll"
+    },
+    {
+      "target": "XCurl.dll imports WINHTTP.dll",
+      "subsystem": "System Services",
+      "dependent_count": 2,
+      "description": "Required platform library dependency XCurl.dll imports WINHTTP.dll"
+    },
+    {
+      "target": "amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-crt-environment-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 2,
+      "description": "Required platform library dependency amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-crt-environment-l1-1-0.dll"
+    },
+    {
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-file-l1-2-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 2,
+      "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-file-l1-2-0.dll"
+    },
+    {
+      "target": "msvcp140.dll imports api-ms-win-core-heap-l2-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 2,
+      "description": "Required platform library dependency msvcp140.dll imports api-ms-win-core-heap-l2-1-0.dll"
+    },
+    {
+      "target": "XCurl.dll imports CRYPT32.dll",
+      "subsystem": "System Services",
+      "dependent_count": 2,
+      "description": "Required platform library dependency XCurl.dll imports CRYPT32.dll"
+    },
+    {
+      "target": "libHttpClient.GDK.dll imports api-ms-win-crt-time-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 2,
+      "description": "Required platform library dependency libHttpClient.GDK.dll imports api-ms-win-crt-time-l1-1-0.dll"
+    },
+    {
+      "target": "vcomp140.dll imports api-ms-win-core-threadpool-legacy-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency vcomp140.dll imports api-ms-win-core-threadpool-legacy-l1-1-0.dll"
+    },
+    {
+      "target": "msvcp140.dll imports api-ms-win-crt-filesystem-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency msvcp140.dll imports api-ms-win-crt-filesystem-l1-1-0.dll"
+    },
+    {
+      "target": "XCurl.dll imports api-ms-win-core-errorhandling-l1-1-2.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency XCurl.dll imports api-ms-win-core-errorhandling-l1-1-2.dll"
+    },
+    {
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-errorhandling-l1-1-1.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-errorhandling-l1-1-1.dll"
+    },
+    {
+      "target": "libHttpClient.GDK.dll imports ADVAPI32.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency libHttpClient.GDK.dll imports ADVAPI32.dll"
+    },
+    {
+      "target": "vcomp140.dll imports api-ms-win-core-string-obsolete-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency vcomp140.dll imports api-ms-win-core-string-obsolete-l1-1-0.dll"
+    },
+    {
+      "target": "msvcp140.dll imports api-ms-win-core-file-l2-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency msvcp140.dll imports api-ms-win-core-file-l2-1-0.dll"
+    },
+    {
+      "target": "Bink2Scarlett.dll imports XAudio2_9.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency Bink2Scarlett.dll imports XAudio2_9.dll"
+    },
+    {
+      "target": "XCurl.dll imports api-ms-win-core-psm-appnotify-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency XCurl.dll imports api-ms-win-core-psm-appnotify-l1-1-0.dll"
+    },
+    {
+      "target": "vccorlib140.dll imports OLEAUT32.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency vccorlib140.dll imports OLEAUT32.dll"
+    },
+    {
+      "target": "XCurl.dll imports api-ms-win-core-registry-l2-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency XCurl.dll imports api-ms-win-core-registry-l2-1-0.dll"
+    },
+    {
+      "target": "vcomp140.dll imports api-ms-win-core-console-l2-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency vcomp140.dll imports api-ms-win-core-console-l2-1-0.dll"
+    },
+    {
+      "target": "vcomp140.dll imports api-ms-win-core-console-l3-2-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency vcomp140.dll imports api-ms-win-core-console-l3-2-0.dll"
+    },
+    {
+      "target": "vccorlib140.dll imports api-ms-win-core-winrt-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency vccorlib140.dll imports api-ms-win-core-winrt-l1-1-0.dll"
+    },
+    {
+      "target": "vcomp140.dll imports api-ms-win-core-localization-obsolete-l1-2-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency vcomp140.dll imports api-ms-win-core-localization-obsolete-l1-2-0.dll"
+    },
+    {
+      "target": "vcomp140.dll imports api-ms-win-core-console-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency vcomp140.dll imports api-ms-win-core-console-l1-1-0.dll"
+    },
+    {
+      "target": "libHttpClient.GDK.dll imports KERNEL32.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency libHttpClient.GDK.dll imports KERNEL32.dll"
+    },
+    {
+      "target": "XCurl.dll imports api-ms-win-eventing-classicprovider-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency XCurl.dll imports api-ms-win-eventing-classicprovider-l1-1-0.dll"
+    },
+    {
+      "target": "XCurl.dll imports api-ms-win-eventing-provider-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency XCurl.dll imports api-ms-win-eventing-provider-l1-1-0.dll"
+    },
+    {
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-processtopology-obsolete-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-processtopology-obsolete-l1-1-0.dll"
+    },
+    {
+      "target": "msvcp140.dll imports api-ms-win-crt-utility-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency msvcp140.dll imports api-ms-win-crt-utility-l1-1-0.dll"
+    },
+    {
+      "target": "XCurl.dll imports api-ms-win-core-synch-l1-2-1.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency XCurl.dll imports api-ms-win-core-synch-l1-2-1.dll"
+    },
+    {
+      "target": "vccorlib140.dll imports api-ms-win-core-winrt-string-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency vccorlib140.dll imports api-ms-win-core-winrt-string-l1-1-0.dll"
+    },
+    {
+      "target": "vccorlib140.dll imports api-ms-win-core-winrt-error-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency vccorlib140.dll imports api-ms-win-core-winrt-error-l1-1-0.dll"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Bink2Scarlett.dll",
+      "target": "Bink2Scarlett.dll imports XAudio2_9.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "Bink2Scarlett.dll depends on Bink2Scarlett.dll imports XAudio2_9.dll"
+    },
+    {
+      "source": "Bink2Scarlett.dll",
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-com-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "Bink2Scarlett.dll depends on Bink2Scarlett.dll imports api-ms-win-core-com-l1-1-0.dll"
+    },
+    {
+      "source": "Bink2Scarlett.dll",
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-debug-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "Bink2Scarlett.dll depends on Bink2Scarlett.dll imports api-ms-win-core-debug-l1-1-0.dll"
+    },
+    {
+      "source": "Bink2Scarlett.dll",
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-errorhandling-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "Bink2Scarlett.dll depends on Bink2Scarlett.dll imports api-ms-win-core-errorhandling-l1-1-0.dll"
+    },
+    {
+      "source": "Bink2Scarlett.dll",
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-errorhandling-l1-1-1.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "Bink2Scarlett.dll depends on Bink2Scarlett.dll imports api-ms-win-core-errorhandling-l1-1-1.dll"
+    },
+    {
+      "source": "Bink2Scarlett.dll",
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-file-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "Bink2Scarlett.dll depends on Bink2Scarlett.dll imports api-ms-win-core-file-l1-1-0.dll"
+    },
+    {
+      "source": "Bink2Scarlett.dll",
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-file-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "Bink2Scarlett.dll depends on Bink2Scarlett.dll imports api-ms-win-core-file-l1-2-0.dll"
+    },
+    {
+      "source": "Bink2Scarlett.dll",
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-handle-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "Bink2Scarlett.dll depends on Bink2Scarlett.dll imports api-ms-win-core-handle-l1-1-0.dll"
+    },
+    {
+      "source": "Bink2Scarlett.dll",
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-interlocked-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "Bink2Scarlett.dll depends on Bink2Scarlett.dll imports api-ms-win-core-interlocked-l1-1-0.dll"
+    },
+    {
+      "source": "Bink2Scarlett.dll",
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-processthreads-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "Bink2Scarlett.dll depends on Bink2Scarlett.dll imports api-ms-win-core-processthreads-l1-1-0.dll"
+    },
+    {
+      "source": "Bink2Scarlett.dll",
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-processthreads-l1-1-1.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "Bink2Scarlett.dll depends on Bink2Scarlett.dll imports api-ms-win-core-processthreads-l1-1-1.dll"
+    },
+    {
+      "source": "Bink2Scarlett.dll",
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-processtopology-obsolete-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "Bink2Scarlett.dll depends on Bink2Scarlett.dll imports api-ms-win-core-processtopology-obsolete-l1-1-0.dll"
+    },
+    {
+      "source": "Bink2Scarlett.dll",
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-profile-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "Bink2Scarlett.dll depends on Bink2Scarlett.dll imports api-ms-win-core-profile-l1-1-0.dll"
+    },
+    {
+      "source": "Bink2Scarlett.dll",
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-rtlsupport-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "Bink2Scarlett.dll depends on Bink2Scarlett.dll imports api-ms-win-core-rtlsupport-l1-1-0.dll"
+    },
+    {
+      "source": "Bink2Scarlett.dll",
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-synch-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "Bink2Scarlett.dll depends on Bink2Scarlett.dll imports api-ms-win-core-synch-l1-1-0.dll"
+    },
+    {
+      "source": "Bink2Scarlett.dll",
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-synch-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "Bink2Scarlett.dll depends on Bink2Scarlett.dll imports api-ms-win-core-synch-l1-2-0.dll"
+    },
+    {
+      "source": "Bink2Scarlett.dll",
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-sysinfo-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "Bink2Scarlett.dll depends on Bink2Scarlett.dll imports api-ms-win-core-sysinfo-l1-1-0.dll"
+    },
+    {
+      "source": "Bink2Scarlett.dll",
+      "target": "Bink2Scarlett.dll imports api-ms-win-crt-runtime-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "Bink2Scarlett.dll depends on Bink2Scarlett.dll imports api-ms-win-crt-runtime-l1-1-0.dll"
+    },
+    {
+      "source": "Bink2Scarlett.dll",
+      "target": "Bink2Scarlett.dll imports xmem.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "Bink2Scarlett.dll depends on Bink2Scarlett.dll imports xmem.dll"
+    },
+    {
+      "source": "Bink2Scarlett.dll",
+      "target": "vcruntime140.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "Bink2Scarlett.dll depends on vcruntime140.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports CRYPT32.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports CRYPT32.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports WINHTTP.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports WINHTTP.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-core-com-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-core-com-l1-1-0.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-core-debug-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-core-debug-l1-1-0.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-core-errorhandling-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-core-errorhandling-l1-1-0.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-core-errorhandling-l1-1-2.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-core-errorhandling-l1-1-2.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-core-fibers-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-core-fibers-l1-1-0.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-core-file-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-core-file-l1-1-0.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-core-handle-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-core-handle-l1-1-0.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-core-heap-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-core-heap-l1-1-0.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-core-interlocked-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-core-interlocked-l1-1-0.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-core-libraryloader-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-core-libraryloader-l1-2-0.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-core-libraryloader-l1-2-1.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-core-libraryloader-l1-2-1.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-core-processthreads-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-core-processthreads-l1-1-0.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-core-profile-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-core-profile-l1-1-0.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-core-psm-appnotify-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-core-psm-appnotify-l1-1-0.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-core-registry-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-core-registry-l1-1-0.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-core-registry-l2-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-core-registry-l2-1-0.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-core-rtlsupport-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-core-rtlsupport-l1-1-0.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-core-string-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-core-string-l1-1-0.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-core-synch-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-core-synch-l1-1-0.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-core-synch-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-core-synch-l1-2-0.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-core-synch-l1-2-1.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-core-synch-l1-2-1.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-core-sysinfo-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-core-sysinfo-l1-1-0.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-core-threadpool-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-core-threadpool-l1-2-0.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-core-util-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-core-util-l1-1-0.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-crt-convert-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-crt-convert-l1-1-0.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-crt-heap-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-crt-heap-l1-1-0.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-crt-runtime-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-crt-runtime-l1-1-0.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-crt-stdio-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-crt-stdio-l1-1-0.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-crt-string-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-crt-string-l1-1-0.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-eventing-classicprovider-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-eventing-classicprovider-l1-1-0.dll"
+    },
+    {
+      "source": "XCurl.dll",
+      "target": "XCurl.dll imports api-ms-win-eventing-provider-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-eventing-provider-l1-1-0.dll"
+    },
+    {
+      "source": "XboxBvhBuilder.dll",
+      "target": "XboxBvhBuilder.dll imports api-ms-win-core-debug-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XboxBvhBuilder.dll depends on XboxBvhBuilder.dll imports api-ms-win-core-debug-l1-1-0.dll"
+    },
+    {
+      "source": "XboxBvhBuilder.dll",
+      "target": "XboxBvhBuilder.dll imports api-ms-win-core-errorhandling-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XboxBvhBuilder.dll depends on XboxBvhBuilder.dll imports api-ms-win-core-errorhandling-l1-1-0.dll"
+    },
+    {
+      "source": "XboxBvhBuilder.dll",
+      "target": "XboxBvhBuilder.dll imports api-ms-win-core-interlocked-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XboxBvhBuilder.dll depends on XboxBvhBuilder.dll imports api-ms-win-core-interlocked-l1-1-0.dll"
+    },
+    {
+      "source": "XboxBvhBuilder.dll",
+      "target": "XboxBvhBuilder.dll imports api-ms-win-core-libraryloader-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XboxBvhBuilder.dll depends on XboxBvhBuilder.dll imports api-ms-win-core-libraryloader-l1-2-0.dll"
+    },
+    {
+      "source": "XboxBvhBuilder.dll",
+      "target": "XboxBvhBuilder.dll imports api-ms-win-core-processthreads-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XboxBvhBuilder.dll depends on XboxBvhBuilder.dll imports api-ms-win-core-processthreads-l1-1-0.dll"
+    },
+    {
+      "source": "XboxBvhBuilder.dll",
+      "target": "XboxBvhBuilder.dll imports api-ms-win-core-processthreads-l1-1-1.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XboxBvhBuilder.dll depends on XboxBvhBuilder.dll imports api-ms-win-core-processthreads-l1-1-1.dll"
+    },
+    {
+      "source": "XboxBvhBuilder.dll",
+      "target": "XboxBvhBuilder.dll imports api-ms-win-core-profile-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XboxBvhBuilder.dll depends on XboxBvhBuilder.dll imports api-ms-win-core-profile-l1-1-0.dll"
+    },
+    {
+      "source": "XboxBvhBuilder.dll",
+      "target": "XboxBvhBuilder.dll imports api-ms-win-core-rtlsupport-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XboxBvhBuilder.dll depends on XboxBvhBuilder.dll imports api-ms-win-core-rtlsupport-l1-1-0.dll"
+    },
+    {
+      "source": "XboxBvhBuilder.dll",
+      "target": "XboxBvhBuilder.dll imports api-ms-win-core-synch-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XboxBvhBuilder.dll depends on XboxBvhBuilder.dll imports api-ms-win-core-synch-l1-1-0.dll"
+    },
+    {
+      "source": "XboxBvhBuilder.dll",
+      "target": "XboxBvhBuilder.dll imports api-ms-win-core-synch-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XboxBvhBuilder.dll depends on XboxBvhBuilder.dll imports api-ms-win-core-synch-l1-2-0.dll"
+    },
+    {
+      "source": "XboxBvhBuilder.dll",
+      "target": "XboxBvhBuilder.dll imports api-ms-win-core-sysinfo-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XboxBvhBuilder.dll depends on XboxBvhBuilder.dll imports api-ms-win-core-sysinfo-l1-1-0.dll"
+    },
+    {
+      "source": "XboxBvhBuilder.dll",
+      "target": "XboxBvhBuilder.dll imports api-ms-win-crt-heap-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XboxBvhBuilder.dll depends on XboxBvhBuilder.dll imports api-ms-win-crt-heap-l1-1-0.dll"
+    },
+    {
+      "source": "XboxBvhBuilder.dll",
+      "target": "XboxBvhBuilder.dll imports api-ms-win-crt-math-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XboxBvhBuilder.dll depends on XboxBvhBuilder.dll imports api-ms-win-crt-math-l1-1-0.dll"
+    },
+    {
+      "source": "XboxBvhBuilder.dll",
+      "target": "XboxBvhBuilder.dll imports api-ms-win-crt-runtime-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XboxBvhBuilder.dll depends on XboxBvhBuilder.dll imports api-ms-win-crt-runtime-l1-1-0.dll"
+    },
+    {
+      "source": "XboxBvhBuilder.dll",
+      "target": "XboxBvhBuilder.dll imports api-ms-win-crt-stdio-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XboxBvhBuilder.dll depends on XboxBvhBuilder.dll imports api-ms-win-crt-stdio-l1-1-0.dll"
+    },
+    {
+      "source": "XboxBvhBuilder.dll",
+      "target": "XboxBvhBuilder.dll imports api-ms-win-crt-string-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XboxBvhBuilder.dll depends on XboxBvhBuilder.dll imports api-ms-win-crt-string-l1-1-0.dll"
+    },
+    {
+      "source": "XboxBvhBuilder.dll",
+      "target": "XboxBvhBuilder.dll imports d3d12_xs.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XboxBvhBuilder.dll depends on XboxBvhBuilder.dll imports d3d12_xs.dll"
+    },
+    {
+      "source": "XboxBvhBuilder.dll",
+      "target": "XboxBvhBuilder.dll imports xmem.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "XboxBvhBuilder.dll depends on XboxBvhBuilder.dll imports xmem.dll"
+    },
+    {
+      "source": "XboxBvhBuilder.dll",
+      "target": "msvcp140.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "XboxBvhBuilder.dll depends on msvcp140.dll"
+    },
+    {
+      "source": "XboxBvhBuilder.dll",
+      "target": "vcruntime140.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "XboxBvhBuilder.dll depends on vcruntime140.dll"
+    },
+    {
+      "source": "XboxBvhBuilder.dll",
+      "target": "vcruntime140_1.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "XboxBvhBuilder.dll depends on vcruntime140_1.dll"
+    },
+    {
+      "source": "amd_fidelityfx_loader_xbox.dll",
+      "target": "amd_fidelityfx_loader_xbox.dll imports api-ms-win-core-interlocked-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "amd_fidelityfx_loader_xbox.dll depends on amd_fidelityfx_loader_xbox.dll imports api-ms-win-core-interlocked-l1-1-0.dll"
+    },
+    {
+      "source": "amd_fidelityfx_loader_xbox.dll",
+      "target": "amd_fidelityfx_loader_xbox.dll imports api-ms-win-core-libraryloader-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "amd_fidelityfx_loader_xbox.dll depends on amd_fidelityfx_loader_xbox.dll imports api-ms-win-core-libraryloader-l1-2-0.dll"
+    },
+    {
+      "source": "amd_fidelityfx_loader_xbox.dll",
+      "target": "amd_fidelityfx_loader_xbox.dll imports api-ms-win-core-libraryloader-l1-2-1.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "amd_fidelityfx_loader_xbox.dll depends on amd_fidelityfx_loader_xbox.dll imports api-ms-win-core-libraryloader-l1-2-1.dll"
+    },
+    {
+      "source": "amd_fidelityfx_loader_xbox.dll",
+      "target": "amd_fidelityfx_loader_xbox.dll imports api-ms-win-core-processthreads-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "amd_fidelityfx_loader_xbox.dll depends on amd_fidelityfx_loader_xbox.dll imports api-ms-win-core-processthreads-l1-1-0.dll"
+    },
+    {
+      "source": "amd_fidelityfx_loader_xbox.dll",
+      "target": "amd_fidelityfx_loader_xbox.dll imports api-ms-win-core-profile-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "amd_fidelityfx_loader_xbox.dll depends on amd_fidelityfx_loader_xbox.dll imports api-ms-win-core-profile-l1-1-0.dll"
+    },
+    {
+      "source": "amd_fidelityfx_loader_xbox.dll",
+      "target": "amd_fidelityfx_loader_xbox.dll imports api-ms-win-core-sysinfo-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "amd_fidelityfx_loader_xbox.dll depends on amd_fidelityfx_loader_xbox.dll imports api-ms-win-core-sysinfo-l1-1-0.dll"
+    },
+    {
+      "source": "amd_fidelityfx_loader_xbox.dll",
+      "target": "amd_fidelityfx_loader_xbox.dll imports api-ms-win-crt-heap-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "amd_fidelityfx_loader_xbox.dll depends on amd_fidelityfx_loader_xbox.dll imports api-ms-win-crt-heap-l1-1-0.dll"
+    },
+    {
+      "source": "amd_fidelityfx_loader_xbox.dll",
+      "target": "amd_fidelityfx_loader_xbox.dll imports api-ms-win-crt-runtime-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "amd_fidelityfx_loader_xbox.dll depends on amd_fidelityfx_loader_xbox.dll imports api-ms-win-crt-runtime-l1-1-0.dll"
+    },
+    {
+      "source": "amd_fidelityfx_loader_xbox.dll",
+      "target": "vcruntime140.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "amd_fidelityfx_loader_xbox.dll depends on vcruntime140.dll"
+    },
+    {
+      "source": "amd_fidelityfx_upscaler_xbox.dll",
+      "target": "amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-debug-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "amd_fidelityfx_upscaler_xbox.dll depends on amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-debug-l1-1-0.dll"
+    },
+    {
+      "source": "amd_fidelityfx_upscaler_xbox.dll",
+      "target": "amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-interlocked-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "amd_fidelityfx_upscaler_xbox.dll depends on amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-interlocked-l1-1-0.dll"
+    },
+    {
+      "source": "amd_fidelityfx_upscaler_xbox.dll",
+      "target": "amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-libraryloader-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "amd_fidelityfx_upscaler_xbox.dll depends on amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-libraryloader-l1-2-0.dll"
+    },
+    {
+      "source": "amd_fidelityfx_upscaler_xbox.dll",
+      "target": "amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-localization-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "amd_fidelityfx_upscaler_xbox.dll depends on amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-localization-l1-2-0.dll"
+    },
+    {
+      "source": "amd_fidelityfx_upscaler_xbox.dll",
+      "target": "amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-processenvironment-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "amd_fidelityfx_upscaler_xbox.dll depends on amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-processenvironment-l1-1-0.dll"
+    },
+    {
+      "source": "amd_fidelityfx_upscaler_xbox.dll",
+      "target": "amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-processthreads-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "amd_fidelityfx_upscaler_xbox.dll depends on amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-processthreads-l1-1-0.dll"
+    },
+    {
+      "source": "amd_fidelityfx_upscaler_xbox.dll",
+      "target": "amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-processthreads-l1-1-1.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "amd_fidelityfx_upscaler_xbox.dll depends on amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-processthreads-l1-1-1.dll"
+    },
+    {
+      "source": "amd_fidelityfx_upscaler_xbox.dll",
+      "target": "amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-profile-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "amd_fidelityfx_upscaler_xbox.dll depends on amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-profile-l1-1-0.dll"
+    },
+    {
+      "source": "amd_fidelityfx_upscaler_xbox.dll",
+      "target": "amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-string-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "amd_fidelityfx_upscaler_xbox.dll depends on amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-string-l1-1-0.dll"
+    },
+    {
+      "source": "amd_fidelityfx_upscaler_xbox.dll",
+      "target": "amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-synch-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "amd_fidelityfx_upscaler_xbox.dll depends on amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-synch-l1-1-0.dll"
+    },
+    {
+      "source": "amd_fidelityfx_upscaler_xbox.dll",
+      "target": "amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-synch-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "amd_fidelityfx_upscaler_xbox.dll depends on amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-synch-l1-2-0.dll"
+    },
+    {
+      "source": "amd_fidelityfx_upscaler_xbox.dll",
+      "target": "amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-sysinfo-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "amd_fidelityfx_upscaler_xbox.dll depends on amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-sysinfo-l1-1-0.dll"
+    },
+    {
+      "source": "amd_fidelityfx_upscaler_xbox.dll",
+      "target": "amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-crt-convert-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "amd_fidelityfx_upscaler_xbox.dll depends on amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-crt-convert-l1-1-0.dll"
+    },
+    {
+      "source": "amd_fidelityfx_upscaler_xbox.dll",
+      "target": "amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-crt-environment-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "amd_fidelityfx_upscaler_xbox.dll depends on amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-crt-environment-l1-1-0.dll"
+    },
+    {
+      "source": "amd_fidelityfx_upscaler_xbox.dll",
+      "target": "amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-crt-heap-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "amd_fidelityfx_upscaler_xbox.dll depends on amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-crt-heap-l1-1-0.dll"
+    },
+    {
+      "source": "amd_fidelityfx_upscaler_xbox.dll",
+      "target": "amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-crt-math-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "amd_fidelityfx_upscaler_xbox.dll depends on amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-crt-math-l1-1-0.dll"
+    },
+    {
+      "source": "amd_fidelityfx_upscaler_xbox.dll",
+      "target": "amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-crt-runtime-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "amd_fidelityfx_upscaler_xbox.dll depends on amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-crt-runtime-l1-1-0.dll"
+    },
+    {
+      "source": "amd_fidelityfx_upscaler_xbox.dll",
+      "target": "amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-crt-stdio-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "amd_fidelityfx_upscaler_xbox.dll depends on amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-crt-stdio-l1-1-0.dll"
+    },
+    {
+      "source": "amd_fidelityfx_upscaler_xbox.dll",
+      "target": "amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-crt-string-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "amd_fidelityfx_upscaler_xbox.dll depends on amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-crt-string-l1-1-0.dll"
+    },
+    {
+      "source": "amd_fidelityfx_upscaler_xbox.dll",
+      "target": "amd_fidelityfx_upscaler_xbox.dll imports d3d12_xs.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "amd_fidelityfx_upscaler_xbox.dll depends on amd_fidelityfx_upscaler_xbox.dll imports d3d12_xs.dll"
+    },
+    {
+      "source": "amd_fidelityfx_upscaler_xbox.dll",
+      "target": "amd_fidelityfx_upscaler_xbox.dll imports xmem.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "amd_fidelityfx_upscaler_xbox.dll depends on amd_fidelityfx_upscaler_xbox.dll imports xmem.dll"
+    },
+    {
+      "source": "amd_fidelityfx_upscaler_xbox.dll",
+      "target": "msvcp140.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "amd_fidelityfx_upscaler_xbox.dll depends on msvcp140.dll"
+    },
+    {
+      "source": "amd_fidelityfx_upscaler_xbox.dll",
+      "target": "vcruntime140.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "amd_fidelityfx_upscaler_xbox.dll depends on vcruntime140.dll"
+    },
+    {
+      "source": "amd_fidelityfx_upscaler_xbox.dll",
+      "target": "vcruntime140_1.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "amd_fidelityfx_upscaler_xbox.dll depends on vcruntime140_1.dll"
+    },
+    {
+      "source": "concrt140.dll",
+      "target": "concrt140.dll imports api-ms-win-core-debug-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "concrt140.dll depends on concrt140.dll imports api-ms-win-core-debug-l1-1-0.dll"
+    },
+    {
+      "source": "concrt140.dll",
+      "target": "concrt140.dll imports api-ms-win-core-errorhandling-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "concrt140.dll depends on concrt140.dll imports api-ms-win-core-errorhandling-l1-1-0.dll"
+    },
+    {
+      "source": "concrt140.dll",
+      "target": "concrt140.dll imports api-ms-win-core-fibers-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "concrt140.dll depends on concrt140.dll imports api-ms-win-core-fibers-l1-1-0.dll"
+    },
+    {
+      "source": "concrt140.dll",
+      "target": "concrt140.dll imports api-ms-win-core-handle-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "concrt140.dll depends on concrt140.dll imports api-ms-win-core-handle-l1-1-0.dll"
+    },
+    {
+      "source": "concrt140.dll",
+      "target": "concrt140.dll imports api-ms-win-core-interlocked-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "concrt140.dll depends on concrt140.dll imports api-ms-win-core-interlocked-l1-1-0.dll"
+    },
+    {
+      "source": "concrt140.dll",
+      "target": "concrt140.dll imports api-ms-win-core-libraryloader-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "concrt140.dll depends on concrt140.dll imports api-ms-win-core-libraryloader-l1-2-0.dll"
+    },
+    {
+      "source": "concrt140.dll",
+      "target": "concrt140.dll imports api-ms-win-core-processthreads-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "concrt140.dll depends on concrt140.dll imports api-ms-win-core-processthreads-l1-1-0.dll"
+    },
+    {
+      "source": "concrt140.dll",
+      "target": "concrt140.dll imports api-ms-win-core-processthreads-l1-1-1.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "concrt140.dll depends on concrt140.dll imports api-ms-win-core-processthreads-l1-1-1.dll"
+    },
+    {
+      "source": "concrt140.dll",
+      "target": "concrt140.dll imports api-ms-win-core-profile-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "concrt140.dll depends on concrt140.dll imports api-ms-win-core-profile-l1-1-0.dll"
+    },
+    {
+      "source": "concrt140.dll",
+      "target": "concrt140.dll imports api-ms-win-core-rtlsupport-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "concrt140.dll depends on concrt140.dll imports api-ms-win-core-rtlsupport-l1-1-0.dll"
+    },
+    {
+      "source": "concrt140.dll",
+      "target": "concrt140.dll imports api-ms-win-core-synch-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "concrt140.dll depends on concrt140.dll imports api-ms-win-core-synch-l1-1-0.dll"
+    },
+    {
+      "source": "concrt140.dll",
+      "target": "concrt140.dll imports api-ms-win-core-synch-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "concrt140.dll depends on concrt140.dll imports api-ms-win-core-synch-l1-2-0.dll"
+    },
+    {
+      "source": "concrt140.dll",
+      "target": "concrt140.dll imports api-ms-win-core-sysinfo-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "concrt140.dll depends on concrt140.dll imports api-ms-win-core-sysinfo-l1-1-0.dll"
+    },
+    {
+      "source": "concrt140.dll",
+      "target": "concrt140.dll imports api-ms-win-core-sysinfo-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "concrt140.dll depends on concrt140.dll imports api-ms-win-core-sysinfo-l1-2-0.dll"
+    },
+    {
+      "source": "concrt140.dll",
+      "target": "concrt140.dll imports api-ms-win-core-threadpool-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "concrt140.dll depends on concrt140.dll imports api-ms-win-core-threadpool-l1-2-0.dll"
+    },
+    {
+      "source": "concrt140.dll",
+      "target": "concrt140.dll imports api-ms-win-core-util-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "concrt140.dll depends on concrt140.dll imports api-ms-win-core-util-l1-1-0.dll"
+    },
+    {
+      "source": "concrt140.dll",
+      "target": "concrt140.dll imports api-ms-win-crt-heap-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "concrt140.dll depends on concrt140.dll imports api-ms-win-crt-heap-l1-1-0.dll"
+    },
+    {
+      "source": "concrt140.dll",
+      "target": "concrt140.dll imports api-ms-win-crt-runtime-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "concrt140.dll depends on concrt140.dll imports api-ms-win-crt-runtime-l1-1-0.dll"
+    },
+    {
+      "source": "concrt140.dll",
+      "target": "concrt140.dll imports api-ms-win-crt-stdio-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "concrt140.dll depends on concrt140.dll imports api-ms-win-crt-stdio-l1-1-0.dll"
+    },
+    {
+      "source": "concrt140.dll",
+      "target": "concrt140.dll imports api-ms-win-crt-string-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "concrt140.dll depends on concrt140.dll imports api-ms-win-crt-string-l1-1-0.dll"
+    },
+    {
+      "source": "concrt140.dll",
+      "target": "msvcp140.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "concrt140.dll depends on msvcp140.dll"
+    },
+    {
+      "source": "concrt140.dll",
+      "target": "vcruntime140.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "concrt140.dll depends on vcruntime140.dll"
+    },
+    {
+      "source": "concrt140.dll",
+      "target": "vcruntime140_1.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "concrt140.dll depends on vcruntime140_1.dll"
+    },
+    {
+      "source": "libHttpClient.GDK.dll",
+      "target": "libHttpClient.GDK.dll imports ADVAPI32.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "libHttpClient.GDK.dll depends on libHttpClient.GDK.dll imports ADVAPI32.dll"
+    },
+    {
+      "source": "libHttpClient.GDK.dll",
+      "target": "libHttpClient.GDK.dll imports CRYPT32.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "libHttpClient.GDK.dll depends on libHttpClient.GDK.dll imports CRYPT32.dll"
+    },
+    {
+      "source": "libHttpClient.GDK.dll",
+      "target": "libHttpClient.GDK.dll imports KERNEL32.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "libHttpClient.GDK.dll depends on libHttpClient.GDK.dll imports KERNEL32.dll"
+    },
+    {
+      "source": "libHttpClient.GDK.dll",
+      "target": "libHttpClient.GDK.dll imports WINHTTP.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "libHttpClient.GDK.dll depends on libHttpClient.GDK.dll imports WINHTTP.dll"
+    },
+    {
+      "source": "libHttpClient.GDK.dll",
+      "target": "libHttpClient.GDK.dll imports api-ms-win-crt-convert-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "libHttpClient.GDK.dll depends on libHttpClient.GDK.dll imports api-ms-win-crt-convert-l1-1-0.dll"
+    },
+    {
+      "source": "libHttpClient.GDK.dll",
+      "target": "libHttpClient.GDK.dll imports api-ms-win-crt-heap-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "libHttpClient.GDK.dll depends on libHttpClient.GDK.dll imports api-ms-win-crt-heap-l1-1-0.dll"
+    },
+    {
+      "source": "libHttpClient.GDK.dll",
+      "target": "libHttpClient.GDK.dll imports api-ms-win-crt-math-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "libHttpClient.GDK.dll depends on libHttpClient.GDK.dll imports api-ms-win-crt-math-l1-1-0.dll"
+    },
+    {
+      "source": "libHttpClient.GDK.dll",
+      "target": "libHttpClient.GDK.dll imports api-ms-win-crt-runtime-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "libHttpClient.GDK.dll depends on libHttpClient.GDK.dll imports api-ms-win-crt-runtime-l1-1-0.dll"
+    },
+    {
+      "source": "libHttpClient.GDK.dll",
+      "target": "libHttpClient.GDK.dll imports api-ms-win-crt-stdio-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "libHttpClient.GDK.dll depends on libHttpClient.GDK.dll imports api-ms-win-crt-stdio-l1-1-0.dll"
+    },
+    {
+      "source": "libHttpClient.GDK.dll",
+      "target": "libHttpClient.GDK.dll imports api-ms-win-crt-string-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "libHttpClient.GDK.dll depends on libHttpClient.GDK.dll imports api-ms-win-crt-string-l1-1-0.dll"
+    },
+    {
+      "source": "libHttpClient.GDK.dll",
+      "target": "libHttpClient.GDK.dll imports api-ms-win-crt-time-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "libHttpClient.GDK.dll depends on libHttpClient.GDK.dll imports api-ms-win-crt-time-l1-1-0.dll"
+    },
+    {
+      "source": "libHttpClient.GDK.dll",
+      "target": "msvcp140.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "libHttpClient.GDK.dll depends on msvcp140.dll"
+    },
+    {
+      "source": "libHttpClient.GDK.dll",
+      "target": "vcruntime140.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "libHttpClient.GDK.dll depends on vcruntime140.dll"
+    },
+    {
+      "source": "libHttpClient.GDK.dll",
+      "target": "vcruntime140_1.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "libHttpClient.GDK.dll depends on vcruntime140_1.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-core-debug-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-core-debug-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-core-errorhandling-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-core-errorhandling-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-core-file-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-core-file-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-core-file-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-core-file-l1-2-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-core-file-l2-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-core-file-l2-1-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-core-handle-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-core-handle-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-core-heap-l2-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-core-heap-l2-1-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-core-interlocked-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-core-interlocked-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-core-libraryloader-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-core-libraryloader-l1-2-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-core-localization-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-core-localization-l1-2-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-core-processthreads-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-core-processthreads-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-core-processthreads-l1-1-1.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-core-processthreads-l1-1-1.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-core-profile-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-core-profile-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-core-rtlsupport-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-core-rtlsupport-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-core-string-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-core-string-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-core-synch-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-core-synch-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-core-synch-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-core-synch-l1-2-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-core-sysinfo-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-core-sysinfo-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-core-sysinfo-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-core-sysinfo-l1-2-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-core-threadpool-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-core-threadpool-l1-2-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-core-util-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-core-util-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-crt-convert-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-crt-convert-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-crt-environment-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-crt-environment-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-crt-filesystem-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-crt-filesystem-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-crt-heap-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-crt-heap-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-crt-locale-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-crt-locale-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-crt-math-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-crt-math-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-crt-runtime-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-crt-runtime-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-crt-stdio-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-crt-stdio-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-crt-string-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-crt-string-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-crt-time-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-crt-time-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "msvcp140.dll imports api-ms-win-crt-utility-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140.dll depends on msvcp140.dll imports api-ms-win-crt-utility-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "vcruntime140.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "msvcp140.dll depends on vcruntime140.dll"
+    },
+    {
+      "source": "msvcp140.dll",
+      "target": "vcruntime140_1.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "msvcp140.dll depends on vcruntime140_1.dll"
+    },
+    {
+      "source": "msvcp140_1.dll",
+      "target": "msvcp140.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "msvcp140_1.dll depends on msvcp140.dll"
+    },
+    {
+      "source": "msvcp140_1.dll",
+      "target": "msvcp140_1.dll imports api-ms-win-core-debug-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_1.dll depends on msvcp140_1.dll imports api-ms-win-core-debug-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_1.dll",
+      "target": "msvcp140_1.dll imports api-ms-win-core-errorhandling-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_1.dll depends on msvcp140_1.dll imports api-ms-win-core-errorhandling-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_1.dll",
+      "target": "msvcp140_1.dll imports api-ms-win-core-interlocked-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_1.dll depends on msvcp140_1.dll imports api-ms-win-core-interlocked-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_1.dll",
+      "target": "msvcp140_1.dll imports api-ms-win-core-libraryloader-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_1.dll depends on msvcp140_1.dll imports api-ms-win-core-libraryloader-l1-2-0.dll"
+    },
+    {
+      "source": "msvcp140_1.dll",
+      "target": "msvcp140_1.dll imports api-ms-win-core-processthreads-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_1.dll depends on msvcp140_1.dll imports api-ms-win-core-processthreads-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_1.dll",
+      "target": "msvcp140_1.dll imports api-ms-win-core-processthreads-l1-1-1.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_1.dll depends on msvcp140_1.dll imports api-ms-win-core-processthreads-l1-1-1.dll"
+    },
+    {
+      "source": "msvcp140_1.dll",
+      "target": "msvcp140_1.dll imports api-ms-win-core-profile-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_1.dll depends on msvcp140_1.dll imports api-ms-win-core-profile-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_1.dll",
+      "target": "msvcp140_1.dll imports api-ms-win-core-rtlsupport-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_1.dll depends on msvcp140_1.dll imports api-ms-win-core-rtlsupport-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_1.dll",
+      "target": "msvcp140_1.dll imports api-ms-win-core-sysinfo-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_1.dll depends on msvcp140_1.dll imports api-ms-win-core-sysinfo-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_1.dll",
+      "target": "msvcp140_1.dll imports api-ms-win-crt-heap-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_1.dll depends on msvcp140_1.dll imports api-ms-win-crt-heap-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_1.dll",
+      "target": "msvcp140_1.dll imports api-ms-win-crt-runtime-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_1.dll depends on msvcp140_1.dll imports api-ms-win-crt-runtime-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_1.dll",
+      "target": "vcruntime140.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "msvcp140_1.dll depends on vcruntime140.dll"
+    },
+    {
+      "source": "msvcp140_2.dll",
+      "target": "msvcp140.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "msvcp140_2.dll depends on msvcp140.dll"
+    },
+    {
+      "source": "msvcp140_2.dll",
+      "target": "msvcp140_2.dll imports api-ms-win-core-debug-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_2.dll depends on msvcp140_2.dll imports api-ms-win-core-debug-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_2.dll",
+      "target": "msvcp140_2.dll imports api-ms-win-core-errorhandling-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_2.dll depends on msvcp140_2.dll imports api-ms-win-core-errorhandling-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_2.dll",
+      "target": "msvcp140_2.dll imports api-ms-win-core-interlocked-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_2.dll depends on msvcp140_2.dll imports api-ms-win-core-interlocked-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_2.dll",
+      "target": "msvcp140_2.dll imports api-ms-win-core-libraryloader-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_2.dll depends on msvcp140_2.dll imports api-ms-win-core-libraryloader-l1-2-0.dll"
+    },
+    {
+      "source": "msvcp140_2.dll",
+      "target": "msvcp140_2.dll imports api-ms-win-core-processthreads-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_2.dll depends on msvcp140_2.dll imports api-ms-win-core-processthreads-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_2.dll",
+      "target": "msvcp140_2.dll imports api-ms-win-core-processthreads-l1-1-1.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_2.dll depends on msvcp140_2.dll imports api-ms-win-core-processthreads-l1-1-1.dll"
+    },
+    {
+      "source": "msvcp140_2.dll",
+      "target": "msvcp140_2.dll imports api-ms-win-core-profile-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_2.dll depends on msvcp140_2.dll imports api-ms-win-core-profile-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_2.dll",
+      "target": "msvcp140_2.dll imports api-ms-win-core-rtlsupport-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_2.dll depends on msvcp140_2.dll imports api-ms-win-core-rtlsupport-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_2.dll",
+      "target": "msvcp140_2.dll imports api-ms-win-core-sysinfo-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_2.dll depends on msvcp140_2.dll imports api-ms-win-core-sysinfo-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_2.dll",
+      "target": "msvcp140_2.dll imports api-ms-win-crt-heap-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_2.dll depends on msvcp140_2.dll imports api-ms-win-crt-heap-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_2.dll",
+      "target": "msvcp140_2.dll imports api-ms-win-crt-locale-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_2.dll depends on msvcp140_2.dll imports api-ms-win-crt-locale-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_2.dll",
+      "target": "msvcp140_2.dll imports api-ms-win-crt-math-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_2.dll depends on msvcp140_2.dll imports api-ms-win-crt-math-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_2.dll",
+      "target": "msvcp140_2.dll imports api-ms-win-crt-runtime-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_2.dll depends on msvcp140_2.dll imports api-ms-win-crt-runtime-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_2.dll",
+      "target": "msvcp140_2.dll imports api-ms-win-crt-stdio-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_2.dll depends on msvcp140_2.dll imports api-ms-win-crt-stdio-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_2.dll",
+      "target": "msvcp140_2.dll imports api-ms-win-crt-string-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_2.dll depends on msvcp140_2.dll imports api-ms-win-crt-string-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_2.dll",
+      "target": "vcruntime140.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "msvcp140_2.dll depends on vcruntime140.dll"
+    },
+    {
+      "source": "msvcp140_2.dll",
+      "target": "vcruntime140_1.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "msvcp140_2.dll depends on vcruntime140_1.dll"
+    },
+    {
+      "source": "msvcp140_atomic_wait.dll",
+      "target": "msvcp140.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "msvcp140_atomic_wait.dll depends on msvcp140.dll"
+    },
+    {
+      "source": "msvcp140_atomic_wait.dll",
+      "target": "msvcp140_atomic_wait.dll imports api-ms-win-core-debug-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_atomic_wait.dll depends on msvcp140_atomic_wait.dll imports api-ms-win-core-debug-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_atomic_wait.dll",
+      "target": "msvcp140_atomic_wait.dll imports api-ms-win-core-errorhandling-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_atomic_wait.dll depends on msvcp140_atomic_wait.dll imports api-ms-win-core-errorhandling-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_atomic_wait.dll",
+      "target": "msvcp140_atomic_wait.dll imports api-ms-win-core-interlocked-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_atomic_wait.dll depends on msvcp140_atomic_wait.dll imports api-ms-win-core-interlocked-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_atomic_wait.dll",
+      "target": "msvcp140_atomic_wait.dll imports api-ms-win-core-libraryloader-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_atomic_wait.dll depends on msvcp140_atomic_wait.dll imports api-ms-win-core-libraryloader-l1-2-0.dll"
+    },
+    {
+      "source": "msvcp140_atomic_wait.dll",
+      "target": "msvcp140_atomic_wait.dll imports api-ms-win-core-processthreads-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_atomic_wait.dll depends on msvcp140_atomic_wait.dll imports api-ms-win-core-processthreads-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_atomic_wait.dll",
+      "target": "msvcp140_atomic_wait.dll imports api-ms-win-core-processthreads-l1-1-1.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_atomic_wait.dll depends on msvcp140_atomic_wait.dll imports api-ms-win-core-processthreads-l1-1-1.dll"
+    },
+    {
+      "source": "msvcp140_atomic_wait.dll",
+      "target": "msvcp140_atomic_wait.dll imports api-ms-win-core-profile-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_atomic_wait.dll depends on msvcp140_atomic_wait.dll imports api-ms-win-core-profile-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_atomic_wait.dll",
+      "target": "msvcp140_atomic_wait.dll imports api-ms-win-core-registry-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_atomic_wait.dll depends on msvcp140_atomic_wait.dll imports api-ms-win-core-registry-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_atomic_wait.dll",
+      "target": "msvcp140_atomic_wait.dll imports api-ms-win-core-rtlsupport-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_atomic_wait.dll depends on msvcp140_atomic_wait.dll imports api-ms-win-core-rtlsupport-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_atomic_wait.dll",
+      "target": "msvcp140_atomic_wait.dll imports api-ms-win-core-string-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_atomic_wait.dll depends on msvcp140_atomic_wait.dll imports api-ms-win-core-string-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_atomic_wait.dll",
+      "target": "msvcp140_atomic_wait.dll imports api-ms-win-core-synch-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_atomic_wait.dll depends on msvcp140_atomic_wait.dll imports api-ms-win-core-synch-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_atomic_wait.dll",
+      "target": "msvcp140_atomic_wait.dll imports api-ms-win-core-synch-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_atomic_wait.dll depends on msvcp140_atomic_wait.dll imports api-ms-win-core-synch-l1-2-0.dll"
+    },
+    {
+      "source": "msvcp140_atomic_wait.dll",
+      "target": "msvcp140_atomic_wait.dll imports api-ms-win-core-sysinfo-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_atomic_wait.dll depends on msvcp140_atomic_wait.dll imports api-ms-win-core-sysinfo-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_atomic_wait.dll",
+      "target": "msvcp140_atomic_wait.dll imports api-ms-win-core-threadpool-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_atomic_wait.dll depends on msvcp140_atomic_wait.dll imports api-ms-win-core-threadpool-l1-2-0.dll"
+    },
+    {
+      "source": "msvcp140_atomic_wait.dll",
+      "target": "msvcp140_atomic_wait.dll imports api-ms-win-crt-heap-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_atomic_wait.dll depends on msvcp140_atomic_wait.dll imports api-ms-win-crt-heap-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_atomic_wait.dll",
+      "target": "msvcp140_atomic_wait.dll imports api-ms-win-crt-locale-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_atomic_wait.dll depends on msvcp140_atomic_wait.dll imports api-ms-win-crt-locale-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_atomic_wait.dll",
+      "target": "msvcp140_atomic_wait.dll imports api-ms-win-crt-runtime-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_atomic_wait.dll depends on msvcp140_atomic_wait.dll imports api-ms-win-crt-runtime-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_atomic_wait.dll",
+      "target": "vcruntime140.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "msvcp140_atomic_wait.dll depends on vcruntime140.dll"
+    },
+    {
+      "source": "msvcp140_atomic_wait.dll",
+      "target": "vcruntime140_1.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "msvcp140_atomic_wait.dll depends on vcruntime140_1.dll"
+    },
+    {
+      "source": "msvcp140_codecvt_ids.dll",
+      "target": "msvcp140_codecvt_ids.dll imports api-ms-win-core-debug-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_codecvt_ids.dll depends on msvcp140_codecvt_ids.dll imports api-ms-win-core-debug-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_codecvt_ids.dll",
+      "target": "msvcp140_codecvt_ids.dll imports api-ms-win-core-errorhandling-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_codecvt_ids.dll depends on msvcp140_codecvt_ids.dll imports api-ms-win-core-errorhandling-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_codecvt_ids.dll",
+      "target": "msvcp140_codecvt_ids.dll imports api-ms-win-core-interlocked-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_codecvt_ids.dll depends on msvcp140_codecvt_ids.dll imports api-ms-win-core-interlocked-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_codecvt_ids.dll",
+      "target": "msvcp140_codecvt_ids.dll imports api-ms-win-core-libraryloader-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_codecvt_ids.dll depends on msvcp140_codecvt_ids.dll imports api-ms-win-core-libraryloader-l1-2-0.dll"
+    },
+    {
+      "source": "msvcp140_codecvt_ids.dll",
+      "target": "msvcp140_codecvt_ids.dll imports api-ms-win-core-processthreads-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_codecvt_ids.dll depends on msvcp140_codecvt_ids.dll imports api-ms-win-core-processthreads-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_codecvt_ids.dll",
+      "target": "msvcp140_codecvt_ids.dll imports api-ms-win-core-processthreads-l1-1-1.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_codecvt_ids.dll depends on msvcp140_codecvt_ids.dll imports api-ms-win-core-processthreads-l1-1-1.dll"
+    },
+    {
+      "source": "msvcp140_codecvt_ids.dll",
+      "target": "msvcp140_codecvt_ids.dll imports api-ms-win-core-profile-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_codecvt_ids.dll depends on msvcp140_codecvt_ids.dll imports api-ms-win-core-profile-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_codecvt_ids.dll",
+      "target": "msvcp140_codecvt_ids.dll imports api-ms-win-core-rtlsupport-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_codecvt_ids.dll depends on msvcp140_codecvt_ids.dll imports api-ms-win-core-rtlsupport-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_codecvt_ids.dll",
+      "target": "msvcp140_codecvt_ids.dll imports api-ms-win-core-sysinfo-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_codecvt_ids.dll depends on msvcp140_codecvt_ids.dll imports api-ms-win-core-sysinfo-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_codecvt_ids.dll",
+      "target": "msvcp140_codecvt_ids.dll imports api-ms-win-crt-runtime-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "msvcp140_codecvt_ids.dll depends on msvcp140_codecvt_ids.dll imports api-ms-win-crt-runtime-l1-1-0.dll"
+    },
+    {
+      "source": "msvcp140_codecvt_ids.dll",
+      "target": "vcruntime140.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "msvcp140_codecvt_ids.dll depends on vcruntime140.dll"
+    },
+    {
+      "source": "vccorlib140.dll",
+      "target": "msvcp140.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "vccorlib140.dll depends on msvcp140.dll"
+    },
+    {
+      "source": "vccorlib140.dll",
+      "target": "vccorlib140.dll imports OLEAUT32.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vccorlib140.dll depends on vccorlib140.dll imports OLEAUT32.dll"
+    },
+    {
+      "source": "vccorlib140.dll",
+      "target": "vccorlib140.dll imports api-ms-win-core-com-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vccorlib140.dll depends on vccorlib140.dll imports api-ms-win-core-com-l1-1-0.dll"
+    },
+    {
+      "source": "vccorlib140.dll",
+      "target": "vccorlib140.dll imports api-ms-win-core-debug-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vccorlib140.dll depends on vccorlib140.dll imports api-ms-win-core-debug-l1-1-0.dll"
+    },
+    {
+      "source": "vccorlib140.dll",
+      "target": "vccorlib140.dll imports api-ms-win-core-errorhandling-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vccorlib140.dll depends on vccorlib140.dll imports api-ms-win-core-errorhandling-l1-1-0.dll"
+    },
+    {
+      "source": "vccorlib140.dll",
+      "target": "vccorlib140.dll imports api-ms-win-core-handle-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vccorlib140.dll depends on vccorlib140.dll imports api-ms-win-core-handle-l1-1-0.dll"
+    },
+    {
+      "source": "vccorlib140.dll",
+      "target": "vccorlib140.dll imports api-ms-win-core-heap-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vccorlib140.dll depends on vccorlib140.dll imports api-ms-win-core-heap-l1-1-0.dll"
+    },
+    {
+      "source": "vccorlib140.dll",
+      "target": "vccorlib140.dll imports api-ms-win-core-interlocked-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vccorlib140.dll depends on vccorlib140.dll imports api-ms-win-core-interlocked-l1-1-0.dll"
+    },
+    {
+      "source": "vccorlib140.dll",
+      "target": "vccorlib140.dll imports api-ms-win-core-libraryloader-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vccorlib140.dll depends on vccorlib140.dll imports api-ms-win-core-libraryloader-l1-2-0.dll"
+    },
+    {
+      "source": "vccorlib140.dll",
+      "target": "vccorlib140.dll imports api-ms-win-core-localization-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vccorlib140.dll depends on vccorlib140.dll imports api-ms-win-core-localization-l1-2-0.dll"
+    },
+    {
+      "source": "vccorlib140.dll",
+      "target": "vccorlib140.dll imports api-ms-win-core-processthreads-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vccorlib140.dll depends on vccorlib140.dll imports api-ms-win-core-processthreads-l1-1-0.dll"
+    },
+    {
+      "source": "vccorlib140.dll",
+      "target": "vccorlib140.dll imports api-ms-win-core-processthreads-l1-1-1.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vccorlib140.dll depends on vccorlib140.dll imports api-ms-win-core-processthreads-l1-1-1.dll"
+    },
+    {
+      "source": "vccorlib140.dll",
+      "target": "vccorlib140.dll imports api-ms-win-core-profile-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vccorlib140.dll depends on vccorlib140.dll imports api-ms-win-core-profile-l1-1-0.dll"
+    },
+    {
+      "source": "vccorlib140.dll",
+      "target": "vccorlib140.dll imports api-ms-win-core-rtlsupport-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vccorlib140.dll depends on vccorlib140.dll imports api-ms-win-core-rtlsupport-l1-1-0.dll"
+    },
+    {
+      "source": "vccorlib140.dll",
+      "target": "vccorlib140.dll imports api-ms-win-core-synch-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vccorlib140.dll depends on vccorlib140.dll imports api-ms-win-core-synch-l1-1-0.dll"
+    },
+    {
+      "source": "vccorlib140.dll",
+      "target": "vccorlib140.dll imports api-ms-win-core-sysinfo-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vccorlib140.dll depends on vccorlib140.dll imports api-ms-win-core-sysinfo-l1-1-0.dll"
+    },
+    {
+      "source": "vccorlib140.dll",
+      "target": "vccorlib140.dll imports api-ms-win-core-util-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vccorlib140.dll depends on vccorlib140.dll imports api-ms-win-core-util-l1-1-0.dll"
+    },
+    {
+      "source": "vccorlib140.dll",
+      "target": "vccorlib140.dll imports api-ms-win-core-winrt-error-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vccorlib140.dll depends on vccorlib140.dll imports api-ms-win-core-winrt-error-l1-1-0.dll"
+    },
+    {
+      "source": "vccorlib140.dll",
+      "target": "vccorlib140.dll imports api-ms-win-core-winrt-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vccorlib140.dll depends on vccorlib140.dll imports api-ms-win-core-winrt-l1-1-0.dll"
+    },
+    {
+      "source": "vccorlib140.dll",
+      "target": "vccorlib140.dll imports api-ms-win-core-winrt-string-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vccorlib140.dll depends on vccorlib140.dll imports api-ms-win-core-winrt-string-l1-1-0.dll"
+    },
+    {
+      "source": "vccorlib140.dll",
+      "target": "vccorlib140.dll imports api-ms-win-crt-heap-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vccorlib140.dll depends on vccorlib140.dll imports api-ms-win-crt-heap-l1-1-0.dll"
+    },
+    {
+      "source": "vccorlib140.dll",
+      "target": "vccorlib140.dll imports api-ms-win-crt-math-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vccorlib140.dll depends on vccorlib140.dll imports api-ms-win-crt-math-l1-1-0.dll"
+    },
+    {
+      "source": "vccorlib140.dll",
+      "target": "vccorlib140.dll imports api-ms-win-crt-runtime-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vccorlib140.dll depends on vccorlib140.dll imports api-ms-win-crt-runtime-l1-1-0.dll"
+    },
+    {
+      "source": "vccorlib140.dll",
+      "target": "vccorlib140.dll imports api-ms-win-crt-stdio-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vccorlib140.dll depends on vccorlib140.dll imports api-ms-win-crt-stdio-l1-1-0.dll"
+    },
+    {
+      "source": "vccorlib140.dll",
+      "target": "vccorlib140.dll imports api-ms-win-crt-string-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vccorlib140.dll depends on vccorlib140.dll imports api-ms-win-crt-string-l1-1-0.dll"
+    },
+    {
+      "source": "vccorlib140.dll",
+      "target": "vcruntime140.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "vccorlib140.dll depends on vcruntime140.dll"
+    },
+    {
+      "source": "vccorlib140.dll",
+      "target": "vcruntime140_1.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "vccorlib140.dll depends on vcruntime140_1.dll"
+    },
+    {
+      "source": "vcomp140.dll",
+      "target": "vcomp140.dll imports api-ms-win-core-console-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcomp140.dll depends on vcomp140.dll imports api-ms-win-core-console-l1-1-0.dll"
+    },
+    {
+      "source": "vcomp140.dll",
+      "target": "vcomp140.dll imports api-ms-win-core-console-l2-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcomp140.dll depends on vcomp140.dll imports api-ms-win-core-console-l2-1-0.dll"
+    },
+    {
+      "source": "vcomp140.dll",
+      "target": "vcomp140.dll imports api-ms-win-core-console-l3-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcomp140.dll depends on vcomp140.dll imports api-ms-win-core-console-l3-2-0.dll"
+    },
+    {
+      "source": "vcomp140.dll",
+      "target": "vcomp140.dll imports api-ms-win-core-debug-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcomp140.dll depends on vcomp140.dll imports api-ms-win-core-debug-l1-1-0.dll"
+    },
+    {
+      "source": "vcomp140.dll",
+      "target": "vcomp140.dll imports api-ms-win-core-errorhandling-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcomp140.dll depends on vcomp140.dll imports api-ms-win-core-errorhandling-l1-1-0.dll"
+    },
+    {
+      "source": "vcomp140.dll",
+      "target": "vcomp140.dll imports api-ms-win-core-file-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcomp140.dll depends on vcomp140.dll imports api-ms-win-core-file-l1-1-0.dll"
+    },
+    {
+      "source": "vcomp140.dll",
+      "target": "vcomp140.dll imports api-ms-win-core-handle-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcomp140.dll depends on vcomp140.dll imports api-ms-win-core-handle-l1-1-0.dll"
+    },
+    {
+      "source": "vcomp140.dll",
+      "target": "vcomp140.dll imports api-ms-win-core-heap-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcomp140.dll depends on vcomp140.dll imports api-ms-win-core-heap-l1-1-0.dll"
+    },
+    {
+      "source": "vcomp140.dll",
+      "target": "vcomp140.dll imports api-ms-win-core-heap-l2-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcomp140.dll depends on vcomp140.dll imports api-ms-win-core-heap-l2-1-0.dll"
+    },
+    {
+      "source": "vcomp140.dll",
+      "target": "vcomp140.dll imports api-ms-win-core-libraryloader-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcomp140.dll depends on vcomp140.dll imports api-ms-win-core-libraryloader-l1-2-0.dll"
+    },
+    {
+      "source": "vcomp140.dll",
+      "target": "vcomp140.dll imports api-ms-win-core-localization-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcomp140.dll depends on vcomp140.dll imports api-ms-win-core-localization-l1-2-0.dll"
+    },
+    {
+      "source": "vcomp140.dll",
+      "target": "vcomp140.dll imports api-ms-win-core-localization-obsolete-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcomp140.dll depends on vcomp140.dll imports api-ms-win-core-localization-obsolete-l1-2-0.dll"
+    },
+    {
+      "source": "vcomp140.dll",
+      "target": "vcomp140.dll imports api-ms-win-core-processenvironment-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcomp140.dll depends on vcomp140.dll imports api-ms-win-core-processenvironment-l1-1-0.dll"
+    },
+    {
+      "source": "vcomp140.dll",
+      "target": "vcomp140.dll imports api-ms-win-core-processthreads-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcomp140.dll depends on vcomp140.dll imports api-ms-win-core-processthreads-l1-1-0.dll"
+    },
+    {
+      "source": "vcomp140.dll",
+      "target": "vcomp140.dll imports api-ms-win-core-processthreads-l1-1-1.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcomp140.dll depends on vcomp140.dll imports api-ms-win-core-processthreads-l1-1-1.dll"
+    },
+    {
+      "source": "vcomp140.dll",
+      "target": "vcomp140.dll imports api-ms-win-core-profile-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcomp140.dll depends on vcomp140.dll imports api-ms-win-core-profile-l1-1-0.dll"
+    },
+    {
+      "source": "vcomp140.dll",
+      "target": "vcomp140.dll imports api-ms-win-core-rtlsupport-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcomp140.dll depends on vcomp140.dll imports api-ms-win-core-rtlsupport-l1-1-0.dll"
+    },
+    {
+      "source": "vcomp140.dll",
+      "target": "vcomp140.dll imports api-ms-win-core-string-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcomp140.dll depends on vcomp140.dll imports api-ms-win-core-string-l1-1-0.dll"
+    },
+    {
+      "source": "vcomp140.dll",
+      "target": "vcomp140.dll imports api-ms-win-core-string-obsolete-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcomp140.dll depends on vcomp140.dll imports api-ms-win-core-string-obsolete-l1-1-0.dll"
+    },
+    {
+      "source": "vcomp140.dll",
+      "target": "vcomp140.dll imports api-ms-win-core-synch-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcomp140.dll depends on vcomp140.dll imports api-ms-win-core-synch-l1-1-0.dll"
+    },
+    {
+      "source": "vcomp140.dll",
+      "target": "vcomp140.dll imports api-ms-win-core-synch-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcomp140.dll depends on vcomp140.dll imports api-ms-win-core-synch-l1-2-0.dll"
+    },
+    {
+      "source": "vcomp140.dll",
+      "target": "vcomp140.dll imports api-ms-win-core-sysinfo-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcomp140.dll depends on vcomp140.dll imports api-ms-win-core-sysinfo-l1-1-0.dll"
+    },
+    {
+      "source": "vcomp140.dll",
+      "target": "vcomp140.dll imports api-ms-win-core-sysinfo-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcomp140.dll depends on vcomp140.dll imports api-ms-win-core-sysinfo-l1-2-0.dll"
+    },
+    {
+      "source": "vcomp140.dll",
+      "target": "vcomp140.dll imports api-ms-win-core-threadpool-legacy-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcomp140.dll depends on vcomp140.dll imports api-ms-win-core-threadpool-legacy-l1-1-0.dll"
+    },
+    {
+      "source": "vcomp140.dll",
+      "target": "vcomp140.dll imports api-ms-win-core-util-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcomp140.dll depends on vcomp140.dll imports api-ms-win-core-util-l1-1-0.dll"
+    },
+    {
+      "source": "vcomp140.dll",
+      "target": "vcomp140.dll imports api-ms-win-crt-convert-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcomp140.dll depends on vcomp140.dll imports api-ms-win-crt-convert-l1-1-0.dll"
+    },
+    {
+      "source": "vcomp140.dll",
+      "target": "vcomp140.dll imports api-ms-win-crt-stdio-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcomp140.dll depends on vcomp140.dll imports api-ms-win-crt-stdio-l1-1-0.dll"
+    },
+    {
+      "source": "vcomp140.dll",
+      "target": "vcomp140.dll imports api-ms-win-crt-string-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcomp140.dll depends on vcomp140.dll imports api-ms-win-crt-string-l1-1-0.dll"
+    },
+    {
+      "source": "vcomp140.dll",
+      "target": "vcruntime140.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "vcomp140.dll depends on vcruntime140.dll"
+    },
+    {
+      "source": "vcruntime140.dll",
+      "target": "vcruntime140.dll imports api-ms-win-core-errorhandling-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcruntime140.dll depends on vcruntime140.dll imports api-ms-win-core-errorhandling-l1-1-0.dll"
+    },
+    {
+      "source": "vcruntime140.dll",
+      "target": "vcruntime140.dll imports api-ms-win-core-fibers-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcruntime140.dll depends on vcruntime140.dll imports api-ms-win-core-fibers-l1-1-0.dll"
+    },
+    {
+      "source": "vcruntime140.dll",
+      "target": "vcruntime140.dll imports api-ms-win-core-interlocked-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcruntime140.dll depends on vcruntime140.dll imports api-ms-win-core-interlocked-l1-1-0.dll"
+    },
+    {
+      "source": "vcruntime140.dll",
+      "target": "vcruntime140.dll imports api-ms-win-core-libraryloader-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcruntime140.dll depends on vcruntime140.dll imports api-ms-win-core-libraryloader-l1-2-0.dll"
+    },
+    {
+      "source": "vcruntime140.dll",
+      "target": "vcruntime140.dll imports api-ms-win-core-processthreads-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcruntime140.dll depends on vcruntime140.dll imports api-ms-win-core-processthreads-l1-1-0.dll"
+    },
+    {
+      "source": "vcruntime140.dll",
+      "target": "vcruntime140.dll imports api-ms-win-core-processthreads-l1-1-1.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcruntime140.dll depends on vcruntime140.dll imports api-ms-win-core-processthreads-l1-1-1.dll"
+    },
+    {
+      "source": "vcruntime140.dll",
+      "target": "vcruntime140.dll imports api-ms-win-core-profile-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcruntime140.dll depends on vcruntime140.dll imports api-ms-win-core-profile-l1-1-0.dll"
+    },
+    {
+      "source": "vcruntime140.dll",
+      "target": "vcruntime140.dll imports api-ms-win-core-rtlsupport-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcruntime140.dll depends on vcruntime140.dll imports api-ms-win-core-rtlsupport-l1-1-0.dll"
+    },
+    {
+      "source": "vcruntime140.dll",
+      "target": "vcruntime140.dll imports api-ms-win-core-synch-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcruntime140.dll depends on vcruntime140.dll imports api-ms-win-core-synch-l1-1-0.dll"
+    },
+    {
+      "source": "vcruntime140.dll",
+      "target": "vcruntime140.dll imports api-ms-win-core-sysinfo-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcruntime140.dll depends on vcruntime140.dll imports api-ms-win-core-sysinfo-l1-1-0.dll"
+    },
+    {
+      "source": "vcruntime140.dll",
+      "target": "vcruntime140.dll imports api-ms-win-core-util-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcruntime140.dll depends on vcruntime140.dll imports api-ms-win-core-util-l1-1-0.dll"
+    },
+    {
+      "source": "vcruntime140.dll",
+      "target": "vcruntime140.dll imports api-ms-win-crt-convert-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcruntime140.dll depends on vcruntime140.dll imports api-ms-win-crt-convert-l1-1-0.dll"
+    },
+    {
+      "source": "vcruntime140.dll",
+      "target": "vcruntime140.dll imports api-ms-win-crt-heap-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcruntime140.dll depends on vcruntime140.dll imports api-ms-win-crt-heap-l1-1-0.dll"
+    },
+    {
+      "source": "vcruntime140.dll",
+      "target": "vcruntime140.dll imports api-ms-win-crt-runtime-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcruntime140.dll depends on vcruntime140.dll imports api-ms-win-crt-runtime-l1-1-0.dll"
+    },
+    {
+      "source": "vcruntime140.dll",
+      "target": "vcruntime140.dll imports api-ms-win-crt-stdio-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcruntime140.dll depends on vcruntime140.dll imports api-ms-win-crt-stdio-l1-1-0.dll"
+    },
+    {
+      "source": "vcruntime140.dll",
+      "target": "vcruntime140.dll imports api-ms-win-crt-string-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcruntime140.dll depends on vcruntime140.dll imports api-ms-win-crt-string-l1-1-0.dll"
+    },
+    {
+      "source": "vcruntime140_1.dll",
+      "target": "vcruntime140.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "vcruntime140_1.dll depends on vcruntime140.dll"
+    },
+    {
+      "source": "vcruntime140_1.dll",
+      "target": "vcruntime140_1.dll imports api-ms-win-core-errorhandling-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcruntime140_1.dll depends on vcruntime140_1.dll imports api-ms-win-core-errorhandling-l1-1-0.dll"
+    },
+    {
+      "source": "vcruntime140_1.dll",
+      "target": "vcruntime140_1.dll imports api-ms-win-core-fibers-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcruntime140_1.dll depends on vcruntime140_1.dll imports api-ms-win-core-fibers-l1-1-0.dll"
+    },
+    {
+      "source": "vcruntime140_1.dll",
+      "target": "vcruntime140_1.dll imports api-ms-win-core-processthreads-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcruntime140_1.dll depends on vcruntime140_1.dll imports api-ms-win-core-processthreads-l1-1-0.dll"
+    },
+    {
+      "source": "vcruntime140_1.dll",
+      "target": "vcruntime140_1.dll imports api-ms-win-core-processthreads-l1-1-1.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcruntime140_1.dll depends on vcruntime140_1.dll imports api-ms-win-core-processthreads-l1-1-1.dll"
+    },
+    {
+      "source": "vcruntime140_1.dll",
+      "target": "vcruntime140_1.dll imports api-ms-win-core-profile-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcruntime140_1.dll depends on vcruntime140_1.dll imports api-ms-win-core-profile-l1-1-0.dll"
+    },
+    {
+      "source": "vcruntime140_1.dll",
+      "target": "vcruntime140_1.dll imports api-ms-win-core-rtlsupport-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcruntime140_1.dll depends on vcruntime140_1.dll imports api-ms-win-core-rtlsupport-l1-1-0.dll"
+    },
+    {
+      "source": "vcruntime140_1.dll",
+      "target": "vcruntime140_1.dll imports api-ms-win-core-synch-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcruntime140_1.dll depends on vcruntime140_1.dll imports api-ms-win-core-synch-l1-1-0.dll"
+    },
+    {
+      "source": "vcruntime140_1.dll",
+      "target": "vcruntime140_1.dll imports api-ms-win-core-sysinfo-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcruntime140_1.dll depends on vcruntime140_1.dll imports api-ms-win-core-sysinfo-l1-1-0.dll"
+    },
+    {
+      "source": "vcruntime140_1.dll",
+      "target": "vcruntime140_1.dll imports api-ms-win-core-util-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcruntime140_1.dll depends on vcruntime140_1.dll imports api-ms-win-core-util-l1-1-0.dll"
+    },
+    {
+      "source": "vcruntime140_1.dll",
+      "target": "vcruntime140_1.dll imports api-ms-win-crt-heap-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcruntime140_1.dll depends on vcruntime140_1.dll imports api-ms-win-crt-heap-l1-1-0.dll"
+    },
+    {
+      "source": "vcruntime140_1.dll",
+      "target": "vcruntime140_1.dll imports api-ms-win-crt-runtime-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcruntime140_1.dll depends on vcruntime140_1.dll imports api-ms-win-crt-runtime-l1-1-0.dll"
+    },
+    {
+      "source": "vcruntime140_1.dll",
+      "target": "vcruntime140_1.dll imports api-ms-win-crt-string-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "vcruntime140_1.dll depends on vcruntime140_1.dll imports api-ms-win-crt-string-l1-1-0.dll"
+    }
+  ]
+}

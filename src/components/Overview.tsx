@@ -118,7 +118,7 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
                 Overall Project Progress
               </span>
               <span style={{ fontSize: '13px', color: '#94a3b8' }}>
-                6 of 8 Foundation Milestones Completed
+                7 of 8 Foundation Milestones Completed
               </span>
             </div>
             <h2 style={{ fontSize: '24px', fontWeight: 800, color: '#f8fafc', margin: 0, letterSpacing: '-0.02em' }}>
@@ -136,7 +136,7 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
             borderRadius: '8px'
           }}>
             <span style={{ fontSize: '13px', color: '#94a3b8', fontWeight: 600 }}>Estimated Global Effort to Boot:</span>
-            <span style={{ fontSize: '26px', fontWeight: 900, color: '#38bdf8' }}>~65%</span>
+            <span style={{ fontSize: '26px', fontWeight: 900, color: '#38bdf8' }}>~75%</span>
           </div>
         </div>
 
@@ -164,14 +164,14 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
               color: '#10b981',
               textShadow: '0 0 20px rgba(16, 185, 129, 0.4)'
             }}>
-              75%
+              88%
             </div>
             <div>
               <div style={{ fontSize: '16px', fontWeight: 700, color: '#f1f5f9' }}>
                 Runtime Infrastructure Ready
               </div>
               <div style={{ fontSize: '12px', color: '#cbd5e1', marginTop: '4px' }}>
-                6 of 8 foundational milestones (M0 through M5) verified and passing 100% of 175 automated tests.
+                7 of 8 foundational milestones (M0 through M6) verified and passing 100% of 200 automated tests.
               </div>
             </div>
           </div>
@@ -191,7 +191,7 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
               💡 What does this mean in practice?
             </span>
             <p style={{ fontSize: '12px', color: '#94a3b8', margin: 0, lineHeight: 1.5 }}>
-              The most challenging low-level engineering foundations (64 KB memory allocator, 7-core Zen 2 CPU topology virtualization, and virtual filesystem D:\) are fully operational. Only the audio subsystem and Direct3D 12 graphics bridge remain before initial title boot testing!
+              The most challenging low-level engineering foundations (64 KB memory allocator, 7-core Zen 2 CPU topology virtualization, virtual filesystem D:\, and WASAPI audio bridge) are fully operational. Only the Direct3D 12 graphics bridge (M7) remains before initial title boot testing!
             </p>
           </div>
         </div>
@@ -199,8 +199,8 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
         {/* Visual Progress Bar */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', fontWeight: 600 }}>
-            <span style={{ color: '#34d399' }}>● M0 to M5: Core Foundations, Memory, Threads & VFS (Completed)</span>
-            <span style={{ color: '#94a3b8' }}>M6 (Audio) + M7 (DirectX 12) + M8 (Executable Boot)</span>
+            <span style={{ color: '#34d399' }}>● M0 to M6: Core Foundations, Memory, Threads, VFS & Audio (Completed)</span>
+            <span style={{ color: '#94a3b8' }}>M7 (Direct3D 12) + M8 (Title Binary Boot)</span>
           </div>
           <div style={{
             width: '100%',
@@ -211,7 +211,7 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
             position: 'relative'
           }}>
             <div style={{
-              width: '75%',
+              width: '88%',
               height: '100%',
               background: 'linear-gradient(90deg, #059669 0%, #10b981 70%, #34d399 100%)',
               borderRadius: '7px',
@@ -232,8 +232,8 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
             { tag: 'M3', label: 'Native PE Loader', status: 'done', desc: '100%' },
             { tag: 'M4', label: '64KB Memory & CPU', status: 'done', desc: '100%' },
             { tag: 'M5', label: 'App Lifecycle & VFS', status: 'done', desc: '100%' },
-            { tag: 'M6', label: 'WASAPI Audio Bridge', status: 'active', desc: 'Next' },
-            { tag: 'M7', label: 'Direct3D 12 Agility', status: 'pending', desc: 'Pending' },
+            { tag: 'M6', label: 'WASAPI Audio Bridge', status: 'done', desc: '100%' },
+            { tag: 'M7', label: 'Direct3D 12 Agility', status: 'active', desc: 'Next' },
             { tag: 'M8', label: 'Title Binary Boot', status: 'gated', desc: 'With .exe' },
           ].map((m, idx) => {
             const isDone = m.status === 'done';

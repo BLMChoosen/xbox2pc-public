@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-21T03:05:56.930708+00:00",
-  "snapshot": "0.2.0",
+  "generated_at": "2026-11-21T03:56:20.119476+00:00",
+  "snapshot": "0.3.0",
   "items": [
     {
       "id": "lib_amd_fidelityfx_loader_xbox_dll",

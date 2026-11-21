@@ -14,7 +14,7 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
   const [viewMode, setViewMode] = useState<'matrix' | 'treemap'>('matrix');
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [zoomedSubsystem, setZoomedSubsystem] = useState<string | null>(null);
-  const [hoveredNode, setHoveredNode] = useState<{ lib: PublicLibraryItem; x: number; y: number } | null>(null);
+  const [hoveredNode, setHoveredNode] = useState<{ targetItem: PublicLibraryItem; x: number; y: number } | null>(null);
 
   const availableSubsystems = useMemo(() => {
     return Array.from(new Set(
@@ -160,7 +160,7 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
       .on('mouseenter', (event: MouseEvent, d: any) => {
         if (d.data.component) {
           setHoveredNode({
-            lib: d.data.component,
+            targetItem: d.data.component,
             x: event.clientX,
             y: event.clientY
           });
@@ -459,10 +459,10 @@ export const LibraryTreemap: React.FC<LibraryTreemapProps> = ({ data, filterSubs
           boxShadow: '0 4px 12px rgba(0,0,0,0.8)'
         }}>
           <div style={{ fontWeight: 700, color: '#f4f4f5', fontFamily: 'monospace', fontSize: '12px' }}>
-            {hoveredNode.lib.name}
+            {hoveredNode.targetItem.name}
           </div>
           <div style={{ fontSize: '11px', color: '#22c55e', marginTop: '2px' }}>
-            {hoveredNode.lib.subsystem} | {hoveredNode.lib.exports_count} exports
+            {hoveredNode.targetItem.subsystem} | {hoveredNode.targetItem.exports_count} exports
           </div>
         </div>
       )}

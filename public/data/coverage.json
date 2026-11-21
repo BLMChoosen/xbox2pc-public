@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-21T16:43:46.209495+00:00",
-  "snapshot": "0.5.0",
-  "public_snapshot_id": "pub_0.5.0_a96915af1739",
+  "generated_at": "2026-11-21T18:42:49.880868+00:00",
+  "snapshot": "0.6.0",
+  "public_snapshot_id": "pub_0.6.0_2635a53d4820",
   "metrics": {
     "discovery": {
       "name": "Discovery Coverage",
@@ -16,8 +16,8 @@
     },
     "analysis": {
       "name": "Analysis Coverage",
-      "numerator": 3518,
-      "denominator": 3519,
+      "numerator": 3520,
+      "denominator": 3521,
       "percentage": 99.97,
       "display_string": "99.97%",
       "reference_universe": "Discovered Components",
@@ -26,18 +26,18 @@
     },
     "implementation": {
       "name": "Implementation Coverage",
-      "numerator": 15,
-      "denominator": 3519,
-      "percentage": 0.43,
-      "display_string": "0.43%",
+      "numerator": 19,
+      "denominator": 3521,
+      "percentage": 0.54,
+      "display_string": "0.54%",
       "reference_universe": "Discovered Components",
       "is_global_unknown": false,
       "description": "Components with functional translation or proxy implementations. Stubs are strictly excluded."
     },
     "testing": {
       "name": "Testing Coverage",
-      "numerator": 15,
-      "denominator": 15,
+      "numerator": 19,
+      "denominator": 19,
       "percentage": 100.0,
       "display_string": "100.0%",
       "reference_universe": "Implemented Components",
@@ -46,10 +46,10 @@
     },
     "validation": {
       "name": "Validation Coverage",
-      "numerator": 4,
-      "denominator": 15,
-      "percentage": 26.67,
-      "display_string": "26.67%",
+      "numerator": 8,
+      "denominator": 19,
+      "percentage": 42.11,
+      "display_string": "42.11%",
       "reference_universe": "Implemented Components",
       "is_global_unknown": false,
       "description": "Implemented components behaviorally validated against hardware golden runs."

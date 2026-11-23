@@ -118,7 +118,7 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
                 Overall Project Progress
               </span>
               <span style={{ fontSize: '13px', color: '#94a3b8' }}>
-                8 of 8 Foundation Milestones Completed (M0–M7 Complete)
+                10 of 10 Foundation & Sandbox Milestones Completed (M0–M9 Complete)
               </span>
             </div>
             <h2 style={{ fontSize: '24px', fontWeight: 800, color: '#f8fafc', margin: 0, letterSpacing: '-0.02em' }}>
@@ -136,7 +136,7 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
             borderRadius: '8px'
           }}>
             <span style={{ fontSize: '13px', color: '#94a3b8', fontWeight: 600 }}>Estimated Global Effort to Boot:</span>
-            <span style={{ fontSize: '26px', fontWeight: 900, color: '#38bdf8' }}>~85%</span>
+            <span style={{ fontSize: '26px', fontWeight: 900, color: '#38bdf8' }}>~95%</span>
           </div>
         </div>
 
@@ -168,10 +168,10 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
             </div>
             <div>
               <div style={{ fontSize: '16px', fontWeight: 700, color: '#f1f5f9' }}>
-                Runtime & Graphics Infrastructure Ready
+                Runtime, Sandbox & VFS Infrastructure Ready
               </div>
               <div style={{ fontSize: '12px', color: '#cbd5e1', marginTop: '4px' }}>
-                8 of 8 foundational milestones (M0 through M7) verified and passing 100% of 215 automated tests.
+                10 of 10 foundational milestones (M0 through M9) verified and passing 100% of 291 automated tests.
               </div>
             </div>
           </div>
@@ -191,7 +191,7 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
               💡 What does this mean in practice?
             </span>
             <p style={{ fontSize: '12px', color: '#94a3b8', margin: 0, lineHeight: 1.5 }}>
-              The low-level engineering foundations (64 KB memory allocator, 7-core Zen 2 CPU topology virtualization, VFS D:\ & T:\ redirection, WASAPI audio bridge, Direct3D 12 Agility SDK bridge with console flag sanitization, and the hybrid DXIL/RDNA2 shader pipeline) are fully operational. All 8 foundational milestones (M0-M7) are complete. Primary title binary (game_scarlett_master.exe) is acquired and analyzed! Milestone M8 (Game-Specific Execution Compatibility) is active.
+              The low-level engineering foundations (64 KB memory allocator, 7-core Zen 2 CPU topology virtualization, VFS cascading overlay for unpacked assets, WASAPI audio bridge, Direct3D 12 Agility SDK bridge with console flag sanitization, hybrid DXIL/RDNA2 shader pipeline, and isolated sandbox host xbox2pc_host.exe) are fully operational. All 10 milestones (M0-M9) are complete. Primary title binary (game_scarlett_master.exe) is executing in sandbox! Milestone M10 (Interactive Execution & Frame Presentation) is active.
             </p>
           </div>
         </div>
@@ -199,8 +199,8 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
         {/* Visual Progress Bar */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', fontWeight: 600 }}>
-            <span style={{ color: '#34d399' }}>● M0 to M7: Core Foundations, Memory, Threads, VFS, Audio & Direct3D 12 (Completed)</span>
-            <span style={{ color: '#38bdf8' }}>M8: Title Binary Boot (Executable Acquired & Analyzed — Active)</span>
+            <span style={{ color: '#34d399' }}>● M0 to M9: Core Foundations, Memory, Threads, VFS, Audio, D3D12, Preflight & Sandbox (Completed)</span>
+            <span style={{ color: '#38bdf8' }}>M10: Interactive Execution & Frame Presentation (Active)</span>
           </div>
           <div style={{
             width: '100%',
@@ -234,7 +234,14 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
             { tag: 'M5', label: 'App Lifecycle & VFS', status: 'done', desc: '100%' },
             { tag: 'M6', label: 'WASAPI Audio Bridge', status: 'done', desc: '100%' },
             { tag: 'M7', label: 'Direct3D 12 & Shaders', status: 'done', desc: '100%' },
-            { tag: 'M8', label: 'Title Binary Boot', status: 'active', desc: 'Active' },
+            { tag: 'M8', label: 'Title Preflight', status: 'done', desc: '100%' },
+            { tag: 'M9', label: 'Sandbox Host & VFS', status: 'done', desc: '100%' },
+            { tag: 'M10', label: 'Frame Presentation', status: 'active', desc: 'Active' },
+            { tag: 'M11', label: 'GameCore Bootstrap', status: 'planned', desc: 'Planned' },
+            { tag: 'M12', label: 'D3D12 Dynamic PSOs', status: 'planned', desc: 'Planned' },
+            { tag: 'M13', label: 'Spatial Audio', status: 'planned', desc: 'Planned' },
+            { tag: 'M14', label: 'Gameplay Stability', status: 'planned', desc: 'Planned' },
+            { tag: 'M15', label: 'Release Package', status: 'planned', desc: 'Planned' },
           ].map((m, idx) => {
             const isDone = m.status === 'done';
             const isActive = m.status === 'active';

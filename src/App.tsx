@@ -114,7 +114,7 @@ export const App: React.FC = () => {
             fontSize: '11px',
             letterSpacing: '0.04em'
           }}>
-            Runtime Active: M0–M7 Complete | M8 Gated (.exe)
+            Runtime Active: M0–M9 Complete | M10 Active (Presentation Loop)
           </span>
         </div>
       </header>

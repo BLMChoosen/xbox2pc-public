@@ -1,0 +1,497 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-11-23T23:50:00.000000+00:00",
+  "milestones": [
+    {
+      "id": "M0",
+      "name": "Discovery Baseline Stabilized",
+      "status": "COMPLETED",
+      "focus": "Automated discovery, audit discrepancy remediation, deterministic baseline snapshot.",
+      "entry_criteria": [
+        "Workspace binaries cataloged",
+        "Audit report delivered"
+      ],
+      "deliverables": [
+        "Remediated database inventory (81 shader containers)",
+        "Deterministic baseline snapshot snap_0.2.0_1e277272",
+        "POST_AUDIT_REMEDIATION.md"
+      ],
+      "dependencies": [],
+      "acceptance_criteria": [
+        "Zero discrepancy regressions",
+        "61/61 automated tests passing",
+        "Deterministic snapshot hash verified"
+      ],
+      "tests_required": [
+        "test_audit_remediation.py (5 tests)",
+        "pytest full test suite"
+      ],
+      "blocking_unknowns": []
+    },
+    {
+      "id": "M1",
+      "name": "External API Compatibility Specification",
+      "status": "COMPLETED",
+      "focus": "Exhaustive research of all 498 unique imported symbols across 63 external libraries.",
+      "entry_criteria": [
+        "Remediated dependency resolution model (DISC-004)"
+      ],
+      "deliverables": [
+        "EXTERNAL_API_CATALOG.json (498 symbol records)",
+        "COMPATIBILITY_SPECIFICATION.md",
+        "COMPATIBILITY_MATRIX.json (28 capabilities across 7 subsystems)"
+      ],
+      "dependencies": [
+        "M0"
+      ],
+      "acceptance_criteria": [
+        "100% of discovered imports categorized into 10 platform classes",
+        "Evidence tiers explicitly labeled (OBSERVED, DOCUMENTED, INFERRED, UNKNOWN)",
+        "Zero invented API signatures"
+      ],
+      "tests_required": [
+        "Schema validation tests",
+        "Fail-closed security audit"
+      ],
+      "blocking_unknowns": []
+    },
+    {
+      "id": "M2",
+      "name": "Runtime Architecture & Interface Contracts",
+      "status": "COMPLETED",
+      "focus": "Modular runtime architecture specification, C-ABI contracts, shader execution strategy.",
+      "entry_criteria": [
+        "Completed M1 Compatibility Matrix"
+      ],
+      "deliverables": [
+        "RUNTIME_ARCHITECTURE.md",
+        "RUNTIME_ARCHITECTURE.mmd",
+        "3-tier hybrid shader execution design"
+      ],
+      "dependencies": [
+        "M1"
+      ],
+      "acceptance_criteria": [
+        "11 modular components defined with public C interfaces",
+        "Tradeoffs between D3D12, recompilation, and SDK replacement fully documented",
+        "Dependency relationship graph complete"
+      ],
+      "tests_required": [
+        "Interface header compilation tests"
+      ],
+      "blocking_unknowns": []
+    },
+    {
+      "id": "M3",
+      "name": "Minimal PE Loader & Module Resolution",
+      "status": "COMPLETED",
+      "focus": "Load authentic x86-64 PE binaries into host virtual memory and resolve native Win32 imports.",
+      "entry_criteria": [
+        "M2 interface contracts signed off"
+      ],
+      "deliverables": [
+        "xbox2pc_loader implementation",
+        "xbox2pc_resolver implementation with 55 API Set redirects",
+        "Module linking unit tests",
+        "XCurl.dll live execution returning version 2604.5.0.0.amd64fre"
+      ],
+      "dependencies": [
+        "M2"
+      ],
+      "acceptance_criteria": [
+        "Successfully load and bind all 17 authentic workspace PE binaries into memory",
+        "Zero unresolved Win32 system imports",
+        "Custom memory mapping for Subsystem 0x11 package catalog"
+      ],
+      "tests_required": [
+        "PE loading unit tests",
+        "IAT symbol binding test harness",
+        "XCurl live execution test"
+      ],
+      "blocking_unknowns": []
+    },
+    {
+      "id": "M4",
+      "name": "Memory & Threading Foundations",
+      "status": "COMPLETED",
+      "focus": "Virtual memory manager (xmem.dll 64KB pages) and threading/synchronization subsystem (Scarlett 7-core CPU topology).",
+      "entry_criteria": [
+        "M3 loader operational"
+      ],
+      "deliverables": [
+        "xbox2pc_memory with 64 KB page alignment and working set tracking",
+        "xbox2pc_sync with Scarlett 7-core / 14-thread affinity mapping and SRW locks"
+      ],
+      "dependencies": [
+        "M3"
+      ],
+      "acceptance_criteria": [
+        "XMemAlloc and XMemFree functional with all GDK page flags",
+        "Multi-threaded synchronization stress tests pass 10,000 cycles without deadlock"
+      ],
+      "tests_required": [
+        "XMem allocation unit tests",
+        "SRW lock contention tests",
+        "CPU affinity mapping test"
+      ],
+      "blocking_unknowns": []
+    },
+    {
+      "id": "M5",
+      "name": "Initial Xbox API Compatibility Layer",
+      "status": "COMPLETED",
+      "focus": "Game Core lifecycle state machine, PSM app state notifications, and VFS path translation (D:\\ and T:\\).",
+      "entry_criteria": [
+        "M4 memory and threading operational"
+      ],
+      "deliverables": [
+        "Game Core lifecycle state machine and PSM notifications",
+        "Virtual Filesystem with drive D:\\ and T:\\ redirection",
+        "MicrosoftGame.Config XML parser"
+      ],
+      "dependencies": [
+        "M4"
+      ],
+      "acceptance_criteria": [
+        "Lifecycle state transitions verified",
+        "PSM notification callbacks dispatch cleanly",
+        "Virtual drive paths normalize correctly"
+      ],
+      "tests_required": [
+        "Lifecycle state machine test",
+        "PSM registration unit tests",
+        "VFS path normalization tests"
+      ],
+      "blocking_unknowns": []
+    },
+    {
+      "id": "M6",
+      "name": "Extended VFS & Audio Subsystem",
+      "status": "COMPLETED",
+      "focus": "Advanced asynchronous file I/O (CreateFile2) and XAudio2_9.dll Ordinal 1 audio bridge.",
+      "entry_criteria": [
+        "M5 API layer operational"
+      ],
+      "deliverables": [
+        "Extended VFS async I/O with OVERLAPPED support",
+        "XAudio2_9.dll Ordinal 1 bridge forwarding to host WASAPI graph",
+        "Bink2Scarlett audio dependency resolution"
+      ],
+      "dependencies": [
+        "M5"
+      ],
+      "acceptance_criteria": [
+        "Asynchronous file I/O operations complete deterministically",
+        "XAudio2 device creation succeeds via Ordinal 1 export",
+        "WASAPI voice graph forwarding initialized"
+      ],
+      "tests_required": [
+        "Async file I/O unit tests",
+        "XAudio2 creation and voice graph tests",
+        "Bink2 audio resolution test"
+      ],
+      "blocking_unknowns": []
+    },
+    {
+      "id": "M7",
+      "name": "Graphics & Shader Translation Pipeline",
+      "status": "COMPLETED",
+      "focus": "Direct3D 12 Agility SDK bridge, console root signature sanitization, DXIL container parsing, and RDNA2 disassembler.",
+      "entry_criteria": [
+        "M4, M5, and M6 operational"
+      ],
+      "deliverables": [
+        "d3d12_manager Direct3D 12 Agility SDK bridge",
+        "d3d12_xs.dll shims with console flag sanitization (0x03000000)",
+        "DXIL container parser for 52 BVH compute shaders",
+        "RDNA2 GFX10.3 ISA disassembler for 29 FSR compute shaders",
+        "100% import resolution for XboxBvhBuilder.dll and amd_fidelityfx_upscaler_xbox.dll"
+      ],
+      "dependencies": [
+        "M6"
+      ],
+      "acceptance_criteria": [
+        "Host D3D12 device and command queue initialization succeeds",
+        "Console-specific root signature flags sanitized without validation errors",
+        "BVH and FSR compute shaders parsed and disassembled"
+      ],
+      "tests_required": [
+        "D3D12 device creation test",
+        "Root signature sanitization test",
+        "DXIL container parser tests",
+        "RDNA2 disassembler tests"
+      ],
+      "blocking_unknowns": []
+    },
+    {
+      "id": "M8",
+      "name": "Game-Specific Execution Compatibility",
+      "status": "COMPLETED",
+      "focus": "Preflight resolution of primary game executable (game_scarlett_master.exe), BSS allocation, SEH unwinds, and TLS analysis.",
+      "entry_criteria": [
+        "Acquisition of authentic game_scarlett_master.exe",
+        "M7 passed"
+      ],
+      "deliverables": [
+        "Preflight import resolution for all 587 game imports across 68 libraries",
+        "38 game-specific shims for GDK identity, platform bindings, and input",
+        "PE loader 176.4MB mapping, zeroed 64.8MB BSS, and 299,257 SEH unwinds",
+        "Execution orchestrator test harness"
+      ],
+      "dependencies": [
+        "M7"
+      ],
+      "acceptance_criteria": [
+        "100% of game_scarlett_master.exe imports resolved (status: preflight_passed)",
+        "Image mapping and BSS allocation validated in memory",
+        "Deterministic preflight execution staging verified"
+      ],
+      "tests_required": [
+        "Game import resolution tests (587 imports)",
+        "PE loader image mapping and BSS tests",
+        "Preflight staging integration tests"
+      ],
+      "blocking_unknowns": []
+    },
+    {
+      "id": "M9",
+      "name": "Sandboxed Execution & VFS Asset Streaming",
+      "status": "COMPLETED",
+      "focus": "Dedicated sandbox host (xbox2pc_host.exe), TLS callback dispatch, cascading VFS overlay (zero DRM bypass), and APU/XG shims.",
+      "entry_criteria": [
+        "M8 preflight staging verified"
+      ],
+      "deliverables": [
+        "Isolated sandbox host process (xbox2pc_host.exe with /BASE:0x200000000)",
+        "PE loader TLS directory parsing, TlsAlloc() slot management, and callback dispatch",
+        "Cascading VFS overlay mapping artifacts/unpacked_assets/ to D:\\ (zero DRM bypass)",
+        "Deep shims for APU hardware context (AcpHalDevice vtable) and D3D12/XG layout (IXGTextureComputer)",
+        "Dynamic IPC telemetry and VectoredCrashHandler register/stack capture"
+      ],
+      "dependencies": [
+        "M8"
+      ],
+      "acceptance_criteria": [
+        "Host sandbox launches and isolates game base address 0x140000000 cleanly",
+        "TLS callbacks 0x055DD4F4 and 0x055E2EBC executed prior to entry point",
+        "VFS overlay prioritizes unpacked assets while rejecting raw encrypted RPF9/XVD access",
+        "Texture layouts computed via ID3D12Device::GetCopyableFootprints bridge"
+      ],
+      "tests_required": [
+        "test_m9_sandbox_host.py (6 tests)",
+        "test_m9_tls_initialization.py (3 tests)",
+        "test_m9_vfs_overlay.py (3 tests)",
+        "test_m9_audio_deep_shims.py (4 tests)",
+        "test_m9_d3d12_xg_layout.py (3 tests)"
+      ],
+      "blocking_unknowns": []
+    },
+    {
+      "id": "M10",
+      "name": "Interactive Execution & Frame Presentation",
+      "status": "IN_PROGRESS",
+      "focus": "Host Win32 window message loop, GameInput controller poll integration, real-time D3D12 frame presentation, and runtime breadcrumb inspection.",
+      "entry_criteria": [
+        "M9 sandbox host and TLS engine operational"
+      ],
+      "deliverables": [
+        "Interactive host window message pump in xbox2pc_host",
+        "DXGI swap chain creation and 60 FPS frame presentation loop",
+        "GameInput controller polling bridge (XInput / Windows Gaming Input)",
+        "Title execution breadcrumb trace logging past CRT initialization"
+      ],
+      "dependencies": [
+        "M9"
+      ],
+      "acceptance_criteria": [
+        "Host displays responsive 3D viewport window",
+        "Title renders presentation frames into swap chain backbuffer",
+        "Controller button and thumbstick inputs forward to game loop"
+      ],
+      "tests_required": [
+        "Window creation and message loop unit tests",
+        "Swap chain frame presentation test",
+        "Controller input event dispatch test"
+      ],
+      "blocking_unknowns": []
+    },
+    {
+      "id": "M11",
+      "name": "Game Core Title Bootstrap & Identity Management",
+      "status": "PLANNED",
+      "focus": "Title lifecycle state machine transitions (Active, Constrained, Suspended), GameCore thread pools, memory budget tracking, XUser/XStore emulation.",
+      "entry_criteria": [
+        "M10 interactive presentation operational"
+      ],
+      "deliverables": [
+        "Title lifecycle state machine handling (Active/Constrained/Suspended transitions)",
+        "GameCore asynchronous task queues and threadpool routing",
+        "Title storage container mount and persistent savegame abstraction (XUser, XStoreContext)",
+        "Memory budget telemetry reporting"
+      ],
+      "dependencies": [
+        "M10"
+      ],
+      "acceptance_criteria": [
+        "Title cleanly boots through Game Core initialization",
+        "Handles mock user sign-in and user profile queries",
+        "Creates and reads virtual storage save containers"
+      ],
+      "tests_required": [
+        "GameCore lifecycle event dispatch tests",
+        "Mock user sign-in and profile storage tests",
+        "Task queue processing stress tests"
+      ],
+      "blocking_unknowns": []
+    },
+    {
+      "id": "M12",
+      "name": "Direct3D 12 Advanced Graphics & RDNA2 Dynamic PSOs",
+      "status": "PLANNED",
+      "focus": "Full RDNA2 compute/graphics pipeline translation to host D3D12/Vulkan, texture decompression, dynamic descriptor indexing, PSO caching.",
+      "entry_criteria": [
+        "M11 Game Core bootstrap validated"
+      ],
+      "deliverables": [
+        "Full RDNA2 GFX10.3 instruction set bridging to host D3D12 / Vulkan",
+        "Dynamic descriptor indexing and heap virtualization",
+        "Hardware texture decompression (BC1-BC7, ASTC) pipeline",
+        "Root signature v2 compilation and disk-backed Agility SDK PSO caching"
+      ],
+      "dependencies": [
+        "M11"
+      ],
+      "acceptance_criteria": [
+        "Multi-pass render passes execute without GPU crash or device removal",
+        "Zero D3D12 debug validation layer errors",
+        "PSO cache loads compiled pipeline states with zero runtime hitching"
+      ],
+      "tests_required": [
+        "RDNA2 instruction translation validation tests",
+        "Dynamic descriptor indexing tests",
+        "Texture decompression fidelity tests",
+        "PSO cache hit-rate tests"
+      ],
+      "blocking_unknowns": []
+    },
+    {
+      "id": "M13",
+      "name": "Multi-Channel Spatial Audio & Streaming Engine",
+      "status": "PLANNED",
+      "focus": "Full XAudio2/WASAPI 7.1 and spatial sound graph processing, low-latency streaming compressed audio decode, Bink2 video playback synchronization.",
+      "entry_criteria": [
+        "M12 graphics and PSO pipeline operational"
+      ],
+      "deliverables": [
+        "Multi-channel 7.1 surround sound and spatial audio DSP graph processing",
+        "Low-latency streaming compressed audio decode pipeline (XMA/Vorbis/PCM)",
+        "Audio-visual synchronization clock bridging",
+        "Bink2 Scarlett video audio interleaving"
+      ],
+      "dependencies": [
+        "M12"
+      ],
+      "acceptance_criteria": [
+        "Continuous, glitch-free multi-channel audio stream presentation",
+        "Less than 5ms audio-video sync drift during real-time playback",
+        "Real-time volume ducking and environmental reverb DSP active"
+      ],
+      "tests_required": [
+        "7.1 surround mixing channel separation tests",
+        "Compressed audio streaming latency tests",
+        "AV lip-sync timing tests"
+      ],
+      "blocking_unknowns": []
+    },
+    {
+      "id": "M14",
+      "name": "Interactive Gameplay Stabilization & Performance Tuning",
+      "status": "PLANNED",
+      "focus": "Sustained interactive gameplay execution, dynamic physics/animation streaming, controller haptics & trigger feedback, memory leak profiling.",
+      "entry_criteria": [
+        "M10 through M13 operational"
+      ],
+      "deliverables": [
+        "Long-duration execution stability in title sandbox",
+        "Sub-16ms input-to-render response time",
+        "Controller haptic trigger feedback translation via Windows Gaming Input",
+        "Dynamic asset streaming memory budget enforcement and leak profiling"
+      ],
+      "dependencies": [
+        "M13"
+      ],
+      "acceptance_criteria": [
+        "Title sustains continuous 60 FPS interactive gameplay loop",
+        "Zero unhandled exceptions or memory growth unbounded by cache limits over 1-hour run",
+        "Responsive controller input and rumble haptics"
+      ],
+      "tests_required": [
+        "1-hour continuous gameplay stability stress test",
+        "Input-to-photon latency benchmark",
+        "Memory leak leak-detector harness"
+      ],
+      "blocking_unknowns": []
+    },
+    {
+      "id": "M15",
+      "name": "Production Distribution & Packaging",
+      "status": "PLANNED",
+      "focus": "Zero-overhead native execution profiling, automated regression harness, standalone user launcher GUI, release packaging.",
+      "entry_criteria": [
+        "M14 gameplay stabilization verified"
+      ],
+      "deliverables": [
+        "Automated cross-platform regression test harness",
+        "Standalone user launcher GUI with graphics/audio configuration profiles",
+        "Production distribution installer and documentation bundle",
+        "Clean-room security verification sign-off"
+      ],
+      "dependencies": [
+        "M14"
+      ],
+      "acceptance_criteria": [
+        "Self-contained runtime distribution bundle passes automated verification on clean Windows 10/11",
+        "Zero developer tooling prerequisites for end users",
+        "Passes fail-closed compliance audit"
+      ],
+      "tests_required": [
+        "Clean-machine installation verification test",
+        "End-to-end regression test suite",
+        "Launcher configuration persistence test"
+      ],
+      "blocking_unknowns": []
+    }
+  ],
+  "critical_blockers": [
+    {
+      "id": "UNK-001",
+      "title": "Primary Executable (game_scarlett_master.exe)",
+      "impact": "Primary title binary requirement for game execution",
+      "status": "RESOLVED (Acquired, 120,181,760 bytes, 587/587 imports resolved, verified in sandbox host)"
+    },
+    {
+      "id": "UNK-002",
+      "title": "Encrypted GameOS Virtual Disk (gameos.xvd container partition)",
+      "impact": "Partition files unreadable without console cryptographic keys",
+      "status": "MITIGATED VIA USER-MODE CLEAN-ROOM API EMULATION"
+    },
+    {
+      "id": "UNK-003",
+      "title": "Encrypted Game Asset Archives (RPF9)",
+      "impact": "Shaders, textures, audio unreadable inside archives",
+      "status": "MITIGATED VIA VFS CASCADING OVERLAY (artifacts/unpacked_assets/ -> D:\\)"
+    },
+    {
+      "id": "UNK-004",
+      "title": "Private D3D12.X APIs & Console Root Signatures",
+      "impact": "Console-specific flags (0x03000000) rejected by standard D3D12",
+      "status": "RESOLVED VIA D3D12_XS.DLL SHIMS & AGILITY SDK BRIDGING"
+    },
+    {
+      "id": "UNK-005",
+      "title": "Custom XMemAlloc Pool Tags & 64KB Page Alignment",
+      "impact": "Xbox-specific memory allocation parameters",
+      "status": "RESOLVED VIA 64KB VIRTUAL PAGE ALLOCATOR (xmem.dll)"
+    }
+  ]
+}

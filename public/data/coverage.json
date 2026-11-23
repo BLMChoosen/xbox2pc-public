@@ -1,12 +1,12 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-21T19:01:56.918371+00:00",
-  "snapshot": "0.6.0",
-  "public_snapshot_id": "pub_0.6.0_2635a53d4820",
+  "generated_at": "2026-11-23T20:46:49.836650+00:00",
+  "snapshot": "0.7.0",
+  "public_snapshot_id": "pub_0.7.0_069af35b3e6e",
   "metrics": {
     "discovery": {
       "name": "Discovery Coverage",
-      "numerator": 3512,
+      "numerator": 3864,
       "denominator": null,
       "percentage": null,
       "display_string": "Unknown",
@@ -16,28 +16,28 @@
     },
     "analysis": {
       "name": "Analysis Coverage",
-      "numerator": 3520,
-      "denominator": 3521,
-      "percentage": 99.97,
-      "display_string": "99.97%",
+      "numerator": 3873,
+      "denominator": 3873,
+      "percentage": 100.0,
+      "display_string": "100.0%",
       "reference_universe": "Discovered Components",
       "is_global_unknown": false,
       "description": "Discovered components whose ABI interfaces, imports, or instructions have been parsed and cataloged."
     },
     "implementation": {
       "name": "Implementation Coverage",
-      "numerator": 19,
-      "denominator": 3521,
-      "percentage": 0.54,
-      "display_string": "0.54%",
+      "numerator": 9,
+      "denominator": 3873,
+      "percentage": 0.23,
+      "display_string": "0.23%",
       "reference_universe": "Discovered Components",
       "is_global_unknown": false,
       "description": "Components with functional translation or proxy implementations. Stubs are strictly excluded."
     },
     "testing": {
       "name": "Testing Coverage",
-      "numerator": 19,
-      "denominator": 19,
+      "numerator": 9,
+      "denominator": 9,
       "percentage": 100.0,
       "display_string": "100.0%",
       "reference_universe": "Implemented Components",
@@ -46,10 +46,10 @@
     },
     "validation": {
       "name": "Validation Coverage",
-      "numerator": 8,
-      "denominator": 19,
-      "percentage": 42.11,
-      "display_string": "42.11%",
+      "numerator": 4,
+      "denominator": 9,
+      "percentage": 44.44,
+      "display_string": "44.44%",
       "reference_universe": "Implemented Components",
       "is_global_unknown": false,
       "description": "Implemented components behaviorally validated against hardware golden runs."
@@ -62,7 +62,7 @@
       "display_string": "Unknown",
       "reference_universe": "Target Executable Requirements",
       "is_global_unknown": true,
-      "description": "Dependencies required by the primary game executable (currently absent from workspace)."
+      "description": "Dependencies required by the primary game executable (game_scarlett_master.exe analyzed in workspace)."
     }
   },
   "anti_inflation_rules": [

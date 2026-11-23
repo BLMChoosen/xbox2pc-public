@@ -1,13 +1,13 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-21T19:01:56.918371+00:00",
-  "snapshot": "0.6.0",
-  "public_snapshot_id": "pub_0.6.0_2635a53d4820",
+  "generated_at": "2026-11-23T20:46:49.836650+00:00",
+  "snapshot": "0.7.0",
+  "public_snapshot_id": "pub_0.7.0_069af35b3e6e",
   "summary": {
-    "unique_physical_files": 17,
+    "unique_physical_files": 18,
     "unique_logical_identities": 18,
     "known_platform_library_identities": 6,
-    "unresolved_library_identities": 1,
+    "unresolved_library_identities": 0,
     "total_records": 18
   },
   "subsystems": [
@@ -39,16 +39,16 @@
     {
       "name": "Kernel and system services",
       "library_count": 8,
-      "export_count": 1906,
+      "export_count": 1907,
       "libraries": [
+        "game_scarlett_master.exe",
         "msvcp140.dll",
         "msvcp140_1.dll",
         "msvcp140_2.dll",
         "msvcp140_atomic_wait.dll",
         "vccorlib140.dll",
         "vcruntime140.dll",
-        "vcruntime140_1.dll",
-        "game_scarlett_master.exe"
+        "vcruntime140_1.dll"
       ]
     },
     {
@@ -85,7 +85,7 @@
       "subsystem": "GPU runtime",
       "category": "Game Middleware (Xbox Optimized)",
       "exports_count": 5,
-      "imports_count": 31,
+      "imports_count": 32,
       "is_physical": true,
       "status": "Analyzed",
       "description": "Exports: 5, Imports: 22"
@@ -115,17 +115,27 @@
       "subsystem": "Graphics and Direct3D",
       "category": "Game Middleware (Xbox Optimized)",
       "exports_count": 12,
-      "imports_count": 78,
+      "imports_count": 79,
       "is_physical": true,
       "status": "Analyzed",
       "description": "Exports: 12, Imports: 57"
+    },
+    {
+      "name": "game_scarlett_master.exe",
+      "subsystem": "Kernel and system services",
+      "category": "Target Executable (Primary Game Binary)",
+      "exports_count": 1,
+      "imports_count": 655,
+      "is_physical": true,
+      "status": "Target Executable",
+      "description": "Primary Game Executable (Scarlett). Exports: 1, Imports: 587"
     },
     {
       "name": "msvcp140.dll",
       "subsystem": "Kernel and system services",
       "category": "MSVC Runtime",
       "exports_count": 1493,
-      "imports_count": 229,
+      "imports_count": 230,
       "is_physical": true,
       "status": "Analyzed",
       "description": "Exports: 1493, Imports: 187"
@@ -175,7 +185,7 @@
       "subsystem": "Kernel and system services",
       "category": "MSVC Runtime",
       "exports_count": 71,
-      "imports_count": 71,
+      "imports_count": 72,
       "is_physical": true,
       "status": "Analyzed",
       "description": "Exports: 71, Imports: 41"
@@ -185,7 +195,7 @@
       "subsystem": "Kernel and system services",
       "category": "MSVC Runtime",
       "exports_count": 3,
-      "imports_count": 55,
+      "imports_count": 56,
       "is_physical": true,
       "status": "Analyzed",
       "description": "Exports: 3, Imports: 34"
@@ -195,7 +205,7 @@
       "subsystem": "Media and codecs",
       "category": "Game Middleware (Xbox Optimized)",
       "exports_count": 74,
-      "imports_count": 80,
+      "imports_count": 81,
       "is_physical": true,
       "status": "Analyzed",
       "description": "Exports: 74, Imports: 60"
@@ -225,7 +235,7 @@
       "subsystem": "Networking",
       "category": "Microsoft GDK Library",
       "exports_count": 129,
-      "imports_count": 212,
+      "imports_count": 213,
       "is_physical": true,
       "status": "Analyzed",
       "description": "Exports: 129, Imports: 198"
@@ -249,16 +259,6 @@
       "is_physical": true,
       "status": "Analyzed",
       "description": "Exports: 113, Imports: 78"
-    },
-    {
-      "name": "game_scarlett_master.exe",
-      "subsystem": "Kernel and system services",
-      "category": "Target Executable (Primary Game Binary)",
-      "exports_count": 0,
-      "imports_count": 0,
-      "is_physical": false,
-      "status": "Missing Platform Requirement",
-      "description": "Specified in MicrosoftGame.Config and appxmanifest.xml; binary NOT present in workspace."
     }
   ]
 }

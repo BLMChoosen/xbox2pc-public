@@ -191,7 +191,7 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
               💡 What does this mean in practice?
             </span>
             <p style={{ fontSize: '12px', color: '#94a3b8', margin: 0, lineHeight: 1.5 }}>
-              The low-level engineering foundations (64 KB memory allocator, 7-core Zen 2 CPU topology virtualization, VFS D:\ & T:\ redirection, WASAPI audio bridge, Direct3D 12 Agility SDK bridge with console flag sanitization, and the hybrid DXIL/RDNA2 shader pipeline) are fully operational. All 8 foundational milestones (M0-M7) are complete. Only Milestone M8 (game-specific title binary boot) remains gated on the primary game executable (game_scarlett_master.exe)!
+              The low-level engineering foundations (64 KB memory allocator, 7-core Zen 2 CPU topology virtualization, VFS D:\ & T:\ redirection, WASAPI audio bridge, Direct3D 12 Agility SDK bridge with console flag sanitization, and the hybrid DXIL/RDNA2 shader pipeline) are fully operational. All 8 foundational milestones (M0-M7) are complete. Primary title binary (game_scarlett_master.exe) is acquired and analyzed! Milestone M8 (Game-Specific Execution Compatibility) is active.
             </p>
           </div>
         </div>
@@ -200,7 +200,7 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', fontWeight: 600 }}>
             <span style={{ color: '#34d399' }}>● M0 to M7: Core Foundations, Memory, Threads, VFS, Audio & Direct3D 12 (Completed)</span>
-            <span style={{ color: '#ef4444' }}>M8: Title Binary Boot (Blocked on game_scarlett_master.exe)</span>
+            <span style={{ color: '#38bdf8' }}>M8: Title Binary Boot (Executable Acquired & Analyzed — Active)</span>
           </div>
           <div style={{
             width: '100%',
@@ -234,7 +234,7 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
             { tag: 'M5', label: 'App Lifecycle & VFS', status: 'done', desc: '100%' },
             { tag: 'M6', label: 'WASAPI Audio Bridge', status: 'done', desc: '100%' },
             { tag: 'M7', label: 'Direct3D 12 & Shaders', status: 'done', desc: '100%' },
-            { tag: 'M8', label: 'Title Binary Boot', status: 'gated', desc: 'Gated (.exe)' },
+            { tag: 'M8', label: 'Title Binary Boot', status: 'active', desc: 'Active' },
           ].map((m, idx) => {
             const isDone = m.status === 'done';
             const isActive = m.status === 'active';

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-21T19:01:56.918371+00:00",
-  "snapshot": "0.6.0",
+  "generated_at": "2026-11-23T20:46:49.836650+00:00",
+  "snapshot": "0.7.0",
   "items": [
     {
       "id": "lib_amd_fidelityfx_loader_xbox_dll",
@@ -38,6 +38,15 @@
       "subsystem": "Graphics and Direct3D",
       "status": "Analyzed",
       "description": "Exports: 12, Imports: 57"
+    },
+    {
+      "id": "lib_game_scarlett_master_exe",
+      "name": "game_scarlett_master.exe",
+      "type": "library",
+      "category": "Target Executable (Primary Game Binary)",
+      "subsystem": "Kernel and system services",
+      "status": "Target Executable",
+      "description": "Primary Game Executable (Scarlett). Exports: 1, Imports: 587"
     },
     {
       "id": "lib_msvcp140_dll",
@@ -155,15 +164,6 @@
       "subsystem": "Threading and synchronization",
       "status": "Analyzed",
       "description": "Exports: 113, Imports: 78"
-    },
-    {
-      "id": "lib_game_scarlett_master_exe",
-      "name": "game_scarlett_master.exe",
-      "type": "library",
-      "category": "Target Executable (Primary Game Binary)",
-      "subsystem": "Kernel and system services",
-      "status": "Missing Platform Requirement",
-      "description": "Specified in MicrosoftGame.Config and appxmanifest.xml; binary NOT present in workspace."
     },
     {
       "id": "isa_v_max_i32",

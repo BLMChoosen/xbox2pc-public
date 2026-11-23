@@ -1,40 +1,40 @@
 {
   "schema_version": "1.0",
   "project": "Xbox2PC",
-  "snapshot": "0.6.0",
-  "public_snapshot_id": "pub_0.6.0_2635a53d4820",
-  "generated_at": "2026-11-21T18:40:35.136922+00:00",
+  "snapshot": "0.7.0",
+  "public_snapshot_id": "pub_0.7.0_069af35b3e6e",
+  "generated_at": "2026-11-23T20:46:17.778338+00:00",
   "discovery": {
-    "physical_binaries": 17,
+    "physical_binaries": 18,
     "logical_libraries": 18,
-    "unique_exports": 2593,
-    "unique_imports": 551,
+    "unique_exports": 2594,
+    "unique_imports": 900,
     "unique_shader_instructions": 202,
     "decoded_shader_occurrences": 48154,
-    "total_workspace_files": 193,
-    "total_components": 3521
+    "total_workspace_files": 562,
+    "total_components": 3873
   },
   "coverage": {
     "global": null,
     "analysis": {
-      "completed": 3520,
-      "known": 3521,
-      "percentage": 99.97
+      "completed": 3873,
+      "known": 3873,
+      "percentage": 100.0
     },
     "implementation": {
-      "completed": 19,
-      "known": 3521,
-      "percentage": 0.54
+      "completed": 9,
+      "known": 3873,
+      "percentage": 0.23
     },
     "testing": {
-      "completed": 19,
-      "known": 19,
+      "completed": 9,
+      "known": 9,
       "percentage": 100.0
     },
     "validation": {
-      "completed": 8,
-      "known": 19,
-      "percentage": 42.11
+      "completed": 4,
+      "known": 9,
+      "percentage": 44.44
     },
     "game_requirement": {
       "completed": 0,
@@ -43,14 +43,14 @@
     }
   },
   "project_info": {
-    "phase": "Discovery Phase Active",
+    "phase": "Milestone M8 Active (Game-Specific Execution Compatibility)",
     "target_platform": "Xbox Series X|S (Scarlett / Anaconda & Lockhart)",
     "target_architecture": "x86-64 CPU (AMD Zen 2), AMD RDNA2 GPU (GFX10.3)",
     "limitations_summary": [
-      "Target primary game executable (game_scarlett_master.exe) is absent from the workspace.",
+      "Target primary game executable (game_scarlett_master.exe) discovered and analyzed in workspace.",
       "Global Xbox OS and title-level API denominator is unclosed and reported as Unknown.",
       "RPF9 container encryption and XVD partitions are not decrypted.",
-      "Implementation progress is 0.0%; stubs are strictly excluded from completion metrics."
+      "Implementation progress is strictly verified; stubs are excluded from completion metrics."
     ]
   }
 }

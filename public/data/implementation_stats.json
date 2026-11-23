@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-21T19:01:56.918371+00:00",
-  "snapshot": "0.6.0",
-  "public_snapshot_id": "pub_0.6.0_2635a53d4820",
+  "generated_at": "2026-11-23T20:46:49.836650+00:00",
+  "snapshot": "0.7.0",
+  "public_snapshot_id": "pub_0.7.0_069af35b3e6e",
   "summary": {
-    "total_discovered": 3521,
+    "total_discovered": 3873,
     "game_required": 1,
     "implemented": 19,
     "stubs": 0,

@@ -1,104 +1,122 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-21T19:01:56.918371+00:00",
-  "snapshot": "0.6.0",
-  "public_snapshot_id": "pub_0.6.0_2635a53d4820",
+  "generated_at": "2026-11-23T20:46:49.836650+00:00",
+  "snapshot": "0.7.0",
+  "public_snapshot_id": "pub_0.7.0_069af35b3e6e",
   "summary": {
-    "total_edges": 1662,
-    "resolved_edges": 301,
-    "unresolved_edges": 1361,
+    "total_edges": 2317,
+    "resolved_edges": 504,
+    "unresolved_edges": 1813,
     "circular_cycles": 0
   },
   "unresolved_platform_targets": [
     {
       "target": "Bink2Scarlett.dll imports api-ms-win-core-processthreads-l1-1-0.dll",
       "subsystem": "System Services",
-      "dependent_count": 15,
+      "dependent_count": 16,
       "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-processthreads-l1-1-0.dll"
     },
     {
       "target": "Bink2Scarlett.dll imports api-ms-win-crt-runtime-l1-1-0.dll",
       "subsystem": "System Services",
-      "dependent_count": 15,
+      "dependent_count": 16,
       "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-crt-runtime-l1-1-0.dll"
     },
     {
       "target": "Bink2Scarlett.dll imports api-ms-win-core-profile-l1-1-0.dll",
       "subsystem": "System Services",
-      "dependent_count": 15,
+      "dependent_count": 16,
       "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-profile-l1-1-0.dll"
     },
     {
       "target": "Bink2Scarlett.dll imports api-ms-win-core-sysinfo-l1-1-0.dll",
       "subsystem": "System Services",
-      "dependent_count": 15,
+      "dependent_count": 16,
       "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-sysinfo-l1-1-0.dll"
     },
     {
       "target": "Bink2Scarlett.dll imports api-ms-win-core-errorhandling-l1-1-0.dll",
       "subsystem": "System Services",
-      "dependent_count": 13,
+      "dependent_count": 14,
       "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-errorhandling-l1-1-0.dll"
     },
     {
       "target": "Bink2Scarlett.dll imports api-ms-win-core-interlocked-l1-1-0.dll",
       "subsystem": "System Services",
-      "dependent_count": 13,
+      "dependent_count": 14,
       "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-interlocked-l1-1-0.dll"
     },
     {
       "target": "XCurl.dll imports api-ms-win-core-libraryloader-l1-2-0.dll",
       "subsystem": "System Services",
-      "dependent_count": 13,
+      "dependent_count": 14,
       "description": "Required platform library dependency XCurl.dll imports api-ms-win-core-libraryloader-l1-2-0.dll"
     },
     {
       "target": "XCurl.dll imports api-ms-win-crt-heap-l1-1-0.dll",
       "subsystem": "System Services",
-      "dependent_count": 13,
+      "dependent_count": 14,
       "description": "Required platform library dependency XCurl.dll imports api-ms-win-crt-heap-l1-1-0.dll"
     },
     {
       "target": "Bink2Scarlett.dll imports api-ms-win-core-rtlsupport-l1-1-0.dll",
       "subsystem": "System Services",
-      "dependent_count": 13,
+      "dependent_count": 14,
       "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-rtlsupport-l1-1-0.dll"
     },
     {
       "target": "Bink2Scarlett.dll imports api-ms-win-core-processthreads-l1-1-1.dll",
       "subsystem": "System Services",
-      "dependent_count": 13,
+      "dependent_count": 14,
       "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-processthreads-l1-1-1.dll"
     },
     {
       "target": "Bink2Scarlett.dll imports api-ms-win-core-debug-l1-1-0.dll",
       "subsystem": "System Services",
-      "dependent_count": 12,
+      "dependent_count": 13,
       "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-debug-l1-1-0.dll"
     },
     {
       "target": "Bink2Scarlett.dll imports api-ms-win-core-synch-l1-1-0.dll",
       "subsystem": "System Services",
-      "dependent_count": 11,
+      "dependent_count": 12,
       "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-synch-l1-1-0.dll"
     },
     {
       "target": "XCurl.dll imports api-ms-win-crt-string-l1-1-0.dll",
       "subsystem": "System Services",
-      "dependent_count": 11,
+      "dependent_count": 12,
       "description": "Required platform library dependency XCurl.dll imports api-ms-win-crt-string-l1-1-0.dll"
     },
     {
       "target": "XCurl.dll imports api-ms-win-crt-stdio-l1-1-0.dll",
       "subsystem": "System Services",
-      "dependent_count": 10,
+      "dependent_count": 11,
       "description": "Required platform library dependency XCurl.dll imports api-ms-win-crt-stdio-l1-1-0.dll"
     },
     {
       "target": "Bink2Scarlett.dll imports api-ms-win-core-synch-l1-2-0.dll",
       "subsystem": "System Services",
-      "dependent_count": 8,
+      "dependent_count": 9,
       "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-synch-l1-2-0.dll"
+    },
+    {
+      "target": "XCurl.dll imports api-ms-win-crt-convert-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 7,
+      "description": "Required platform library dependency XCurl.dll imports api-ms-win-crt-convert-l1-1-0.dll"
+    },
+    {
+      "target": "XboxBvhBuilder.dll imports api-ms-win-crt-math-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 7,
+      "description": "Required platform library dependency XboxBvhBuilder.dll imports api-ms-win-crt-math-l1-1-0.dll"
+    },
+    {
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-handle-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 7,
+      "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-handle-l1-1-0.dll"
     },
     {
       "target": "XCurl.dll imports api-ms-win-core-util-l1-1-0.dll",
@@ -107,34 +125,28 @@
       "description": "Required platform library dependency XCurl.dll imports api-ms-win-core-util-l1-1-0.dll"
     },
     {
-      "target": "XCurl.dll imports api-ms-win-crt-convert-l1-1-0.dll",
-      "subsystem": "System Services",
-      "dependent_count": 6,
-      "description": "Required platform library dependency XCurl.dll imports api-ms-win-crt-convert-l1-1-0.dll"
-    },
-    {
-      "target": "XboxBvhBuilder.dll imports api-ms-win-crt-math-l1-1-0.dll",
-      "subsystem": "System Services",
-      "dependent_count": 6,
-      "description": "Required platform library dependency XboxBvhBuilder.dll imports api-ms-win-crt-math-l1-1-0.dll"
-    },
-    {
-      "target": "Bink2Scarlett.dll imports api-ms-win-core-handle-l1-1-0.dll",
-      "subsystem": "System Services",
-      "dependent_count": 6,
-      "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-handle-l1-1-0.dll"
-    },
-    {
       "target": "XCurl.dll imports api-ms-win-core-string-l1-1-0.dll",
       "subsystem": "System Services",
-      "dependent_count": 5,
+      "dependent_count": 6,
       "description": "Required platform library dependency XCurl.dll imports api-ms-win-core-string-l1-1-0.dll"
     },
     {
       "target": "Bink2Scarlett.dll imports api-ms-win-core-file-l1-1-0.dll",
       "subsystem": "System Services",
-      "dependent_count": 4,
+      "dependent_count": 5,
       "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-file-l1-1-0.dll"
+    },
+    {
+      "target": "amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-localization-l1-2-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 5,
+      "description": "Required platform library dependency amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-localization-l1-2-0.dll"
+    },
+    {
+      "target": "game_scarlett_master.exe imports api-ms-win-crt-locale-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 4,
+      "description": "Required platform library dependency game_scarlett_master.exe imports api-ms-win-crt-locale-l1-1-0.dll"
     },
     {
       "target": "XCurl.dll imports api-ms-win-core-fibers-l1-1-0.dll",
@@ -143,10 +155,22 @@
       "description": "Required platform library dependency XCurl.dll imports api-ms-win-core-fibers-l1-1-0.dll"
     },
     {
-      "target": "amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-localization-l1-2-0.dll",
+      "target": "concrt140.dll imports api-ms-win-core-sysinfo-l1-2-0.dll",
       "subsystem": "System Services",
       "dependent_count": 4,
-      "description": "Required platform library dependency amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-localization-l1-2-0.dll"
+      "description": "Required platform library dependency concrt140.dll imports api-ms-win-core-sysinfo-l1-2-0.dll"
+    },
+    {
+      "target": "Bink2Scarlett.dll imports api-ms-win-core-com-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 4,
+      "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-com-l1-1-0.dll"
+    },
+    {
+      "target": "Bink2Scarlett.dll imports xmem.dll",
+      "subsystem": "System Services",
+      "dependent_count": 4,
+      "description": "Required platform library dependency Bink2Scarlett.dll imports xmem.dll"
     },
     {
       "target": "XCurl.dll imports api-ms-win-core-threadpool-l1-2-0.dll",
@@ -161,40 +185,46 @@
       "description": "Required platform library dependency XCurl.dll imports api-ms-win-core-heap-l1-1-0.dll"
     },
     {
-      "target": "msvcp140.dll imports api-ms-win-crt-locale-l1-1-0.dll",
-      "subsystem": "System Services",
-      "dependent_count": 3,
-      "description": "Required platform library dependency msvcp140.dll imports api-ms-win-crt-locale-l1-1-0.dll"
-    },
-    {
-      "target": "concrt140.dll imports api-ms-win-core-sysinfo-l1-2-0.dll",
-      "subsystem": "System Services",
-      "dependent_count": 3,
-      "description": "Required platform library dependency concrt140.dll imports api-ms-win-core-sysinfo-l1-2-0.dll"
-    },
-    {
-      "target": "Bink2Scarlett.dll imports api-ms-win-core-com-l1-1-0.dll",
-      "subsystem": "System Services",
-      "dependent_count": 3,
-      "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-com-l1-1-0.dll"
-    },
-    {
-      "target": "Bink2Scarlett.dll imports xmem.dll",
-      "subsystem": "System Services",
-      "dependent_count": 3,
-      "description": "Required platform library dependency Bink2Scarlett.dll imports xmem.dll"
-    },
-    {
       "target": "amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-processenvironment-l1-1-0.dll",
       "subsystem": "System Services",
-      "dependent_count": 2,
+      "dependent_count": 3,
       "description": "Required platform library dependency amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-core-processenvironment-l1-1-0.dll"
     },
     {
       "target": "XCurl.dll imports api-ms-win-core-libraryloader-l1-2-1.dll",
       "subsystem": "System Services",
-      "dependent_count": 2,
+      "dependent_count": 3,
       "description": "Required platform library dependency XCurl.dll imports api-ms-win-core-libraryloader-l1-2-1.dll"
+    },
+    {
+      "target": "XboxBvhBuilder.dll imports d3d12_xs.dll",
+      "subsystem": "System Services",
+      "dependent_count": 3,
+      "description": "Required platform library dependency XboxBvhBuilder.dll imports d3d12_xs.dll"
+    },
+    {
+      "target": "XCurl.dll imports WINHTTP.dll",
+      "subsystem": "System Services",
+      "dependent_count": 3,
+      "description": "Required platform library dependency XCurl.dll imports WINHTTP.dll"
+    },
+    {
+      "target": "game_scarlett_master.exe imports api-ms-win-core-heap-l2-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 3,
+      "description": "Required platform library dependency game_scarlett_master.exe imports api-ms-win-core-heap-l2-1-0.dll"
+    },
+    {
+      "target": "game_scarlett_master.exe imports api-ms-win-crt-time-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 3,
+      "description": "Required platform library dependency game_scarlett_master.exe imports api-ms-win-crt-time-l1-1-0.dll"
+    },
+    {
+      "target": "game_scarlett_master.exe imports api-ms-win-crt-filesystem-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 2,
+      "description": "Required platform library dependency game_scarlett_master.exe imports api-ms-win-crt-filesystem-l1-1-0.dll"
     },
     {
       "target": "XCurl.dll imports api-ms-win-core-registry-l1-1-0.dll",
@@ -203,16 +233,28 @@
       "description": "Required platform library dependency XCurl.dll imports api-ms-win-core-registry-l1-1-0.dll"
     },
     {
-      "target": "XboxBvhBuilder.dll imports d3d12_xs.dll",
+      "target": "game_scarlett_master.exe imports ADVAPI32.dll",
       "subsystem": "System Services",
       "dependent_count": 2,
-      "description": "Required platform library dependency XboxBvhBuilder.dll imports d3d12_xs.dll"
+      "description": "Required platform library dependency game_scarlett_master.exe imports ADVAPI32.dll"
     },
     {
-      "target": "XCurl.dll imports WINHTTP.dll",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-string-obsolete-l1-1-0.dll",
       "subsystem": "System Services",
       "dependent_count": 2,
-      "description": "Required platform library dependency XCurl.dll imports WINHTTP.dll"
+      "description": "Required platform library dependency game_scarlett_master.exe imports api-ms-win-core-string-obsolete-l1-1-0.dll"
+    },
+    {
+      "target": "game_scarlett_master.exe imports api-ms-win-core-file-l2-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 2,
+      "description": "Required platform library dependency game_scarlett_master.exe imports api-ms-win-core-file-l2-1-0.dll"
+    },
+    {
+      "target": "XCurl.dll imports api-ms-win-core-psm-appnotify-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 2,
+      "description": "Required platform library dependency XCurl.dll imports api-ms-win-core-psm-appnotify-l1-1-0.dll"
     },
     {
       "target": "amd_fidelityfx_upscaler_xbox.dll imports api-ms-win-crt-environment-l1-1-0.dll",
@@ -227,10 +269,16 @@
       "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-file-l1-2-0.dll"
     },
     {
-      "target": "msvcp140.dll imports api-ms-win-core-heap-l2-1-0.dll",
+      "target": "game_scarlett_master.exe imports api-ms-win-crt-utility-l1-1-0.dll",
       "subsystem": "System Services",
       "dependent_count": 2,
-      "description": "Required platform library dependency msvcp140.dll imports api-ms-win-core-heap-l2-1-0.dll"
+      "description": "Required platform library dependency game_scarlett_master.exe imports api-ms-win-crt-utility-l1-1-0.dll"
+    },
+    {
+      "target": "XCurl.dll imports api-ms-win-core-synch-l1-2-1.dll",
+      "subsystem": "System Services",
+      "dependent_count": 2,
+      "description": "Required platform library dependency XCurl.dll imports api-ms-win-core-synch-l1-2-1.dll"
     },
     {
       "target": "XCurl.dll imports CRYPT32.dll",
@@ -239,10 +287,10 @@
       "description": "Required platform library dependency XCurl.dll imports CRYPT32.dll"
     },
     {
-      "target": "libHttpClient.GDK.dll imports api-ms-win-crt-time-l1-1-0.dll",
+      "target": "game_scarlett_master.exe imports GameInput.dll",
       "subsystem": "System Services",
-      "dependent_count": 2,
-      "description": "Required platform library dependency libHttpClient.GDK.dll imports api-ms-win-crt-time-l1-1-0.dll"
+      "dependent_count": 1,
+      "description": "Required platform library dependency game_scarlett_master.exe imports GameInput.dll"
     },
     {
       "target": "vcomp140.dll imports api-ms-win-core-threadpool-legacy-l1-1-0.dll",
@@ -251,10 +299,34 @@
       "description": "Required platform library dependency vcomp140.dll imports api-ms-win-core-threadpool-legacy-l1-1-0.dll"
     },
     {
-      "target": "msvcp140.dll imports api-ms-win-crt-filesystem-l1-1-0.dll",
+      "target": "game_scarlett_master.exe imports bcrypt.dll",
       "subsystem": "System Services",
       "dependent_count": 1,
-      "description": "Required platform library dependency msvcp140.dll imports api-ms-win-crt-filesystem-l1-1-0.dll"
+      "description": "Required platform library dependency game_scarlett_master.exe imports bcrypt.dll"
+    },
+    {
+      "target": "game_scarlett_master.exe imports ext-ms-win-rtcore-ntuser-message-ansi-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency game_scarlett_master.exe imports ext-ms-win-rtcore-ntuser-message-ansi-l1-1-0.dll"
+    },
+    {
+      "target": "game_scarlett_master.exe imports MFPlat.DLL",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency game_scarlett_master.exe imports MFPlat.DLL"
+    },
+    {
+      "target": "game_scarlett_master.exe imports chad.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency game_scarlett_master.exe imports chad.dll"
+    },
+    {
+      "target": "game_scarlett_master.exe imports api-ms-win-core-windowserrorreporting-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency game_scarlett_master.exe imports api-ms-win-core-windowserrorreporting-l1-1-0.dll"
     },
     {
       "target": "XCurl.dll imports api-ms-win-core-errorhandling-l1-1-2.dll",
@@ -263,34 +335,40 @@
       "description": "Required platform library dependency XCurl.dll imports api-ms-win-core-errorhandling-l1-1-2.dll"
     },
     {
+      "target": "game_scarlett_master.exe imports api-ms-win-core-localization-l1-2-3.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency game_scarlett_master.exe imports api-ms-win-core-localization-l1-2-3.dll"
+    },
+    {
       "target": "Bink2Scarlett.dll imports api-ms-win-core-errorhandling-l1-1-1.dll",
       "subsystem": "System Services",
       "dependent_count": 1,
       "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-errorhandling-l1-1-1.dll"
     },
     {
-      "target": "libHttpClient.GDK.dll imports ADVAPI32.dll",
+      "target": "game_scarlett_master.exe imports ext-ms-win-rtcore-ntuser-window-ansi-l1-1-0.dll",
       "subsystem": "System Services",
       "dependent_count": 1,
-      "description": "Required platform library dependency libHttpClient.GDK.dll imports ADVAPI32.dll"
+      "description": "Required platform library dependency game_scarlett_master.exe imports ext-ms-win-rtcore-ntuser-window-ansi-l1-1-0.dll"
     },
     {
-      "target": "vcomp140.dll imports api-ms-win-core-string-obsolete-l1-1-0.dll",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-processtopology-l1-1-0.dll",
       "subsystem": "System Services",
       "dependent_count": 1,
-      "description": "Required platform library dependency vcomp140.dll imports api-ms-win-core-string-obsolete-l1-1-0.dll"
-    },
-    {
-      "target": "msvcp140.dll imports api-ms-win-core-file-l2-1-0.dll",
-      "subsystem": "System Services",
-      "dependent_count": 1,
-      "description": "Required platform library dependency msvcp140.dll imports api-ms-win-core-file-l2-1-0.dll"
+      "description": "Required platform library dependency game_scarlett_master.exe imports api-ms-win-core-processtopology-l1-1-0.dll"
     },
     {
       "target": "Bink2Scarlett.dll imports XAudio2_9.dll",
       "subsystem": "System Services",
       "dependent_count": 1,
       "description": "Required platform library dependency Bink2Scarlett.dll imports XAudio2_9.dll"
+    },
+    {
+      "target": "game_scarlett_master.exe imports xg_xs.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency game_scarlett_master.exe imports xg_xs.dll"
     },
     {
       "target": "vccorlib140.dll imports OLEAUT32.dll",
@@ -317,6 +395,12 @@
       "description": "Required platform library dependency vcomp140.dll imports api-ms-win-core-console-l3-2-0.dll"
     },
     {
+      "target": "game_scarlett_master.exe imports XCRDAPI.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency game_scarlett_master.exe imports XCRDAPI.dll"
+    },
+    {
       "target": "vccorlib140.dll imports api-ms-win-core-winrt-l1-1-0.dll",
       "subsystem": "System Services",
       "dependent_count": 1,
@@ -329,10 +413,22 @@
       "description": "Required platform library dependency vcomp140.dll imports api-ms-win-core-localization-obsolete-l1-2-0.dll"
     },
     {
+      "target": "game_scarlett_master.exe imports ext-ms-win-rtcore-ntuser-window-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency game_scarlett_master.exe imports ext-ms-win-rtcore-ntuser-window-l1-1-0.dll"
+    },
+    {
       "target": "vcomp140.dll imports api-ms-win-core-console-l1-1-0.dll",
       "subsystem": "System Services",
       "dependent_count": 1,
       "description": "Required platform library dependency vcomp140.dll imports api-ms-win-core-console-l1-1-0.dll"
+    },
+    {
+      "target": "game_scarlett_master.exe imports xapu.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency game_scarlett_master.exe imports xapu.dll"
     },
     {
       "target": "libHttpClient.GDK.dll imports KERNEL32.dll",
@@ -347,6 +443,12 @@
       "description": "Required platform library dependency XCurl.dll imports api-ms-win-eventing-classicprovider-l1-1-0.dll"
     },
     {
+      "target": "game_scarlett_master.exe imports api-ms-win-core-psm-appnotify-l1-1-1.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency game_scarlett_master.exe imports api-ms-win-core-psm-appnotify-l1-1-1.dll"
+    },
+    {
       "target": "XCurl.dll imports api-ms-win-eventing-provider-l1-1-0.dll",
       "subsystem": "System Services",
       "dependent_count": 1,
@@ -359,16 +461,34 @@
       "description": "Required platform library dependency Bink2Scarlett.dll imports api-ms-win-core-processtopology-obsolete-l1-1-0.dll"
     },
     {
-      "target": "msvcp140.dll imports api-ms-win-crt-utility-l1-1-0.dll",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-namedpipe-l1-1-0.dll",
       "subsystem": "System Services",
       "dependent_count": 1,
-      "description": "Required platform library dependency msvcp140.dll imports api-ms-win-crt-utility-l1-1-0.dll"
+      "description": "Required platform library dependency game_scarlett_master.exe imports api-ms-win-core-namedpipe-l1-1-0.dll"
     },
     {
-      "target": "XCurl.dll imports api-ms-win-core-synch-l1-2-1.dll",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-timezone-l1-1-0.dll",
       "subsystem": "System Services",
       "dependent_count": 1,
-      "description": "Required platform library dependency XCurl.dll imports api-ms-win-core-synch-l1-2-1.dll"
+      "description": "Required platform library dependency game_scarlett_master.exe imports api-ms-win-core-timezone-l1-1-0.dll"
+    },
+    {
+      "target": "game_scarlett_master.exe imports ext-ms-win-rtcore-ntuser-message-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency game_scarlett_master.exe imports ext-ms-win-rtcore-ntuser-message-l1-1-0.dll"
+    },
+    {
+      "target": "game_scarlett_master.exe imports api-ms-win-core-datetime-l1-1-1.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency game_scarlett_master.exe imports api-ms-win-core-datetime-l1-1-1.dll"
+    },
+    {
+      "target": "game_scarlett_master.exe imports api-ms-win-core-memory-l1-1-0.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency game_scarlett_master.exe imports api-ms-win-core-memory-l1-1-0.dll"
     },
     {
       "target": "vccorlib140.dll imports api-ms-win-core-winrt-string-l1-1-0.dll",
@@ -377,10 +497,34 @@
       "description": "Required platform library dependency vccorlib140.dll imports api-ms-win-core-winrt-string-l1-1-0.dll"
     },
     {
+      "target": "game_scarlett_master.exe imports api-ms-win-core-processthreads-l1-1-2.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency game_scarlett_master.exe imports api-ms-win-core-processthreads-l1-1-2.dll"
+    },
+    {
+      "target": "game_scarlett_master.exe imports MFReadWrite.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency game_scarlett_master.exe imports MFReadWrite.dll"
+    },
+    {
+      "target": "game_scarlett_master.exe imports AcpHal.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency game_scarlett_master.exe imports AcpHal.dll"
+    },
+    {
       "target": "vccorlib140.dll imports api-ms-win-core-winrt-error-l1-1-0.dll",
       "subsystem": "System Services",
       "dependent_count": 1,
       "description": "Required platform library dependency vccorlib140.dll imports api-ms-win-core-winrt-error-l1-1-0.dll"
+    },
+    {
+      "target": "game_scarlett_master.exe imports WS2_32.dll",
+      "subsystem": "System Services",
+      "dependent_count": 1,
+      "description": "Required platform library dependency game_scarlett_master.exe imports WS2_32.dll"
     }
   ],
   "relationships": [
@@ -633,7 +777,7 @@
       "source": "XCurl.dll",
       "target": "XCurl.dll imports api-ms-win-core-psm-appnotify-l1-1-0.dll",
       "type": "import_dll",
-      "is_resolved": true,
+      "is_resolved": false,
       "notes": "XCurl.dll depends on XCurl.dll imports api-ms-win-core-psm-appnotify-l1-1-0.dll"
     },
     {
@@ -1293,6 +1437,482 @@
       "type": "import_dll",
       "is_resolved": true,
       "notes": "concrt140.dll depends on vcruntime140_1.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "Bink2Scarlett.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "game_scarlett_master.exe depends on Bink2Scarlett.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "XboxBvhBuilder.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "game_scarlett_master.exe depends on XboxBvhBuilder.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "amd_fidelityfx_loader_xbox.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "game_scarlett_master.exe depends on amd_fidelityfx_loader_xbox.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports ADVAPI32.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports ADVAPI32.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports AcpHal.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports AcpHal.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports GameInput.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports GameInput.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports MFPlat.DLL",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports MFPlat.DLL"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports MFReadWrite.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports MFReadWrite.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports WINHTTP.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports WINHTTP.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports WS2_32.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports WS2_32.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports XCRDAPI.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports XCRDAPI.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-com-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-com-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-datetime-l1-1-1.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-datetime-l1-1-1.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-debug-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-debug-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-errorhandling-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-errorhandling-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-file-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-file-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-file-l2-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-file-l2-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-handle-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-handle-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-heap-l2-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-heap-l2-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-interlocked-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-interlocked-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-libraryloader-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-libraryloader-l1-2-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-libraryloader-l1-2-1.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-libraryloader-l1-2-1.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-localization-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-localization-l1-2-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-localization-l1-2-3.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-localization-l1-2-3.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-memory-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-memory-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-namedpipe-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-namedpipe-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-processenvironment-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-processenvironment-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-processthreads-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-processthreads-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-processthreads-l1-1-1.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-processthreads-l1-1-1.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-processthreads-l1-1-2.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-processthreads-l1-1-2.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-processtopology-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-processtopology-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-profile-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-profile-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-psm-appnotify-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-psm-appnotify-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-psm-appnotify-l1-1-1.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-psm-appnotify-l1-1-1.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-rtlsupport-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-rtlsupport-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-string-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-string-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-string-obsolete-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-string-obsolete-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-synch-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-synch-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-synch-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-synch-l1-2-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-synch-l1-2-1.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-synch-l1-2-1.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-sysinfo-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-sysinfo-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-sysinfo-l1-2-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-sysinfo-l1-2-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-timezone-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-timezone-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-core-windowserrorreporting-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-core-windowserrorreporting-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-crt-convert-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-crt-convert-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-crt-filesystem-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-crt-filesystem-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-crt-heap-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-crt-heap-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-crt-locale-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-crt-locale-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-crt-math-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-crt-math-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-crt-runtime-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-crt-runtime-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-crt-stdio-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-crt-stdio-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-crt-string-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-crt-string-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-crt-time-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-crt-time-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports api-ms-win-crt-utility-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports api-ms-win-crt-utility-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports bcrypt.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports bcrypt.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports chad.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports chad.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports d3d12_xs.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports d3d12_xs.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports ext-ms-win-rtcore-ntuser-message-ansi-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports ext-ms-win-rtcore-ntuser-message-ansi-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports ext-ms-win-rtcore-ntuser-message-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports ext-ms-win-rtcore-ntuser-message-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports ext-ms-win-rtcore-ntuser-window-ansi-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports ext-ms-win-rtcore-ntuser-window-ansi-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports ext-ms-win-rtcore-ntuser-window-l1-1-0.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports ext-ms-win-rtcore-ntuser-window-l1-1-0.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports xapu.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports xapu.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports xg_xs.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports xg_xs.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "game_scarlett_master.exe imports xmem.dll",
+      "type": "import_dll",
+      "is_resolved": false,
+      "notes": "game_scarlett_master.exe depends on game_scarlett_master.exe imports xmem.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "libHttpClient.GDK.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "game_scarlett_master.exe depends on libHttpClient.GDK.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "msvcp140.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "game_scarlett_master.exe depends on msvcp140.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "vcruntime140.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "game_scarlett_master.exe depends on vcruntime140.dll"
+    },
+    {
+      "source": "game_scarlett_master.exe",
+      "target": "vcruntime140_1.dll",
+      "type": "import_dll",
+      "is_resolved": true,
+      "notes": "game_scarlett_master.exe depends on vcruntime140_1.dll"
     },
     {
       "source": "libHttpClient.GDK.dll",

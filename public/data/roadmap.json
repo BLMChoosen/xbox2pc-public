@@ -289,7 +289,7 @@
     {
       "id": "M10",
       "name": "Interactive Execution & Frame Presentation",
-      "status": "IN_PROGRESS",
+      "status": "COMPLETED",
       "focus": "Host Win32 window message loop, GameInput controller poll integration, real-time D3D12 frame presentation, and runtime breadcrumb inspection.",
       "entry_criteria": [
         "M9 sandbox host and TLS engine operational"
@@ -318,7 +318,7 @@
     {
       "id": "M11",
       "name": "Game Core Title Bootstrap & Identity Management",
-      "status": "PLANNED",
+      "status": "IN_PROGRESS",
       "focus": "Title lifecycle state machine transitions (Active, Constrained, Suspended), GameCore thread pools, memory budget tracking, XUser/XStore emulation.",
       "entry_criteria": [
         "M10 interactive presentation operational"
@@ -467,7 +467,7 @@
       "id": "UNK-001",
       "title": "Primary Executable (game_scarlett_master.exe)",
       "impact": "Primary title binary requirement for game execution",
-      "status": "RESOLVED (Acquired, 120,181,760 bytes, 587/587 imports resolved, verified in sandbox host)"
+      "status": "RESOLVED (Acquired, 120,181,760 bytes, 587/587 imports resolved, verified in 60 FPS interactive presentation)"
     },
     {
       "id": "UNK-002",

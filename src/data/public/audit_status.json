@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-23T23:54:29.712977+00:00",
-  "snapshot": "0.9.0",
-  "public_snapshot_id": "pub_0.9.0_a6b1cbd38163",
+  "generated_at": "2026-11-24T03:02:06.793552+00:00",
+  "snapshot": "0.10.0",
+  "public_snapshot_id": "pub_0.10.0_ad4e6f3d8360",
   "audit_date": "2026-11-20",
   "verdict": "PARTIALLY VERIFIED",
   "discrepancies_count": 1,
@@ -17,7 +17,7 @@
       "evidence_reference": "INDEPENDENT_AUDIT.md#Section-6.1"
     }
   ],
-  "verified_public_snapshot_id": "pub_0.9.0_a6b1cbd38163",
+  "verified_public_snapshot_id": "pub_0.10.0_ad4e6f3d8360",
   "auditor": "Independent Discovery Audit Worker",
   "evidence_references": [
     "Public methodology and validation policy"

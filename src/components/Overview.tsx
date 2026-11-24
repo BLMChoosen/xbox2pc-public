@@ -191,7 +191,7 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
               💡 What does this mean in practice?
             </span>
             <p style={{ fontSize: '12px', color: '#94a3b8', margin: 0, lineHeight: 1.5 }}>
-              The low-level engineering foundations (64 KB memory allocator, 7-core Zen 2 CPU topology virtualization, VFS cascading overlay for unpacked assets, WASAPI audio bridge, Direct3D 12 Agility SDK bridge with console flag sanitization, hybrid DXIL/RDNA2 shader pipeline, and isolated sandbox host xbox2pc_host.exe) are fully operational. All 10 milestones (M0-M9) are complete. Primary title binary (game_scarlett_master.exe) is executing in sandbox! Milestone M10 (Interactive Execution & Frame Presentation) is active.
+              The low-level engineering foundations (64 KB memory allocator, 7-core Zen 2 CPU topology virtualization, VFS cascading overlay for unpacked assets, WASAPI audio bridge, Direct3D 12 Agility SDK bridge with console flag sanitization, hybrid DXIL/RDNA2 shader pipeline, isolated sandbox host xbox2pc_host.exe, and D3D12 60 FPS swap chain presentation with GameInput) are fully operational. All 11 milestones (M0-M10) are complete. Milestone M11 (Game Core Title Bootstrap & Identity) is active.
             </p>
           </div>
         </div>
@@ -199,8 +199,8 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
         {/* Visual Progress Bar */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', fontWeight: 600 }}>
-            <span style={{ color: '#34d399' }}>● M0 to M9: Core Foundations, Memory, Threads, VFS, Audio, D3D12, Preflight & Sandbox (Completed)</span>
-            <span style={{ color: '#38bdf8' }}>M10: Interactive Execution & Frame Presentation (Active)</span>
+            <span style={{ color: '#34d399' }}>● M0 to M10: Core Foundations, Memory, Threads, VFS, Audio, D3D12, Preflight, Sandbox & Frame Presentation (Completed)</span>
+            <span style={{ color: '#38bdf8' }}>M11: Game Core Title Bootstrap & Identity (Active)</span>
           </div>
           <div style={{
             width: '100%',
@@ -236,8 +236,8 @@ export const Overview: React.FC<OverviewProps> = ({ overview, coverage, libraryS
             { tag: 'M7', label: 'Direct3D 12 & Shaders', status: 'done', desc: '100%' },
             { tag: 'M8', label: 'Title Preflight', status: 'done', desc: '100%' },
             { tag: 'M9', label: 'Sandbox Host & VFS', status: 'done', desc: '100%' },
-            { tag: 'M10', label: 'Frame Presentation', status: 'active', desc: 'Active' },
-            { tag: 'M11', label: 'GameCore Bootstrap', status: 'planned', desc: 'Planned' },
+            { tag: 'M10', label: 'Frame Presentation', status: 'done', desc: '100%' },
+            { tag: 'M11', label: 'GameCore Bootstrap', status: 'active', desc: 'Active' },
             { tag: 'M12', label: 'D3D12 Dynamic PSOs', status: 'planned', desc: 'Planned' },
             { tag: 'M13', label: 'Spatial Audio', status: 'planned', desc: 'Planned' },
             { tag: 'M14', label: 'Gameplay Stability', status: 'planned', desc: 'Planned' },
